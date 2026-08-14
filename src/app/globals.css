@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 217.2 91.2% 59.8%;
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: 222.2 47% 6%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 47% 8%;
+  --card-foreground: 210 40% 98%;
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 14%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 14%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 18%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 40%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 18%;
+  --input: 217.2 32.6% 18%;
+  --ring: 217.2 91.2% 59.8%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html,
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Pleasant custom scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted-foreground) / 0.4) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted-foreground) / 0.35);
+  border-radius: 9999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--muted-foreground) / 0.55);
+}
+
+/* Subtle grid / glow background used on the landing hero */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, hsl(var(--border) / 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.6) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 50%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 50%, transparent 100%);
+}
+
+/* Hide default marker on lists where we render our own */
+.list-clean {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth focus ring removal for touch devices */
+@media (pointer: coarse) {
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}

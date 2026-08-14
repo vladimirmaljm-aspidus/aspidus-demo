@@ -1,0 +1,11 @@
+{
+  "/demo/invoices/page": "app/demo/invoices/page.js",
+  "/demo/offers/page": "app/demo/offers/page.js",
+  "/demo/page": "app/demo/page.js",
+  "/demo/partners/page": "app/demo/partners/page.js",
+  "/demo/products/page": "app/demo/products/page.js",
+  "/demo/trade-calculator/page": "app/demo/trade-calculator/page.js",
+  "/page": "app/page.js",
+  "/pricing/page": "app/pricing/page.js",
+  "/trial/page": "app/trial/page.js"
+}
