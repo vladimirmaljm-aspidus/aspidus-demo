@@ -59,7 +59,7 @@ export default function PartnersPage() {
           />
         </div>
         <div className="text-sm text-muted-foreground">
-          {filtered.length} {filtered.length === 1 ? "partner" : "partners"}
+          {filtered.length} {filtered.length === 1 ? t("common.item") : t("common.items")}
         </div>
       </div>
 
@@ -73,9 +73,9 @@ export default function PartnersPage() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
                     {initials(p.name)}
                   </div>
-                  <div>
-                    <div className="font-semibold leading-tight">{p.name}</div>
-                    <div className="mt-0.5 text-xs text-muted-foreground">
+                  <div className="min-w-0">
+                    <div className="truncate font-semibold leading-tight">{p.name}</div>
+                    <div className="mt-0.5 truncate text-xs text-muted-foreground">
                       {p.city}, {p.country} · {p.countryCode}
                     </div>
                   </div>
@@ -92,12 +92,19 @@ export default function PartnersPage() {
                 <Stat label={t("partners.col.currency")} value={p.currency} />
               </div>
               <div className="mt-3 space-y-1 border-t pt-3 text-xs text-muted-foreground">
-                <div className="flex items-center gap-2"><Mail className="h-3 w-3" /> {p.email}</div>
-                <div className="flex items-center gap-2"><Phone className="h-3 w-3" /> {p.phone}</div>
+                <div className="flex items-center gap-2 truncate"><Mail className="h-3 w-3 shrink-0" /> {p.email}</div>
+                <div className="flex items-center gap-2 truncate"><Phone className="h-3 w-3 shrink-0" /> {p.phone}</div>
               </div>
             </CardContent>
           </Card>
         ))}
+        {filtered.length === 0 && (
+          <Card className="sm:col-span-2">
+            <CardContent className="p-10 text-center text-muted-foreground">
+              {t("common.empty.partners")}
+            </CardContent>
+          </Card>
+        )}
       </div>
 
       <Card className="hidden lg:block">
@@ -153,7 +160,7 @@ export default function PartnersPage() {
                 {filtered.length === 0 && (
                   <tr>
                     <td colSpan={7} className="px-6 py-10 text-center text-muted-foreground">
-                      No partners match “{query}”.
+                      {t("common.empty.partners")}
                     </td>
                   </tr>
                 )}

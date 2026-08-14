@@ -1,13 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { X } from "lucide-react";
 import { DemoSidebar } from "@/components/demo-sidebar";
 import { DemoTopbar } from "@/components/demo-topbar";
 import { GuidedTour } from "@/components/guided-tour";
+import { PageTransition } from "@/components/page-transition";
+import { usePathname } from "next/navigation";
 
 export function DemoShell({ children }: { children: React.ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div className="flex min-h-screen bg-muted/20">
@@ -26,9 +29,9 @@ export function DemoShell({ children }: { children: React.ReactNode }) {
             onClick={() => setMobileOpen(false)}
             aria-hidden="true"
           />
-          <div className="absolute left-0 top-0 h-full w-72 border-r bg-card shadow-xl">
+          <div className="absolute left-0 top-0 h-full w-72 max-w-[85vw] border-r bg-card shadow-xl">
             <button
-              className="absolute right-2 top-2 z-10 rounded-md p-2 text-muted-foreground hover:bg-accent"
+              className="absolute right-2 top-3 z-10 rounded-md p-2 text-muted-foreground hover:bg-accent"
               aria-label="Close menu"
               onClick={() => setMobileOpen(false)}
             >
@@ -42,7 +45,9 @@ export function DemoShell({ children }: { children: React.ReactNode }) {
       {/* Main column */}
       <div className="flex min-w-0 flex-1 flex-col">
         <DemoTopbar onMenu={() => setMobileOpen(true)} />
-        <main className="flex-1 p-4 sm:p-6 lg:p-8">{children}</main>
+        <main className="flex-1 overflow-x-hidden p-4 sm:p-6 lg:p-8">
+          <PageTransition key={pathname}>{children}</PageTransition>
+        </main>
       </div>
 
       <GuidedTour />

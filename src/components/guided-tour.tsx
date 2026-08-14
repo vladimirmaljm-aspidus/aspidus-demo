@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Sparkles, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { useT } from "@/components/i18n-provider";
-import { cn } from "@/lib/utils";
 
 type TourStep = {
   /** Translation key for the title */
@@ -25,12 +24,12 @@ type TourStep = {
 
 const STEPS: TourStep[] = [
   { titleKey: "tour.step1.title", bodyKey: "tour.step1.body", emoji: "👋" },
-  { titleKey: "tour.step2.title", bodyKey: "tour.step2.body", href: "/demo", emoji: "📊" },
-  { titleKey: "tour.step3.title", bodyKey: "tour.step3.body", href: "/demo/partners", emoji: "🤝" },
-  { titleKey: "tour.step4.title", bodyKey: "tour.step4.body", href: "/demo/products", emoji: "📦" },
-  { titleKey: "tour.step5.title", bodyKey: "tour.step5.body", href: "/demo/offers", emoji: "💱" },
-  { titleKey: "tour.step6.title", bodyKey: "tour.step6.body", href: "/demo/invoices", emoji: "🧾" },
-  { titleKey: "tour.step7.title", bodyKey: "tour.step7.body", href: "/demo/trade-calculator", emoji: "🧮" },
+  { titleKey: "tour.step2.title", bodyKey: "tour.step2.body", href: "/demo", emoji: "📊", selector: "[data-tour='dashboard']" },
+  { titleKey: "tour.step3.title", bodyKey: "tour.step3.body", href: "/demo/partners", emoji: "🤝", selector: "[data-tour='partners']" },
+  { titleKey: "tour.step4.title", bodyKey: "tour.step4.body", href: "/demo/products", emoji: "📦", selector: "[data-tour='products']" },
+  { titleKey: "tour.step5.title", bodyKey: "tour.step5.body", href: "/demo/offers", emoji: "💱", selector: "[data-tour='offers']" },
+  { titleKey: "tour.step6.title", bodyKey: "tour.step6.body", href: "/demo/invoices", emoji: "🧾", selector: "[data-tour='invoices']" },
+  { titleKey: "tour.step7.title", bodyKey: "tour.step7.body", href: "/demo/trade-calculator", emoji: "🧮", selector: "[data-tour='trade-calculator']" },
   { titleKey: "tour.step8.title", bodyKey: "tour.step8.body", href: "/trial", emoji: "🚀" },
 ];
 
@@ -39,6 +38,7 @@ const STORAGE_KEY = "aspidus-demo-tour-done";
 export function GuidedTour() {
   const t = useT();
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
   const [showLauncher, setShowLauncher] = useState(true);
@@ -58,50 +58,63 @@ export function GuidedTour() {
     }
   }, [pathname]);
 
+  // Navigate when step changes
+  useEffect(() => {
+    if (!open) return;
+    const cur = STEPS[step];
+    if (!cur?.href) return;
+    // Navigate if we are not already on the target route
+    if (cur.href === "/trial") {
+      // trial is outside /demo — we navigate only at the end (last step button)
+      return;
+    }
+    if (pathname !== cur.href) {
+      router.push(cur.href);
+    }
+  }, [open, step, router, pathname]);
+
   // Highlight the target element of the current step
   useEffect(() => {
     if (!open) return;
     const cur = STEPS[step];
     if (!cur?.selector) return;
-    const el = document.querySelector(cur.selector) as HTMLElement | null;
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "center" });
-    el.classList.add("tour-highlight");
-    return () => el.classList.remove("tour-highlight");
+    // Wait a tick for navigation/layout
+    const id = window.setTimeout(() => {
+      const el = document.querySelector(cur.selector!) as HTMLElement | null;
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      el.classList.add("tour-highlight");
+    }, 250);
+    return () => {
+      window.clearTimeout(id);
+      document.querySelectorAll(".tour-highlight").forEach((el) => el.classList.remove("tour-highlight"));
+    };
   }, [open, step]);
 
-  const close = () => {
+  const close = useCallback(() => {
     setOpen(false);
     try {
       window.localStorage.setItem(STORAGE_KEY, "1");
     } catch {
       /* ignore */
     }
-  };
+  }, []);
 
-  const next = () => {
+  const next = useCallback(() => {
     if (step < STEPS.length - 1) setStep((s) => s + 1);
     else close();
-  };
-  const back = () => step > 0 && setStep((s) => s - 1);
+  }, [step, close]);
+  const back = useCallback(() => step > 0 && setStep((s) => s - 1), [step]);
 
   const current = STEPS[step];
   const isLast = step === STEPS.length - 1;
   const progressPct = ((step + 1) / STEPS.length) * 100;
+  const inDemo = pathname?.startsWith("/demo") ?? false;
 
   return (
     <>
-      <style>{`
-        .tour-highlight {
-          outline: 2px solid hsl(var(--primary));
-          outline-offset: 3px;
-          border-radius: 0.5rem;
-          transition: outline 0.2s ease;
-        }
-      `}</style>
-
       {/* Floating launcher (always visible on /demo) */}
-      {pathname?.startsWith("/demo") && showLauncher && !open && (
+      {inDemo && showLauncher && !open && (
         <motion.button
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -110,9 +123,14 @@ export function GuidedTour() {
           onClick={() => {
             setStep(0);
             setOpen(true);
+            try {
+              window.localStorage.removeItem(STORAGE_KEY);
+            } catch {
+              /* ignore */
+            }
           }}
-          className="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-primary-foreground shadow-lg shadow-primary/30"
-          aria-label="Start guided tour"
+          className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-gradient-brand px-4 py-3 text-primary-foreground shadow-lg shadow-primary/40"
+          aria-label={t("tour.restart")}
         >
           <Sparkles className="h-5 w-5" />
           <span className="text-sm font-semibold">{t("tour.restart")}</span>
@@ -126,11 +144,11 @@ export function GuidedTour() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 24, scale: 0.96 }}
             transition={{ duration: 0.25 }}
-            className="fixed bottom-5 right-5 z-50 w-[360px] max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl border bg-card shadow-2xl"
+            className="fixed bottom-5 right-5 z-[60] w-[360px] max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl border bg-card shadow-2xl"
             role="dialog"
             aria-label="Guided tour"
           >
-            <div className="relative bg-gradient-to-br from-primary to-blue-700 p-5 text-primary-foreground">
+            <div className="relative bg-gradient-brand p-5 text-primary-foreground">
               <button
                 onClick={close}
                 aria-label="Close tour"
@@ -142,17 +160,17 @@ export function GuidedTour() {
               <h3 className="text-lg font-bold leading-tight">{t(current.titleKey)}</h3>
               <p className="mt-1 text-sm text-primary-foreground/90">{t(current.bodyKey)}</p>
               <div className="mt-3 text-[11px] uppercase tracking-wider text-primary-foreground/80">
-                Step {step + 1} {t("tour.of")} {STEPS.length}
+                {step + 1} {t("tour.of")} {STEPS.length}
               </div>
             </div>
 
             <div className="space-y-4 p-4">
               <Progress value={progressPct} className="h-1.5" />
 
-              {current.href && (
+              {current.href && current.href !== "/trial" && (
                 <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
-                  {current.href === "/trial" ? "Redirecting to trial sign-up" : `Navigated to ${current.href}`}
+                  {current.href}
                 </p>
               )}
 
@@ -173,20 +191,8 @@ export function GuidedTour() {
                         {t("tour.finish")}
                       </Link>
                     </Button>
-                  ) : current.href === "/trial" ? (
-                    <Button asChild variant="default" size="sm">
-                      <Link href="/trial" onClick={close}>
-                        {t("tour.next")}
-                        <ChevronRight className="h-4 w-4" />
-                      </Link>
-                    </Button>
                   ) : (
-                    <Button
-                      variant="default"
-                      size="sm"
-                      onClick={next}
-                      className={cn(current.href && "ring-2 ring-primary/30")}
-                    >
+                    <Button variant="default" size="sm" onClick={next}>
                       {t("tour.next")}
                       <ChevronRight className="h-4 w-4" />
                     </Button>

@@ -62,19 +62,19 @@ export default function InvoicesPage() {
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <Card>
           <CardContent className="p-4">
-            <div className="text-xs uppercase tracking-wider text-muted-foreground">Total outstanding</div>
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">{t("common.totalOutstanding")}</div>
             <div className="mt-1 text-xl font-bold">{formatCurrency(totals.total, "USD")}</div>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4">
-            <div className="text-xs uppercase tracking-wider text-muted-foreground">Overdue</div>
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">{t("common.overdue")}</div>
             <div className="mt-1 text-xl font-bold text-red-600">{formatCurrency(totals.overdue, "USD")}</div>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4">
-            <div className="text-xs uppercase tracking-wider text-muted-foreground">Paid (this period)</div>
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">{t("common.paidPeriod")}</div>
             <div className="mt-1 text-xl font-bold text-emerald-600">{formatCurrency(totals.paid, "USD")}</div>
           </CardContent>
         </Card>
@@ -99,7 +99,7 @@ export default function InvoicesPage() {
               onClick={() => setStatus(s)}
               className="capitalize"
             >
-              {s === "all" ? "All" : t(`common.status.${s}`)}
+              {s === "all" ? t("common.all") : t(`common.status.${s}`)}
             </Button>
           ))}
         </div>
@@ -117,7 +117,7 @@ export default function InvoicesPage() {
                   <th className="px-6 py-3 font-medium">{t("invoices.col.due")}</th>
                   <th className="px-6 py-3 text-right font-medium">{t("invoices.col.amount")}</th>
                   <th className="px-6 py-3 font-medium">{t("invoices.col.status")}</th>
-                  <th className="px-6 py-3 text-right font-medium">Actions</th>
+                  <th className="px-6 py-3 text-right font-medium">{t("common.actions")}</th>
                 </tr>
               </thead>
               <tbody className="divide-y">
@@ -145,7 +145,7 @@ export default function InvoicesPage() {
                         <StatusBadge status={inv.status} t={t} />
                       </td>
                       <td className="px-6 py-3 text-right">
-                        <Button variant="ghost" size="sm">View</Button>
+                        <Button variant="ghost" size="sm">{t("common.view")}</Button>
                       </td>
                     </tr>
                   );
@@ -153,7 +153,7 @@ export default function InvoicesPage() {
                 {filtered.length === 0 && (
                   <tr>
                     <td colSpan={7} className="px-6 py-10 text-center text-muted-foreground">
-                      No invoices match your filters.
+                      {t("common.empty.invoices")}
                     </td>
                   </tr>
                 )}

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, Mail, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -35,16 +36,30 @@ const EMPTY: FormState = {
 
 export function TrialForm() {
   const t = useT();
+  const searchParams = useSearchParams();
   const [form, setForm] = useState<FormState>(EMPTY);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  // Prefill from URL ?plan=X
+  useEffect(() => {
+    const planParam = searchParams?.get("plan");
+    if (planParam && pricingPlans.some((p) => p.id === planParam)) {
+      setForm((f) => ({ ...f, plan: planParam }));
+    }
+  }, [searchParams]);
 
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((f) => ({ ...f, [key]: value }));
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // No backend — just simulate success
-    setSubmitted(true);
+    setSubmitting(true);
+    // Simulate async submission (no backend in this demo)
+    window.setTimeout(() => {
+      setSubmitting(false);
+      setSubmitted(true);
+    }, 700);
   };
 
   if (submitted) {
@@ -66,13 +81,19 @@ export function TrialForm() {
               <span className="font-medium">{form.email || "your inbox"}</span>
             </div>
             <div className="mt-6 flex flex-col gap-2 sm:flex-row">
-              <Button variant="outline" onClick={() => setForm(EMPTY)}>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setForm(EMPTY);
+                  setSubmitted(false);
+                }}
+              >
                 {t("trial.success.again")}
               </Button>
               <Button asChild variant="ghost">
                 <Link href="/demo">
                   <ArrowLeft className="h-4 w-4" />
-                  Back to demo
+                  {t("trial.backToDemo")}
                 </Link>
               </Button>
             </div>
@@ -81,6 +102,8 @@ export function TrialForm() {
       </motion.div>
     );
   }
+
+  const selectedPlan = pricingPlans.find((p) => p.id === form.plan);
 
   return (
     <Card>
@@ -147,18 +170,35 @@ export function TrialForm() {
             >
               {pricingPlans.map((p) => (
                 <option key={p.id} value={p.id}>
-                  {p.name} {p.priceMonthly ? `— $${p.priceMonthly}/mo` : "— contact us"}
+                  {p.name} {p.priceMonthly ? `— $${p.priceMonthly}/mo` : `— ${t("pricing.contact")}`}
                 </option>
               ))}
             </Select>
           </Field>
+
+          {selectedPlan && (
+            <div className="sm:col-span-2">
+              <div className="flex flex-wrap items-center gap-2 rounded-md border bg-muted/40 px-3 py-2 text-sm">
+                <Badge variant={selectedPlan.highlight ? "default" : "info"}>
+                  {selectedPlan.name}
+                </Badge>
+                {selectedPlan.priceMonthly !== null ? (
+                  <span className="font-semibold">
+                    ${selectedPlan.priceMonthly} {t("pricing.month")}
+                  </span>
+                ) : (
+                  <span className="font-semibold">{t("pricing.custom")}</span>
+                )}
+                <span className="text-muted-foreground">— {selectedPlan.tagline}</span>
+              </div>
+            </div>
+          )}
+
           <div className="sm:col-span-2">
-            <Button type="submit" size="lg" variant="emerald" className="w-full">
-              {t("trial.submit")}
+            <Button type="submit" size="lg" variant="emerald" className="w-full" disabled={submitting}>
+              {submitting ? "…" : t("trial.submit")}
             </Button>
-            <p className="mt-3 text-center text-xs text-muted-foreground">
-              By submitting you agree to our Terms and Privacy Policy. No credit card required.
-            </p>
+            <p className="mt-3 text-center text-xs text-muted-foreground">{t("trial.legal")}</p>
           </div>
         </form>
       </CardContent>
@@ -183,9 +223,10 @@ export function TrialPage() {
       <header className="border-b bg-background/80 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
           <Link href="/" className="flex items-center gap-2">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+            <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-brand text-primary-foreground">
               <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
                 <path d="M12 2 4 7v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-5Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
+                <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </span>
             <span className="text-lg font-bold">{t("brand.name")}</span>
@@ -202,11 +243,13 @@ export function TrialPage() {
 
       <main className="mx-auto flex w-full max-w-3xl flex-1 items-start px-4 py-10 sm:px-6 sm:py-16">
         <div className="w-full">
-          <Badge variant="info" className="mb-4">10-day free trial</Badge>
+          <Badge variant="info" className="mb-4">{t("trial.badge")}</Badge>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{t("trial.title")}</h1>
           <p className="mt-2 text-muted-foreground">{t("trial.subtitle")}</p>
           <div className="mt-8">
-            <TrialForm />
+            <Suspense fallback={null}>
+              <TrialForm />
+            </Suspense>
           </div>
         </div>
       </main>

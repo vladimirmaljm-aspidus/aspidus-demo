@@ -2,44 +2,81 @@
 @plugin "tailwindcss-animate";
 
 :root {
+  /* Surfaces */
   --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  --foreground: 222 47% 11%;
   --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --primary: 217.2 91.2% 59.8%;
+  --card-foreground: 222 47% 11%;
+
+  /* Brand — calm blue with a hint of cyan for energy */
+  --primary: 221 83% 53%;
   --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
+  --primary-soft: 214 95% 93%;
+
+  /* Accents */
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 199 89% 96%;
+  --accent-foreground: 222 47% 11%;
+
+  /* Status */
+  --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 217.2 91.2% 59.8%;
+  --success: 152 60% 40%;
+  --success-foreground: 210 40% 98%;
+  --warning: 36 94% 50%;
+  --warning-foreground: 22 80% 12%;
+  --info: 199 89% 48%;
+  --info-foreground: 210 40% 98%;
+
+  /* Lines & focus */
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+
+  /* Gradient stops */
+  --gradient-from: 221 83% 53%;
+  --gradient-via: 199 89% 48%;
+  --gradient-to: 168 84% 42%;
+
   --radius: 0.625rem;
 }
 
 .dark {
-  --background: 222.2 47% 6%;
+  --background: 222 47% 5%;
   --foreground: 210 40% 98%;
-  --card: 222.2 47% 8%;
+  --card: 222 47% 7%;
   --card-foreground: 210 40% 98%;
-  --primary: 217.2 91.2% 59.8%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-  --secondary: 217.2 32.6% 14%;
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 11%;
+  --primary-soft: 217 91% 16%;
+
+  --secondary: 217 33% 12%;
   --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 14%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 18%;
+  --muted: 217 33% 13%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 217 33% 16%;
   --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 40%;
+
+  --destructive: 0 63% 45%;
   --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 18%;
-  --input: 217.2 32.6% 18%;
-  --ring: 217.2 91.2% 59.8%;
+  --success: 152 60% 42%;
+  --success-foreground: 210 40% 98%;
+  --warning: 36 94% 55%;
+  --warning-foreground: 22 80% 12%;
+  --info: 199 89% 55%;
+  --info-foreground: 210 40% 98%;
+
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 217 91% 60%;
+
+  --gradient-from: 217 91% 60%;
+  --gradient-via: 199 89% 50%;
+  --gradient-to: 168 84% 45%;
 }
 
 * {
@@ -56,6 +93,7 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Pleasant custom scrollbar */
@@ -78,14 +116,64 @@ body {
   background-color: hsl(var(--muted-foreground) / 0.55);
 }
 
-/* Subtle grid / glow background used on the landing hero */
+/* Subtle grid background used on the landing hero */
 .bg-grid {
   background-image:
-    linear-gradient(to right, hsl(var(--border) / 0.6) 1px, transparent 1px),
-    linear-gradient(to bottom, hsl(var(--border) / 0.6) 1px, transparent 1px);
+    linear-gradient(to right, hsl(var(--border) / 0.7) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.7) 1px, transparent 1px);
   background-size: 36px 36px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 50%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 50%, transparent 100%);
+}
+
+/* Animated gradient mesh used behind the hero */
+.bg-hero-mesh {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+.bg-hero-mesh::before,
+.bg-hero-mesh::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: meshFloat 18s ease-in-out infinite;
+}
+.bg-hero-mesh::before {
+  top: -10%;
+  left: -10%;
+  width: 48rem;
+  height: 48rem;
+  background: radial-gradient(circle at 30% 30%, hsl(var(--primary) / 0.6), transparent 60%);
+}
+.bg-hero-mesh::after {
+  bottom: -20%;
+  right: -10%;
+  width: 40rem;
+  height: 40rem;
+  background: radial-gradient(circle at 70% 70%, hsl(var(--gradient-to) / 0.5), transparent 60%);
+  animation-delay: -9s;
+}
+
+.dark .bg-hero-mesh::before {
+  opacity: 0.4;
+}
+.dark .bg-hero-mesh::after {
+  opacity: 0.4;
+}
+
+@keyframes meshFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(3%, -3%) scale(1.05);
+  }
 }
 
 /* Hide default marker on lists where we render our own */
@@ -95,10 +183,73 @@ body {
   padding: 0;
 }
 
+/* Brand text gradient used in CTA buttons / hero accents */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--gradient-from)),
+    hsl(var(--gradient-via)),
+    hsl(var(--gradient-to))
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.bg-gradient-brand {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--gradient-from)),
+    hsl(var(--gradient-via)),
+    hsl(var(--gradient-to))
+  );
+}
+
+/* Hover lift used by cards / nav items */
+.lift {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.lift:hover {
+  transform: translateY(-2px);
+}
+
 /* Smooth focus ring removal for touch devices */
 @media (pointer: coarse) {
   *:focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
   }
+}
+
+/* Page transition (used with framer-motion) */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .bg-hero-mesh::before,
+  .bg-hero-mesh::after {
+    animation: none;
+  }
+}
+
+/* Tour highlight ring (used by guided-tour) */
+.tour-highlight {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+  transition: outline 0.2s ease;
+  position: relative;
+  z-index: 5;
 }

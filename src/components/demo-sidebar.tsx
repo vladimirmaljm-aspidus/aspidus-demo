@@ -18,10 +18,12 @@ import {
   Settings,
   ChevronLeft,
   ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useT } from "@/components/i18n-provider";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 type NavItem = {
   href: string;
@@ -73,12 +75,16 @@ export function DemoSidebar({ onNavigate }: { onNavigate?: () => void }) {
     <aside className="flex h-full flex-col bg-card">
       {/* Brand */}
       <div className="flex h-16 items-center gap-2 border-b px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+        <Link href="/" className="flex items-center gap-2" onClick={onNavigate}>
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-brand text-primary-foreground">
             <ShieldCheck className="h-5 w-5" />
           </span>
           <span className="text-lg font-bold tracking-tight">{t("brand.name")}</span>
         </Link>
+        <Badge variant="warning" className="ml-auto hidden items-center gap-1 px-2 py-0.5 text-[10px] lg:inline-flex">
+          <Sparkles className="h-3 w-3" />
+          {t("demo.modeIndicator")}
+        </Badge>
       </div>
 
       {/* Nav */}
@@ -108,7 +114,7 @@ export function DemoSidebar({ onNavigate }: { onNavigate?: () => void }) {
                         href={item.href}
                         onClick={onNavigate}
                         className={cn(
-                          "flex items-center gap-2.5 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                          "lift flex items-center gap-2.5 rounded-md px-3 py-2 text-sm font-medium transition-colors",
                           active
                             ? "bg-primary/10 text-primary"
                             : "text-muted-foreground hover:bg-accent hover:text-foreground",
@@ -124,7 +130,9 @@ export function DemoSidebar({ onNavigate }: { onNavigate?: () => void }) {
                         title="Demo locked"
                       >
                         {content}
-                        <span className="ml-auto text-[10px] uppercase">soon</span>
+                        <Badge variant="muted" className="ml-auto px-1.5 py-0 text-[9px] uppercase tracking-wider">
+                          Soon
+                        </Badge>
                       </span>
                     )}
                   </li>
@@ -138,7 +146,7 @@ export function DemoSidebar({ onNavigate }: { onNavigate?: () => void }) {
       {/* Exit demo */}
       <div className="border-t p-3">
         <Button asChild variant="outline" size="sm" className="w-full">
-          <Link href="/">
+          <Link href="/" onClick={onNavigate}>
             <ChevronLeft className="h-4 w-4" />
             {t("demo.exit")}
           </Link>

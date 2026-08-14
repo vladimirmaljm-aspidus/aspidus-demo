@@ -57,7 +57,7 @@ export default function ProductsPage() {
         action={
           <Button>
             <Plus className="h-4 w-4" />
-            {t("offers.new")}
+            {t("products.add")}
           </Button>
         }
       />
@@ -132,15 +132,15 @@ export default function ProductsPage() {
                           {formatNumber(p.stock)} <span className="text-xs font-normal text-muted-foreground">{p.unit}</span>
                         </>
                       ) : (
-                        <span className="text-red-600">Out of stock</span>
+                        <span className="text-red-600">{t("common.outOfStock")}</span>
                       )}
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-4 flex items-center justify-between border-t pt-3 text-xs text-muted-foreground">
-                  <span>Origin: <span className="font-medium text-foreground">{p.origin}</span></span>
-                  <Button variant="outline" size="sm">View</Button>
+                  <span className="truncate">{t("common.origin")}: <span className="font-medium text-foreground">{p.origin}</span></span>
+                  <Button variant="outline" size="sm">{t("common.view")}</Button>
                 </div>
               </CardContent>
             </Card>
@@ -151,7 +151,7 @@ export default function ProductsPage() {
       {filtered.length === 0 && (
         <Card>
           <CardContent className="p-10 text-center text-muted-foreground">
-            No products match “{query}”.
+            {t("common.empty.products")}
           </CardContent>
         </Card>
       )}

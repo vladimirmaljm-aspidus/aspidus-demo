@@ -6,3 +6,5 @@ build/
 .vercel
 *.tsbuildinfo
 dev.log
+.next/
+.next/

@@ -74,7 +74,9 @@ export default function DashboardPage() {
                 <TrendingUp className="h-4 w-4 text-primary" />
                 {t("kpi.revenue")}
               </CardTitle>
-              <CardDescription>Last 6 months · {dashboardKpis.revenueCurrency}</CardDescription>
+              <CardDescription>
+                {t("common.last6Months")} · {dashboardKpis.revenueCurrency}
+              </CardDescription>
             </div>
             <Badge variant="success" className="gap-1">
               <ArrowUpRight className="h-3 w-3" /> +{dashboardKpis.revenueDelta}%
@@ -89,7 +91,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader>
             <CardTitle>{t("dash.tradeVolume")}</CardTitle>
-            <CardDescription>Current month</CardDescription>
+            <CardDescription>{t("common.currentMonth")}</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             {tradeVolumeByCurrency.map((row) => (
@@ -103,7 +105,7 @@ export default function DashboardPage() {
                     initial={{ width: 0 }}
                     animate={{ width: `${row.share}%` }}
                     transition={{ duration: 0.6 }}
-                    className="h-full rounded-full bg-primary"
+                    className="h-full rounded-full bg-gradient-brand"
                   />
                 </div>
               </div>
@@ -118,7 +120,7 @@ export default function DashboardPage() {
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
               <CardTitle>{t("dash.recentOffers")}</CardTitle>
-              <CardDescription>Latest 4 offers</CardDescription>
+              <CardDescription>{t("common.latest4Offers")}</CardDescription>
             </div>
             <Button asChild variant="ghost" size="sm">
               <Link href="/demo/offers">{t("common.viewAll")}</Link>
@@ -151,7 +153,7 @@ export default function DashboardPage() {
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
               <CardTitle>{t("dash.upcoming")}</CardTitle>
-              <CardDescription>Next due invoices</CardDescription>
+              <CardDescription>{t("common.nextDueInvoices")}</CardDescription>
             </div>
             <Button asChild variant="ghost" size="sm">
               <Link href="/demo/invoices">{t("common.viewAll")}</Link>
@@ -167,7 +169,7 @@ export default function DashboardPage() {
                       <StatusBadge status={inv.status} t={t} />
                     </div>
                     <div className="mt-0.5 truncate text-xs text-muted-foreground">
-                      {inv.partnerName} · due {formatDate(inv.due)}
+                      {inv.partnerName} · {formatDate(inv.due)}
                     </div>
                   </div>
                   <div className="text-right text-sm font-semibold">

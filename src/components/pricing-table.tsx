@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { LanguageSelector } from "@/components/language-selector";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { useT } from "@/components/i18n-provider";
 import { pricingPlans, type PricingPlan } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
+import { LanguageSelector } from "@/components/language-selector";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function PricingTable() {
   const t = useT();
@@ -43,16 +43,19 @@ export function PricingTable() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: idx * 0.06 }}
+            className="h-full"
           >
             <Card
               className={cn(
-                "relative flex h-full flex-col",
-                plan.highlight && "border-primary shadow-lg ring-2 ring-primary/20",
+                "lift relative flex h-full flex-col",
+                plan.highlight
+                  ? "border-primary shadow-lg ring-2 ring-primary/30 lg:scale-[1.03]"
+                  : "",
               )}
             >
               {plan.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <Badge className="bg-primary px-3 py-1 text-primary-foreground shadow">
+                  <Badge className="bg-gradient-brand px-3 py-1 text-primary-foreground shadow">
                     {t("pricing.mostPopular")}
                   </Badge>
                 </div>
@@ -62,7 +65,9 @@ export function PricingTable() {
                 <CardDescription>{plan.tagline}</CardDescription>
                 <div className="mt-3 flex items-baseline gap-1">
                   {plan.priceMonthly === null ? (
-                    <span className="text-3xl font-extrabold tracking-tight">Custom</span>
+                    <span className="text-3xl font-extrabold tracking-tight">
+                      {t("pricing.custom")}
+                    </span>
                   ) : (
                     <>
                       <span className="text-3xl font-extrabold tracking-tight">
@@ -87,15 +92,21 @@ export function PricingTable() {
                 </ul>
 
                 <div className="mt-6 pt-2">
-                  {plan.ctaKey === "trial" ? (
-                    <Button asChild className="w-full" variant={plan.highlight ? "default" : "outline"}>
-                      <Link href="/trial">{t("pricing.choose")}</Link>
-                    </Button>
-                  ) : (
-                    <Button asChild variant="outline" className="w-full">
-                      <Link href="/trial">{t("pricing.contact")}</Link>
-                    </Button>
-                  )}
+                  <Button
+                    asChild
+                    className="w-full"
+                    variant={plan.highlight ? "default" : "outline"}
+                  >
+                    <Link
+                      href={
+                        plan.ctaKey === "trial"
+                          ? `/trial?plan=${plan.id}`
+                          : `/contact?subject=${encodeURIComponent(`Interested in ${plan.name} plan`)}`
+                      }
+                    >
+                      {plan.ctaKey === "trial" ? t("pricing.choose") : t("pricing.contact")}
+                    </Link>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -106,18 +117,18 @@ export function PricingTable() {
       {/* Comparison table */}
       <Card>
         <CardHeader>
-          <CardTitle>Compare all features</CardTitle>
-          <CardDescription>Side-by-side comparison of every plan.</CardDescription>
+          <CardTitle>{t("pricing.compareTitle")}</CardTitle>
+          <CardDescription>{t("pricing.compareSubtitle")}</CardDescription>
         </CardHeader>
         <CardContent className="p-0">
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead className="border-b bg-muted/40 text-left text-xs uppercase tracking-wider text-muted-foreground">
                 <tr>
-                  <th className="px-6 py-3 font-medium">Feature</th>
+                  <th className="px-6 py-3 font-medium">{t("pricing.compareTitle")}</th>
                   {pricingPlans.map((p) => (
                     <th key={p.id} className="px-6 py-3 text-center font-medium">
-                      {p.name}
+                      <span className={cn(p.highlight && "text-primary")}>{p.name}</span>
                     </th>
                   ))}
                 </tr>
@@ -144,9 +155,9 @@ export function PricingTable() {
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <li className="flex items-center justify-between">
+    <li className="flex items-center justify-between gap-2">
       <span className="text-muted-foreground">{label}</span>
-      <span className="font-medium">{value}</span>
+      <span className="text-right font-medium">{value}</span>
     </li>
   );
 }
@@ -180,9 +191,10 @@ export function PricingPage() {
       <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-2">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+            <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-brand text-primary-foreground">
               <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
                 <path d="M12 2 4 7v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-5Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
+                <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </span>
             <span className="text-lg font-bold">{t("brand.name")}</span>
@@ -199,8 +211,7 @@ export function PricingPage() {
             </Link>
           </nav>
           <div className="flex items-center gap-1">
-            <LanguageSelector compact />
-            <ThemeToggle />
+            <PricingLangToggle />
             <Button asChild>
               <Link href="/trial">{t("nav.trial")}</Link>
             </Button>
@@ -229,6 +240,16 @@ export function PricingPage() {
           © {new Date().getFullYear()} {t("brand.name")}. {t("footer.rights")}
         </div>
       </footer>
+    </div>
+  );
+}
+
+/** Inline language + theme toggle for the standalone pricing page header. */
+function PricingLangToggle() {
+  return (
+    <div className="flex items-center gap-1">
+      <LanguageSelector compact />
+      <ThemeToggle />
     </div>
   );
 }

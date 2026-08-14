@@ -46,10 +46,10 @@ export default function OffersPage() {
       />
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <SummaryCard label="Total offers" value={String(filtered.length)} />
-        <SummaryCard label="Accepted value" value={formatCurrency(totalValue, "USD")} accent="text-emerald-600" />
-        <SummaryCard label="Pending" value={String(offers.filter((o) => o.status === "sent").length)} accent="text-blue-600" />
-        <SummaryCard label="Rejected" value={String(offers.filter((o) => o.status === "rejected").length)} accent="text-red-600" />
+        <SummaryCard label={t("common.totalOffers")} value={String(filtered.length)} />
+        <SummaryCard label={t("common.acceptedValue")} value={formatCurrency(totalValue, "USD")} accent="text-emerald-600" />
+        <SummaryCard label={t("common.pending")} value={String(offers.filter((o) => o.status === "sent").length)} accent="text-blue-600" />
+        <SummaryCard label={t("common.rejected")} value={String(offers.filter((o) => o.status === "rejected").length)} accent="text-red-600" />
       </div>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -71,7 +71,7 @@ export default function OffersPage() {
               onClick={() => setStatus(s)}
               className="capitalize"
             >
-              {s === "all" ? "All" : t(`common.status.${s}`)}
+              {s === "all" ? t("common.all") : t(`common.status.${s}`)}
             </Button>
           ))}
         </div>
@@ -99,7 +99,9 @@ export default function OffersPage() {
                         <FileText className="h-4 w-4 text-muted-foreground" />
                         <span className="font-mono font-medium">{o.number}</span>
                       </div>
-                      <div className="ml-6 text-xs text-muted-foreground">{o.items} item{o.items > 1 ? "s" : ""}</div>
+                      <div className="ml-6 text-xs text-muted-foreground">
+                        {o.items} {o.items > 1 ? t("common.items") : t("common.item")}
+                      </div>
                     </td>
                     <td className="px-6 py-3">{o.partnerName}</td>
                     <td className="px-6 py-3 text-muted-foreground">{formatDate(o.date)}</td>
@@ -115,7 +117,7 @@ export default function OffersPage() {
                 {filtered.length === 0 && (
                   <tr>
                     <td colSpan={6} className="px-6 py-10 text-center text-muted-foreground">
-                      No offers match your filters.
+                      {t("common.empty.offers")}
                     </td>
                   </tr>
                 )}

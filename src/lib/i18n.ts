@@ -1214,12 +1214,995 @@ const ru: Dict = {
   "common.filter": "Фильтр",
 };
 
-export const DICTIONARIES: Record<Locale, Dict> = { en, sr, tr, de, ru };
+/** Extra keys added during the demo overhaul (about / contact / faq / privacy / terms pages,
+ * plus new common UI labels). Merged into each locale's dictionary at lookup time. */
+const EXTRA: Record<Locale, Dict> = {
+  en: {
+    "nav.about": "About",
+    "nav.contact": "Contact",
+    "nav.faq": "FAQ",
+    "nav.privacy": "Privacy",
+    "nav.terms": "Terms",
+    "nav.menu": "Menu",
+    "demo.user": "Demo User",
+    "demo.role": "Administrator",
+    "demo.modeIndicator": "Demo Mode",
+    "demo.searchResults": "Search results",
+    "demo.noResults": "No results found",
+    "demo.searchHint": "Partners · Offers · Invoices · Products",
+    "common.outOfStock": "Out of stock",
+    "common.origin": "Origin",
+    "common.view": "View",
+    "common.actions": "Actions",
+    "common.all": "All",
+    "products.add": "Add Product",
+    "common.totalOutstanding": "Total outstanding",
+    "common.totalOffers": "Total offers",
+    "common.acceptedValue": "Accepted value",
+    "common.pending": "Pending",
+    "common.rejected": "Rejected",
+    "common.overdue": "Overdue",
+    "common.paidPeriod": "Paid (this period)",
+    "common.savedCalculations": "Saved calculations",
+    "common.recentCalculations": "Recent trade calculations from your team",
+    "common.last6Months": "Last 6 months",
+    "common.currentMonth": "Current month",
+    "common.latest4Offers": "Latest 4 offers",
+    "common.nextDueInvoices": "Next due invoices",
+    "common.vsLastMonth": "vs last month",
+    "common.empty.offers": "No offers match your filters.",
+    "common.empty.invoices": "No invoices match your filters.",
+    "common.empty.partners": "No partners match your search.",
+    "common.empty.products": "No products match your search.",
+    "common.empty.search": "No results found for your search.",
+    "common.items": "items",
+    "common.item": "item",
+    "pricing.compareTitle": "Compare all features",
+    "pricing.compareSubtitle": "Side-by-side comparison of every plan.",
+    "pricing.custom": "Custom",
+    "trial.legal":
+      "By submitting you agree to our Terms and Privacy Policy. No credit card required.",
+    "trial.badge": "10-day free trial",
+    "trial.backToDemo": "Back to demo",
+    "calc.buyPrice": "Buy price",
+    "calc.sellPrice": "Sell price",
+    "calc.margin": "Margin",
+    "calc.marginPct": "Margin %",
+    "calc.profit": "Gross profit",
+    "calc.revenue": "Revenue",
+    "calc.cost": "Cost",
+    "calc.sellCurrency": "Sell currency",
+    "calc.buyCurrency": "Buy currency",
+    "calc.results.revenue": "Total revenue",
+    "calc.results.cost": "Total cost",
+    "calc.results.profit": "Gross profit",
+    "calc.results.margin": "Margin %",
+    "calc.saveCalc": "Save calculation",
+    "calc.livePreview": "Live preview",
+    "calc.preset": "Preset",
+
+    // About page
+    "about.title": "About Aspidus",
+    "about.subtitle": "We build the operating system for international trade.",
+    "about.mission.title": "Our mission",
+    "about.mission.body":
+      "Aspidus was founded by traders who got tired of stitching spreadsheets, WhatsApp threads and outdated ERPs together. We are building the unified workspace that brings the whole trade desk — front office, back office and partners — onto a single source of truth.",
+    "about.story.title": "Our story",
+    "about.story.body":
+      "From a small team in Belgrade in 2021, Aspidus now serves trading houses across 30+ countries. Our customers move fertilizers, grains, metals, coffee and chemicals across borders every day — and they trust Aspidus to keep their offers, invoices and calculations accurate down to the cent.",
+    "about.values.title": "What we stand for",
+    "about.value.1.title": "Precision",
+    "about.value.1.body":
+      "Trade is a low-margin business. A single decimal point matters. We obsess over correctness.",
+    "about.value.2.title": "Speed",
+    "about.value.2.body":
+      "Offers move at the speed of the market. Aspidus loads in under a second, even on hotel Wi-Fi.",
+    "about.value.3.title": "Partnership",
+    "about.value.3.body":
+      "We grow only when our customers grow. Every roadmap item starts from a customer request.",
+    "about.stats.title": "Aspidus in numbers",
+    "about.stats.customers": "Trading houses",
+    "about.stats.countries": "Countries served",
+    "about.stats.volume": "Annual trade managed",
+    "about.stats.uptime": "Platform uptime",
+
+    // Contact page
+    "contact.title": "Contact us",
+    "contact.subtitle":
+      "Tell us about your trade desk — we will get back within one business day.",
+    "contact.company": "Company",
+    "contact.name": "Your name",
+    "contact.email": "Work email",
+    "contact.subject": "Subject",
+    "contact.message": "Message",
+    "contact.submit": "Send message",
+    "contact.success.title": "Message sent",
+    "contact.success.body":
+      "Thanks for reaching out. Our team will reply within one business day.",
+    "contact.info.title": "Other ways to reach us",
+    "contact.info.emailLabel": "Email",
+    "contact.info.phoneLabel": "Phone",
+    "contact.info.addressLabel": "Office",
+    "contact.info.email": "hello@aspidus.app",
+    "contact.info.phone": "+381 11 0000 000",
+    "contact.info.address": "Bulevar oslobođenja 11, 21000 Novi Sad, Serbia",
+    "contact.placeholder.company": "Acme Trading Ltd.",
+    "contact.placeholder.name": "John Doe",
+    "contact.placeholder.email": "you@company.com",
+    "contact.placeholder.subject": "How can we help?",
+    "contact.placeholder.message": "Tell us about your trade desk and what you would like to achieve with Aspidus.",
+
+    // FAQ page
+    "faq.title": "Frequently asked questions",
+    "faq.subtitle":
+      "Everything you need to know about Aspidus. Cannot find the answer? Reach out to our team.",
+    "faq.items.1.q": "How does the 10-day free trial work?",
+    "faq.items.1.a":
+      "Sign up with your work email, choose a plan, and you will receive payment instructions by email. Once the activation fee is processed, your 10-day trial starts with full platform access — no feature limits, no credit card on file.",
+    "faq.items.2.q": "Do I need a credit card to start the trial?",
+    "faq.items.2.a":
+      "No. We send payment instructions by email once you submit the trial form. You can pay by bank transfer or card — your trial only starts after the activation fee is received.",
+    "faq.items.3.q": "Which currencies does Aspidus support?",
+    "faq.items.3.a":
+      "50+ currencies with live exchange rates and automatic revaluation of open items. You can price, invoice and settle in different currencies in the same offer.",
+    "faq.items.4.q": "Can I bring my own exchange rate feed?",
+    "faq.items.4.a":
+      "Yes. Enterprise and Custom plans support custom FX feeds (ECB, central banks, Bloomberg, your own bank) alongside the default Aspidus rates.",
+    "faq.items.5.q": "Is my data secure?",
+    "faq.items.5.a":
+      "All traffic is encrypted in transit (TLS 1.3) and at rest (AES-256). We run on ISO 27001-certified infrastructure in the EU, with daily backups and full audit trails on every record.",
+    "faq.items.6.q": "Can I export my data if I leave?",
+    "faq.items.6.a":
+      "Always. Every list (partners, products, offers, invoices, calculations) can be exported to CSV or Excel with one click. Your data is yours.",
+    "faq.items.7.q": "Do you offer onboarding?",
+    "faq.items.7.a":
+      "Yes. Business and above include guided onboarding. Enterprise and Custom include a dedicated customer success manager and in-person training for your trade desk.",
+    "faq.items.8.q": "Do you have a partner portal?",
+    "faq.items.8.a":
+      "Yes. Invite buyers, suppliers and agents to view their offers, upload KYC documents and respond to RFQs in a secure branded portal — included on Business and above.",
+
+    // Privacy & Terms
+    "privacy.title": "Privacy Policy",
+    "privacy.updated": "Last updated: January 2025",
+    "privacy.intro":
+      "This Privacy Policy explains how Aspidus («we», «us») collects, uses and protects your personal data when you use our platform and website.",
+    "privacy.collect.title": "1. Data we collect",
+    "privacy.collect.body":
+      "Account data (name, email, company), usage data (pages visited, features used), and transactional data you create inside the platform (partners, offers, invoices, calculations).",
+    "privacy.use.title": "2. How we use it",
+    "privacy.use.body":
+      "To provide and improve the service, send you account and billing notifications, and respond to support requests. We never sell your data.",
+    "privacy.store.title": "3. Storage and retention",
+    "privacy.store.body":
+      "Data is stored on ISO 27001-certified EU infrastructure, encrypted at rest with AES-256. We retain your data for the lifetime of your account and 90 days after deletion, then it is purged.",
+    "privacy.rights.title": "4. Your rights",
+    "privacy.rights.body":
+      "You can request export, correction or deletion of your data at any time by emailing privacy@aspidus.app. We respond within 30 days.",
+    "privacy.contact.title": "5. Contact",
+    "privacy.contact.body":
+      "Questions about this policy? Write to privacy@aspidus.app or Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Serbia.",
+
+    "terms.title": "Terms of Service",
+    "terms.updated": "Last updated: January 2025",
+    "terms.intro":
+      "These Terms govern your use of the Aspidus platform. By signing up you agree to them.",
+    "terms.accept.title": "1. Acceptance of terms",
+    "terms.accept.body":
+      "By creating an account you agree to these Terms and our Privacy Policy. If you do not agree, do not use the platform.",
+    "terms.accounts.title": "2. Accounts",
+    "terms.accounts.body":
+      "You are responsible for keeping your credentials secure and for all activity under your account. Notify us immediately at security@aspidus.app of any unauthorized use.",
+    "terms.use.title": "3. Acceptable use",
+    "terms.use.body":
+      "You may not use Aspidus to facilitate illegal trade, money laundering, sanctioned-party transactions or any activity prohibited by applicable law. We reserve the right to suspend accounts that violate these rules.",
+    "terms.payment.title": "4. Payment",
+    "terms.payment.body":
+      "Plans are billed monthly in advance. The 10-day trial activation fee is non-refundable. You can upgrade, downgrade or cancel at any time; changes take effect at the next billing cycle.",
+    "terms.liability.title": "5. Liability",
+    "terms.liability.body":
+      "Aspidus is provided «as is». To the maximum extent permitted by law, we are not liable for indirect or consequential damages arising from use of the platform.",
+    "terms.contact.title": "6. Contact",
+    "terms.contact.body":
+      "Questions about these Terms? Write to legal@aspidus.app or Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Serbia.",
+
+    // Features page
+    "features.pageBadge": "Platform features",
+    "features.pageSubtitle":
+      "A complete trade operating system — from first inquiry to final payment.",
+    "features.cta.title": "Ready to see it in action?",
+    "features.cta.body": "Spin up a fully-loaded demo in seconds. No signup required.",
+    "features.cta.demo": "Open live demo",
+    "features.cta.trial": "Start free trial",
+  },
+  sr: {
+    "nav.about": "O nama",
+    "nav.contact": "Kontakt",
+    "nav.faq": "FAQ",
+    "nav.privacy": "Privatnost",
+    "nav.terms": "Uslovi",
+    "nav.menu": "Meni",
+    "demo.user": "Demo korisnik",
+    "demo.role": "Administrator",
+    "demo.modeIndicator": "Demo režim",
+    "demo.searchResults": "Rezultati pretrage",
+    "demo.noResults": "Nema rezultata",
+    "demo.searchHint": "Partneri · Ponude · Fakture · Proizvodi",
+    "common.outOfStock": "Nema na zalihama",
+    "common.origin": "Poreklo",
+    "common.view": "Pogledaj",
+    "common.actions": "Akcije",
+    "common.all": "Sve",
+    "products.add": "Dodaj proizvod",
+    "common.totalOutstanding": "Ukupno otvoreno",
+    "common.totalOffers": "Ukupno ponuda",
+    "common.acceptedValue": "Prihvaćena vrednost",
+    "common.pending": "Na čekanju",
+    "common.rejected": "Odbijeno",
+    "common.overdue": "Dospelo",
+    "common.paidPeriod": "Plaćeno (period)",
+    "common.savedCalculations": "Sačuvani proračuni",
+    "common.recentCalculations": "Nedavni proračuni vašeg tima",
+    "common.last6Months": "Poslednjih 6 meseci",
+    "common.currentMonth": "Tekući mesec",
+    "common.latest4Offers": "Poslednje 4 ponude",
+    "common.nextDueInvoices": "Sledeće fakture po roku",
+    "common.vsLastMonth": "vs prošli mesec",
+    "common.empty.offers": "Nema ponuda po filterima.",
+    "common.empty.invoices": "Nema faktura po filterima.",
+    "common.empty.partners": "Nema partnera po pretrazi.",
+    "common.empty.products": "Nema proizvoda po pretrazi.",
+    "common.empty.search": "Nema rezultata pretrage.",
+    "common.items": "stavki",
+    "common.item": "stavka",
+    "pricing.compareTitle": "Uporedite sve mogućnosti",
+    "pricing.compareSubtitle": "Uporedni pregled svih planova.",
+    "pricing.custom": "Prilagođeno",
+    "trial.legal":
+      "Slanjem prihvatate Uslove i Politiku privatnosti. Bez kreditne kartice.",
+    "trial.badge": "10-dnevna besplatna proba",
+    "trial.backToDemo": "Nazad u demo",
+    "calc.buyPrice": "Nabavna cena",
+    "calc.sellPrice": "Prodajna cena",
+    "calc.margin": "Marža",
+    "calc.marginPct": "Marža %",
+    "calc.profit": "Bruto dobit",
+    "calc.revenue": "Prihod",
+    "calc.cost": "Trošak",
+    "calc.sellCurrency": "Prodajna valuta",
+    "calc.buyCurrency": "Nabavna valuta",
+    "calc.results.revenue": "Ukupni prihod",
+    "calc.results.cost": "Ukupni trošak",
+    "calc.results.profit": "Bruto dobit",
+    "calc.results.margin": "Marža %",
+    "calc.saveCalc": "Sačuvaj proračun",
+    "calc.livePreview": "Pregled uživo",
+    "calc.preset": "Preset",
+
+    "about.title": "O Aspidusu",
+    "about.subtitle": "Gradimo operativni sistem za međunarodnu trgovinu.",
+    "about.mission.title": "Naša misija",
+    "about.mission.body":
+      "Aspidus su osnovali trgovci umorni od kombinovanja tabela, WhatsApp razgovora i zastarelih ERP-ova. Gradimo objedinjeni radni prostor koji ceo trgovački sto — front office, back office i partnere — postavlja na jedan izvor istine.",
+    "about.story.title": "Naša priča",
+    "about.story.body":
+      "Iz malog tima u Beogradu 2021. godine, Aspidus danas služi trgovačkim kućama u 30+ zemalja. Naši kupci svakodnevno prevoze đubriva, žitarice, metale, kafu i hemikalije preko granica — i veruju Aspidusu da njihove ponude, fakture i proračune budu tačni do poslednjeg centa.",
+    "about.values.title": "Za šta se zalažemo",
+    "about.value.1.title": "Preciznost",
+    "about.value.1.body":
+      "Trgovina je niskomaržni biznis. Jedan decimalni zarez je bitan. Opsednuti smo tačnošću.",
+    "about.value.2.title": "Brzina",
+    "about.value.2.body":
+      "Ponude se kreću brzinom tržišta. Aspidus se učitava za manje od sekunde, čak na hotelskom Wi-Fi-ju.",
+    "about.value.3.title": "Partnerstvo",
+    "about.value.3.body":
+      "Rastemo samo kad naši kupci rastu. Svaka stavka roadmapa kreće od zahteva kupca.",
+    "about.stats.title": "Aspidus u brojkama",
+    "about.stats.customers": "Trgovačke kuće",
+    "about.stats.countries": "Obuhvaćene zemlje",
+    "about.stats.volume": "Godišnja trgovina",
+    "about.stats.uptime": "Vreme rada platforme",
+
+    "contact.title": "Kontaktirajte nas",
+    "contact.subtitle":
+      "Recite nam o svom trgovačkom sto — odgovaramo u roku jednog radnog dana.",
+    "contact.company": "Kompanija",
+    "contact.name": "Vaše ime",
+    "contact.email": "Poslovni email",
+    "contact.subject": "Tema",
+    "contact.message": "Poruka",
+    "contact.submit": "Pošalji poruku",
+    "contact.success.title": "Poruka poslata",
+    "contact.success.body":
+      "Hvala što ste nas kontaktirali. Naš tim odgovara u roku jednog radnog dana.",
+    "contact.info.title": "Drugi načini da nas dobijete",
+    "contact.info.emailLabel": "Email",
+    "contact.info.phoneLabel": "Telefon",
+    "contact.info.addressLabel": "Kancelarija",
+    "contact.info.email": "hello@aspidus.app",
+    "contact.info.phone": "+381 11 0000 000",
+    "contact.info.address": "Bulevar oslobođenja 11, 21000 Novi Sad, Srbija",
+    "contact.placeholder.company": "Acme Trading d.o.o.",
+    "contact.placeholder.name": "Marko Marković",
+    "contact.placeholder.email": "vi@kompanija.com",
+    "contact.placeholder.subject": "Kako možemo pomoći?",
+    "contact.placeholder.message":
+      "Recite nam o svom trgovačkom sto i šta biste želeli da postignete sa Aspidusom.",
+
+    "faq.title": "Često postavljana pitanja",
+    "faq.subtitle":
+      "Sve što treba da znate o Aspidusu. Ne možete da pronađete odgovor? Javite se našem timu.",
+    "faq.items.1.q": "Kako funkcioniše 10-dnevna besplatna proba?",
+    "faq.items.1.a":
+      "Prijavite se poslovnim emailom, izaberite plan i primaćete uputstva za plaćanje emailom. Kada se aktivaciona naknada procesuira, vaša 10-dnevna proba počinje sa punim pristupom — bez ograničenja, bez kreditne kartice.",
+    "faq.items.2.q": "Da li mi treba kreditna kartica za početak probe?",
+    "faq.items.2.a":
+      "Ne. Šaljemo uputstva za plaćanje emailom nakon što popunite formu. Možete platiti bankovnim transferom ili karticom — proba počinje tek po prijemu naknade.",
+    "faq.items.3.q": "Koje valute Aspidus podržava?",
+    "faq.items.3.a":
+      "50+ valuta sa živim kursevima i automatskom revalorizacijom. Možete ceniti, fakturisati i poravnavati u različitim valutama unutar iste ponude.",
+    "faq.items.4.q": "Mogu li da koristim sopstveni izvor kurseva?",
+    "faq.items.4.a":
+      "Da. Enterprise i Custom planovi podržavaju prilagođene FX izvore (ECB, centralne banke, Bloomberg, vaša banka) uz podrazumevane Aspidus kurseve.",
+    "faq.items.5.q": "Da li su moji podaci sigurni?",
+    "faq.items.5.a":
+      "Sav saobraćaj je šifrovan u tranzitu (TLS 1.3) i u mirovanju (AES-256). Radimo na ISO 27001 sertifikovanoj infrastrukturi u EU, sa dnevnim backupima i potpunim revizijskim tragom.",
+    "faq.items.6.q": "Mogu li da izvezem podatke ako odem?",
+    "faq.items.6.a":
+      "Uvek. Svaka lista (partneri, proizvodi, ponude, fakture, proračuni) se izvozi u CSV ili Excel jednim klikom. Vaši podaci su vaši.",
+    "faq.items.7.q": "Da li nudite onboarding?",
+    "faq.items.7.a":
+      "Da. Business i iznad uključuju vođeni onboarding. Enterprise i Custom uključuju dedikovanog customer success menadžera i lični trening.",
+    "faq.items.8.q": "Da li imate portal za partnere?",
+    "faq.items.8.a":
+      "Da. Pozovite kupce, dobavljače i agente da pregledaju ponude, postave KYC i odgovore na RFQ u sigurnom brendiranom portalu — uključeno od Business plana.",
+
+    "privacy.title": "Politika privatnosti",
+    "privacy.updated": "Poslednje ažuriranje: januar 2025",
+    "privacy.intro":
+      "Ova Politika privatnosti objašnjava kako Aspidus („mi”) prikuplja, koristi i štiti vaše lične podatke kada koristite našu platformu i sajt.",
+    "privacy.collect.title": "1. Podaci koje prikupljamo",
+    "privacy.collect.body":
+      "Podaci o nalogu (ime, email, kompanija), podaci o korišćenju (posete, funkcije) i transakcioni podaci koje kreirate (partneri, ponude, fakture, proračuni).",
+    "privacy.use.title": "2. Kako ih koristimo",
+    "privacy.use.body":
+      "Za pružanje i unapređenje usluge, slanje naloga i naplate i odgovore na podršku. Nikada ne prodajemo vaše podatke.",
+    "privacy.store.title": "3. Skladištenje i zadržavanje",
+    "privacy.store.body":
+      "Podaci se čuvaju na ISO 27001 sertifikovanoj EU infrastrukturi, šifrovani AES-256. Zadržavamo podatke tokom trajanja naloga i 90 dana nakon brisanja.",
+    "privacy.rights.title": "4. Vaša prava",
+    "privacy.rights.body":
+      "Možete zatražiti izvoz, ispravku ili brisanje podataka slanjem emaila na privacy@aspidus.app. Odgovaramo u roku od 30 dana.",
+    "privacy.contact.title": "5. Kontakt",
+    "privacy.contact.body":
+      "Pitanja o ovoj politici? Pišite na privacy@aspidus.app ili Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Srbija.",
+
+    "terms.title": "Uslovi korišćenja",
+    "terms.updated": "Poslednje ažuriranje: januar 2025",
+    "terms.intro":
+      "Ovi Uslovi uređuju korišćenje Aspidus platforme. Prijavom prihvatate iste.",
+    "terms.accept.title": "1. Prihvatanje uslova",
+    "terms.accept.body":
+      "Kreiranjem naloga prihvatate ove Uslove i Politiku privatnosti. Ako ne prihvatate, ne koristite platformu.",
+    "terms.accounts.title": "2. Nalozi",
+    "terms.accounts.body":
+      "Odgovorni ste za sigurnost akreditiva i svu aktivnost pod vašim nalogom. Odmah nas obavestite na security@aspidus.app o neovlašćenoj upotrebi.",
+    "terms.use.title": "3. Prihvatljivo korišćenje",
+    "terms.use.body":
+      "Ne smete koristiti Aspidus za ilegalnu trgovinu, pranje novca, transakcije sa sankcionisanim licima ni aktivnosti zabranjene zakonom. Zadržavamo pravo suspenzije.",
+    "terms.payment.title": "4. Plaćanje",
+    "terms.payment.body":
+      "Planovi se naplaćuju mesečno unapred. Aktivaciona naknada za 10-dnevnu probu nije povratna. Možete nadograditi, sniziti ili otkazati u svakom trenutku.",
+    "terms.liability.title": "5. Odgovornost",
+    "terms.liability.body":
+      "Aspidus se pruža „kao što jeste”. Po zakonu, ne odgovaramo za indirektne ili posledične štete.",
+    "terms.contact.title": "6. Kontakt",
+    "terms.contact.body":
+      "Pitanja o Uslovima? Pišite na legal@aspidus.app ili Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Srbija.",
+
+    "features.pageBadge": "Mogućnosti platforme",
+    "features.pageSubtitle":
+      "Kompletan operativni sistem za trgovinu — od prvog upita do konačnog plaćanja.",
+    "features.cta.title": "Spremni da vidite?",
+    "features.cta.body": "Pokrenite potpuno demo za sekund. Bez prijave.",
+    "features.cta.demo": "Otvori demo",
+    "features.cta.trial": "Započni probu",
+  },
+  tr: {
+    "nav.about": "Hakkında",
+    "nav.contact": "İletişim",
+    "nav.faq": "SSS",
+    "nav.privacy": "Gizlilik",
+    "nav.terms": "Şartlar",
+    "nav.menu": "Menü",
+    "demo.user": "Demo Kullanıcı",
+    "demo.role": "Yönetici",
+    "demo.modeIndicator": "Demo Modu",
+    "demo.searchResults": "Arama sonuçları",
+    "demo.noResults": "Sonuç bulunamadı",
+    "demo.searchHint": "Partnerler · Teklifler · Faturalar · Ürünler",
+    "common.outOfStock": "Stokta yok",
+    "common.origin": "Menşei",
+    "common.view": "Görüntüle",
+    "common.actions": "İşlemler",
+    "common.all": "Tümü",
+    "products.add": "Ürün Ekle",
+    "common.totalOutstanding": "Toplam açık",
+    "common.totalOffers": "Toplam teklif",
+    "common.acceptedValue": "Kabul edilen tutar",
+    "common.pending": "Beklemede",
+    "common.rejected": "Reddedildi",
+    "common.overdue": "Vadesi geçmiş",
+    "common.paidPeriod": "Ödendi (dönem)",
+    "common.savedCalculations": "Kaydedilen hesaplamalar",
+    "common.recentCalculations": "Ekibinizin son ticaret hesaplamaları",
+    "common.last6Months": "Son 6 ay",
+    "common.currentMonth": "Bu ay",
+    "common.latest4Offers": "Son 4 teklif",
+    "common.nextDueInvoices": "Sonraki vade faturaları",
+    "common.vsLastMonth": "geçen aya göre",
+    "common.empty.offers": "Filtrelere uyan teklif yok.",
+    "common.empty.invoices": "Filtrelere uyan fatura yok.",
+    "common.empty.partners": "Aramanıza uyan partner yok.",
+    "common.empty.products": "Aramanıza uyan ürün yok.",
+    "common.empty.search": "Aramanız için sonuç bulunamadı.",
+    "common.items": "kalemler",
+    "common.item": "kalem",
+    "pricing.compareTitle": "Tüm özellikleri karşılaştırın",
+    "pricing.compareSubtitle": "Tüm planların yan yana karşılaştırması.",
+    "pricing.custom": "Özel",
+    "trial.legal":
+      "Göndererek Şartlar ve Gizlilik Politikası'nı kabul edersiniz. Kredi kartı gerekmez.",
+    "trial.badge": "10 günlük ücretsiz deneme",
+    "trial.backToDemo": "Demoya dön",
+    "calc.buyPrice": "Alış fiyatı",
+    "calc.sellPrice": "Satış fiyatı",
+    "calc.margin": "Marj",
+    "calc.marginPct": "Marj %",
+    "calc.profit": "Brüt kâr",
+    "calc.revenue": "Gelir",
+    "calc.cost": "Maliyet",
+    "calc.sellCurrency": "Satış para birimi",
+    "calc.buyCurrency": "Alış para birimi",
+    "calc.results.revenue": "Toplam gelir",
+    "calc.results.cost": "Toplam maliyet",
+    "calc.results.profit": "Brüt kâr",
+    "calc.results.margin": "Marj %",
+    "calc.saveCalc": "Hesaplamayı kaydet",
+    "calc.livePreview": "Canlı önizleme",
+    "calc.preset": "Hazır ayar",
+
+    "about.title": "Aspidus Hakkında",
+    "about.subtitle": "Uluslararası ticaret için işletim sistemi kuruyoruz.",
+    "about.mission.title": "Misyonumuz",
+    "about.mission.body":
+      "Aspidus, e-tabloları, WhatsApp konuşmalarını ve eski ERP'leri birleştirmekten bıkan tüccarlar tarafından kuruldu. Tüm ticaret masasını — ön ofis, arka ofis ve partnerler — tek bir doğru kaynak üzerinde birleştiren çalışma alanını inşa ediyoruz.",
+    "about.story.title": "Hikâyemiz",
+    "about.story.body":
+      "2021'de Belgrad'da küçük bir ekiple başlayan Aspidus, bugün 30+ ülkedeki ticaret evlerine hizmet veriyor. Müşterilerimiz her gün gübre, tahıl, metal, kahve ve kimyasalları sınırlar ötesine taşıyor — ve tekliflerinin, faturalarının ve hesaplamalarının son kuruşuna kadar doğru kalması için Aspidus'a güveniyorlar.",
+    "about.values.title": "Neyi temsil ediyoruz",
+    "about.value.1.title": "Hassasiyet",
+    "about.value.1.body":
+      "Ticaret düşük marjlı bir iştir. Tek bir ondalık basamak önemlidir. Doğruluğa takıntılıyız.",
+    "about.value.2.title": "Hız",
+    "about.value.2.body":
+      "Teklifler pazarın hızında hareket eder. Aspidus bir saniyenin altında yüklenir, otel Wi-Fi'ında bile.",
+    "about.value.3.title": "Ortaklık",
+    "about.value.3.body":
+      "Müşterilerimiz büyüdükçe büyüyoruz. Yol haritamızdaki her madde bir müşteri talebiyle başlar.",
+    "about.stats.title": "Aspidus rakamlarla",
+    "about.stats.customers": "Ticaret evleri",
+    "about.stats.countries": "Hizmet verilen ülke",
+    "about.stats.volume": "Yıllık yönetilen ticaret",
+    "about.stats.uptime": "Platform çalışma süresi",
+
+    "contact.title": "Bize ulaşın",
+    "contact.subtitle":
+      "Ticaret masanızdan bahsedin — bir iş günü içinde döneceğiz.",
+    "contact.company": "Şirket",
+    "contact.name": "Adınız",
+    "contact.email": "İş e-postası",
+    "contact.subject": "Konu",
+    "contact.message": "Mesaj",
+    "contact.submit": "Mesaj gönder",
+    "contact.success.title": "Mesaj gönderildi",
+    "contact.success.body":
+      "Ulaştığınız için teşekkürler. Ekibimiz bir iş günü içinde yanıt verecek.",
+    "contact.info.title": "Bize ulaşmanın diğer yolları",
+    "contact.info.emailLabel": "E-posta",
+    "contact.info.phoneLabel": "Telefon",
+    "contact.info.addressLabel": "Ofis",
+    "contact.info.email": "hello@aspidus.app",
+    "contact.info.phone": "+381 11 0000 000",
+    "contact.info.address": "Bulevar oslobođenja 11, 21000 Novi Sad, Sırbistan",
+    "contact.placeholder.company": "Acme Ticaret A.Ş.",
+    "contact.placeholder.name": "Ahmet Yılmaz",
+    "contact.placeholder.email": "siz@sirket.com",
+    "contact.placeholder.subject": "Nasıl yardımcı olabiliriz?",
+    "contact.placeholder.message":
+      "Ticaret masanızdan ve Aspidus ile ne başarmak istediğinizden bahsedin.",
+
+    "faq.title": "Sık sorulan sorular",
+    "faq.subtitle":
+      "Aspidus hakkında bilmeniz gereken her şey. Cevabı bulamıyor musunuz? Ekibimize ulaşın.",
+    "faq.items.1.q": "10 günlük ücretsiz deneme nasıl çalışır?",
+    "faq.items.1.a":
+      "İş e-postanızla kaydolun, plan seçin ve e-posta ile ödeme talimatları alın. Aktivasyon ücreti işlendikten sonra 10 günlük denemeniz tam platform erişimiyle başlar — özellik sınırlaması yok, kredi kartı yok.",
+    "faq.items.2.q": "Deneme için kredi kartı gerekir mi?",
+    "faq.items.2.a":
+      "Hayır. Formu gönderdikten sonra ödeme talimatlarını e-posta ile göndeririz. Banka transferi veya kartla ödeyebilirsiniz — deneme yalnızca aktivasyon ücreti alındıktan sonra başlar.",
+    "faq.items.3.q": "Aspidus hangi para birimlerini destekler?",
+    "faq.items.3.a":
+      "Canlı döviz kurları ve açık kalemlerin otomatik yeniden değerlemesi ile 50+ para birimi. Aynı teklifte farklı para birimlerinde fiyatlandırma, faturalama ve hesaplaşma yapabilirsiniz.",
+    "faq.items.4.q": "Kendi döviz kaynağımı getirebilir miyim?",
+    "faq.items.4.a":
+      "Evet. Enterprise ve Custom planlar varsayılan Aspidus kurlarının yanı sıra özel FX kaynaklarını (ECB, merkez bankaları, Bloomberg, kendi bankanız) destekler.",
+    "faq.items.5.q": "Verilerim güvende mi?",
+    "faq.items.5.a":
+      "Tüm trafik transitte (TLS 1.3) ve bekleyen halde (AES-256) şifrelenir. AB'de ISO 27001 sertifikalı altyapıda çalışırız, günlük yedekleme ve her kayıtta tam denetim izi ile.",
+    "faq.items.6.q": "Ayrılırsam verilerimi dışa aktarabilir miyim?",
+    "faq.items.6.a":
+      "Her zaman. Her liste (partnerler, ürünler, teklifler, faturalar, hesaplamalar) tek tıkla CSV veya Excel'e aktarılabilir. Verileriniz sizindir.",
+    "faq.items.7.q": "Onboarding sunuyor musunuz?",
+    "faq.items.7.a":
+      "Evet. Business ve üzeri rehberli onboarding içerir. Enterprise ve Custom özel müşteri başarı yöneticisi ve yüz yüze eğitim içerir.",
+    "faq.items.8.q": "Partner portalınız var mı?",
+    "faq.items.8.a":
+      "Evet. Alıcıları, tedarikçileri ve acenteleri tekliflerini görüntülemeye, KYC yüklemeye ve RFQ'lara yanıt vermeye güvenli markalı portalda davet edin — Business ve üzeri dahil.",
+
+    "privacy.title": "Gizlilik Politikası",
+    "privacy.updated": "Son güncelleme: Ocak 2025",
+    "privacy.intro":
+      "Bu Gizlilik Politikası, platformumuzu ve sitemizi kullanırken Aspidus'un («biz») kişisel verilerinizi nasıl topladığını, kullandığını ve koruduğunu açıklar.",
+    "privacy.collect.title": "1. Topladığımız veriler",
+    "privacy.collect.body":
+      "Hesap verileri (ad, e-posta, şirket), kullanım verileri (ziyaret edilen sayfalar, kullanılan özellikler) ve platformda oluşturduğunuz işlem verileri.",
+    "privacy.use.title": "2. Nasıl kullanıyoruz",
+    "privacy.use.body":
+      "Hizmeti sağlamak ve geliştirmek, hesap ve fatura bildirimleri göndermek ve destek taleplerine yanıt vermek için. Verilerinizi asla satmayız.",
+    "privacy.store.title": "3. Saklama ve elde tutma",
+    "privacy.store.body":
+      "Veriler AB'de ISO 27001 sertifikalı altyapıda, AES-256 ile şifrelenerek saklanır. Verilerinizi hesabınızın ömrü boyunca ve silindikten sonra 90 gün boyunca tutarız.",
+    "privacy.rights.title": "4. Haklarınız",
+    "privacy.rights.body":
+      "Verilerinizin dışa aktarılmasını, düzeltilmesini veya silinmesini isteyebilirsiniz: privacy@aspidus.app. 30 gün içinde yanıt veririz.",
+    "privacy.contact.title": "5. İletişim",
+    "privacy.contact.body":
+      "Bu politika hakkında sorularınız mı var? privacy@aspidus.app veya Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Sırbistan.",
+
+    "terms.title": "Hizmet Şartları",
+    "terms.updated": "Son güncelleme: Ocak 2025",
+    "terms.intro":
+      "Bu Şartlar Aspidus platformunun kullanımını düzenler. Kaydolarak kabul edersiniz.",
+    "terms.accept.title": "1. Şartların kabulü",
+    "terms.accept.body":
+      "Hesap oluşturarak bu Şartları ve Gizlilik Politikamızı kabul edersiniz. Kabul etmiyorsanız platformu kullanmayın.",
+    "terms.accounts.title": "2. Hesaplar",
+    "terms.accounts.body":
+      "Kimlik bilgilerinizi güvende tutmaktan ve hesabınız altındaki tüm aktiviteden siz sorumlusunuz. Yetkisiz kullanımda security@aspidus.app adresine hemen bildirin.",
+    "terms.use.title": "3. Kabul edilebilir kullanım",
+    "terms.use.body":
+      "Aspidus'u yasa dışı ticaret, kara para aklama, yaptırımlı taraflarla işlem veya yasa dışı faaliyet için kullanamazsınız. Kuralları ihlal eden hesapları askıya alma hakkımızı saklı tutarız.",
+    "terms.payment.title": "4. Ödeme",
+    "terms.payment.body":
+      "Planlar aylık peşin faturalanır. 10 günlük deneme aktivasyon ücreti iade edilmez. İstediğiniz zaman yükseltebilir, düşürebilir veya iptal edebilirsiniz.",
+    "terms.liability.title": "5. Sorumluluk",
+    "terms.liability.body":
+      "Aspidus «olduğu gibi» sağlanır. Yasaların izin verdiği en geniş ölçüde dolaylı veya dolaylı zararlardan sorumlu değiliz.",
+    "terms.contact.title": "6. İletişim",
+    "terms.contact.body":
+      "Şartlar hakkında sorularınız mı var? legal@aspidus.app veya Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Sırbistan.",
+
+    "features.pageBadge": "Platform özellikleri",
+    "features.pageSubtitle":
+      "Eksiksiz bir ticaret işletim sistemi — ilk talepten son ödemeye kadar.",
+    "features.cta.title": "Aksiyon görmeye hazır mısınız?",
+    "features.cta.body": "Saniyeler içinde tam donanımlı demo başlatın. Kayıt gerekmez.",
+    "features.cta.demo": "Canlı demoyu aç",
+    "features.cta.trial": "Ücretsiz deneme başlat",
+  },
+  de: {
+    "nav.about": "Über uns",
+    "nav.contact": "Kontakt",
+    "nav.faq": "FAQ",
+    "nav.privacy": "Datenschutz",
+    "nav.terms": "AGB",
+    "nav.menu": "Menü",
+    "demo.user": "Demo-Benutzer",
+    "demo.role": "Administrator",
+    "demo.modeIndicator": "Demo-Modus",
+    "demo.searchResults": "Suchergebnisse",
+    "demo.noResults": "Keine Ergebnisse",
+    "demo.searchHint": "Partner · Angebote · Rechnungen · Produkte",
+    "common.outOfStock": "Nicht vorrätig",
+    "common.origin": "Herkunft",
+    "common.view": "Anzeigen",
+    "common.actions": "Aktionen",
+    "common.all": "Alle",
+    "products.add": "Produkt hinzufügen",
+    "common.totalOutstanding": "Gesamt offen",
+    "common.totalOffers": "Gesamtangebote",
+    "common.acceptedValue": "Angenommener Wert",
+    "common.pending": "Ausstehend",
+    "common.rejected": "Abgelehnt",
+    "common.overdue": "Überfällig",
+    "common.paidPeriod": "Bezahlt (Periode)",
+    "common.savedCalculations": "Gespeicherte Berechnungen",
+    "common.recentCalculations": "Aktuelle Berechnungen Ihres Teams",
+    "common.last6Months": "Letzte 6 Monate",
+    "common.currentMonth": "Aktueller Monat",
+    "common.latest4Offers": "Neueste 4 Angebote",
+    "common.nextDueInvoices": "Nächste fällige Rechnungen",
+    "common.vsLastMonth": "ggü. Vormonat",
+    "common.empty.offers": "Keine Angebote entsprechen den Filtern.",
+    "common.empty.invoices": "Keine Rechnungen entsprechen den Filtern.",
+    "common.empty.partners": "Keine Partner entsprechen der Suche.",
+    "common.empty.products": "Keine Produkte entsprechen der Suche.",
+    "common.empty.search": "Keine Ergebnisse für Ihre Suche.",
+    "common.items": "Positionen",
+    "common.item": "Position",
+    "pricing.compareTitle": "Alle Funktionen vergleichen",
+    "pricing.compareSubtitle": "Direkter Vergleich aller Pläne.",
+    "pricing.custom": "Individuell",
+    "trial.legal":
+      "Mit dem Absenden stimmen Sie den AGB und der Datenschutzerklärung zu. Keine Kreditkarte erforderlich.",
+    "trial.badge": "10-tägige kostenlose Testversion",
+    "trial.backToDemo": "Zurück zur Demo",
+    "calc.buyPrice": "Einkaufspreis",
+    "calc.sellPrice": "Verkaufspreis",
+    "calc.margin": "Marge",
+    "calc.marginPct": "Marge %",
+    "calc.profit": "Bruttogewinn",
+    "calc.revenue": "Umsatz",
+    "calc.cost": "Kosten",
+    "calc.sellCurrency": "Verkaufswährung",
+    "calc.buyCurrency": "Einkaufswährung",
+    "calc.results.revenue": "Gesamtumsatz",
+    "calc.results.cost": "Gesamtkosten",
+    "calc.results.profit": "Bruttogewinn",
+    "calc.results.margin": "Marge %",
+    "calc.saveCalc": "Berechnung speichern",
+    "calc.livePreview": "Live-Vorschau",
+    "calc.preset": "Vorlage",
+
+    "about.title": "Über Aspidus",
+    "about.subtitle": "Wir bauen das Betriebssystem für den internationalen Handel.",
+    "about.mission.title": "Unsere Mission",
+    "about.mission.body":
+      "Aspidus wurde von Händlern gegründet, die es satt hatten, Tabellen, WhatsApp-Threads und veraltete ERP-Systeme zusammenzuflicken. Wir bauen den einheitlichen Arbeitsbereich, der den gesamten Handelstisch — Front Office, Back Office und Partner — auf eine einzige Wahrheitsquelle bringt.",
+    "about.story.title": "Unsere Geschichte",
+    "about.story.body":
+      "Aus einem kleinen Team in Belgrad im Jahr 2021 bedient Aspidus heute Handelshäuser in über 30 Ländern. Unsere Kunden bewegen täglich Düngemittel, Getreide, Metalle, Kaffee und Chemikalien über Grenzen — und vertrauen darauf, dass Aspidus ihre Angebote, Rechnungen und Berechnungen bis auf den Cent genau hält.",
+    "about.values.title": "Wofür wir stehen",
+    "about.value.1.title": "Präzision",
+    "about.value.1.body":
+      "Handel ist ein margenschwaches Geschäft. Eine Dezimalstelle zählt. Wir sind besessen von Korrektheit.",
+    "about.value.2.title": "Geschwindigkeit",
+    "about.value.2.body":
+      "Angebote bewegen sich im Tempo des Marktes. Aspidus lädt in unter einer Sekunde, selbst im Hotel-WLAN.",
+    "about.value.3.title": "Partnerschaft",
+    "about.value.3.body":
+      "Wir wachsen nur, wenn unsere Kunden wachsen. Jeder Roadmap-Punkt beginnt mit einer Kundenanfrage.",
+    "about.stats.title": "Aspidus in Zahlen",
+    "about.stats.customers": "Handelshäuser",
+    "about.stats.countries": "Bediente Länder",
+    "about.stats.volume": "Jährliches Handelsvolumen",
+    "about.stats.uptime": "Plattform-Verfügbarkeit",
+
+    "contact.title": "Kontakt",
+    "contact.subtitle":
+      "Erzählen Sie uns von Ihrem Handelstisch — wir melden uns innerhalb eines Werktags.",
+    "contact.company": "Firma",
+    "contact.name": "Ihr Name",
+    "contact.email": "Geschäfts-E-Mail",
+    "contact.subject": "Betreff",
+    "contact.message": "Nachricht",
+    "contact.submit": "Nachricht senden",
+    "contact.success.title": "Nachricht gesendet",
+    "contact.success.body":
+      "Danke für Ihre Nachricht. Unser Team antwortet innerhalb eines Werktags.",
+    "contact.info.title": "Andere Wege, uns zu erreichen",
+    "contact.info.emailLabel": "E-Mail",
+    "contact.info.phoneLabel": "Telefon",
+    "contact.info.addressLabel": "Büro",
+    "contact.info.email": "hello@aspidus.app",
+    "contact.info.phone": "+381 11 0000 000",
+    "contact.info.address": "Bulevar oslobođenja 11, 21000 Novi Sad, Serbien",
+    "contact.placeholder.company": "Acme Trading GmbH",
+    "contact.placeholder.name": "Max Mustermann",
+    "contact.placeholder.email": "sie@firma.com",
+    "contact.placeholder.subject": "Wie können wir helfen?",
+    "contact.placeholder.message":
+      "Erzählen Sie uns von Ihrem Handelstisch und was Sie mit Aspidus erreichen möchten.",
+
+    "faq.title": "Häufig gestellte Fragen",
+    "faq.subtitle":
+      "Alles, was Sie über Aspidus wissen müssen. Antwort nicht gefunden? Kontaktieren Sie unser Team.",
+    "faq.items.1.q": "Wie funktioniert die 10-tägige kostenlose Testversion?",
+    "faq.items.1.a":
+      "Registrieren Sie sich mit Ihrer geschäftlichen E-Mail-Adresse, wählen Sie einen Plan und Sie erhalten per E-Mail Zahlungsanweisungen. Sobald die Aktivierungsgebühr verarbeitet ist, beginnt Ihre 10-tägige Testversion mit vollem Plattformzugang — ohne Feature-Limits, ohne Kreditkarte.",
+    "faq.items.2.q": "Brauche ich eine Kreditkarte für den Start?",
+    "faq.items.2.a":
+      "Nein. Wir senden Zahlungsanweisungen per E-Mail, sobald Sie das Formular absenden. Sie können per Banküberweisung oder Karte zahlen — die Testversion beginnt erst nach Eingang der Aktivierungsgebühr.",
+    "faq.items.3.q": "Welche Währungen unterstützt Aspidus?",
+    "faq.items.3.a":
+      "50+ Währungen mit Live-Wechselkursen und automatischer Neubewertung offener Posten. Sie können in derselben Anfrage in verschiedenen Währungen preisen, abrechnen und begleichen.",
+    "faq.items.4.q": "Kann ich meinen eigenen Wechselkurs-Feed einbringen?",
+    "faq.items.4.a":
+      "Ja. Enterprise- und Custom-Pläne unterstützen eigene FX-Feeds (EZB, Zentralbanken, Bloomberg, Ihre Bank) neben den Standard-Aspidus-Kursen.",
+    "faq.items.5.q": "Sind meine Daten sicher?",
+    "faq.items.5.a":
+      "Der gesamte Verkehr ist in Transit (TLS 1.3) und ruht (AES-256) verschlüsselt. Wir laufen auf ISO 27001-zertifizierter EU-Infrastruktur mit täglichen Backups und vollständigen Audit-Trails.",
+    "faq.items.6.q": "Kann ich meine Daten beim Verlassen exportieren?",
+    "faq.items.6.a":
+      "Immer. Jede Liste (Partner, Produkte, Angebote, Rechnungen, Berechnungen) lässt sich mit einem Klick als CSV oder Excel exportieren. Ihre Daten gehören Ihnen.",
+    "faq.items.7.q": "Bieten Sie Onboarding an?",
+    "faq.items.7.a":
+      "Ja. Business und höher beinhalten geführtes Onboarding. Enterprise und Custom beinhalten einen dedizierten Customer-Success-Manager und Vor-Ort-Schulungen.",
+    "faq.items.8.q": "Haben Sie ein Partnerportal?",
+    "faq.items.8.a":
+      "Ja. Laden Sie Käufer, Lieferanten und Agenten ein, ihre Angebote einzusehen, KYC hochzuladen und auf RFQs zu antworten — in einem sicheren gebrandeten Portal, ab Business enthalten.",
+
+    "privacy.title": "Datenschutzerklärung",
+    "privacy.updated": "Zuletzt aktualisiert: Januar 2025",
+    "privacy.intro":
+      "Diese Datenschutzerklärung erklärt, wie Aspidus („wir”) Ihre personenbezogenen Daten bei Nutzung unserer Plattform und Website erhebt, verwendet und schützt.",
+    "privacy.collect.title": "1. Daten, die wir erheben",
+    "privacy.collect.body":
+      "Kontodaten (Name, E-Mail, Firma), Nutzungsdaten (besuchte Seiten, genutzte Funktionen) und Transaktionsdaten, die Sie in der Plattform erstellen.",
+    "privacy.use.title": "2. Wie wir sie verwenden",
+    "privacy.use.body":
+      "Um den Service bereitzustellen und zu verbessern, Konto- und Abrechnungsbenachrichtigungen zu senden und auf Supportanfragen zu antworten. Wir verkaufen niemals Ihre Daten.",
+    "privacy.store.title": "3. Speicherung und Aufbewahrung",
+    "privacy.store.body":
+      "Daten werden auf ISO 27001-zertifizierter EU-Infrastruktur gespeichert, ruhend mit AES-256 verschlüsselt. Wir bewahren Ihre Daten für die Lebensdauer des Kontos und 90 Tage nach Löschung auf.",
+    "privacy.rights.title": "4. Ihre Rechte",
+    "privacy.rights.body":
+      "Sie können jederzeit Export, Korrektur oder Löschung verlangen: privacy@aspidus.app. Wir antworten innerhalb von 30 Tagen.",
+    "privacy.contact.title": "5. Kontakt",
+    "privacy.contact.body":
+      "Fragen zu dieser Richtlinie? Schreiben Sie an privacy@aspidus.app oder Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Serbien.",
+
+    "terms.title": "Nutzungsbedingungen",
+    "terms.updated": "Zuletzt aktualisiert: Januar 2025",
+    "terms.intro":
+      "Diese Bedingungen regeln Ihre Nutzung der Aspidus-Plattform. Mit der Anmeldung stimmen Sie ihnen zu.",
+    "terms.accept.title": "1. Annahme der Bedingungen",
+    "terms.accept.body":
+      "Mit der Kontoerstellung stimmen Sie diesen Bedingungen und unserer Datenschutzerklärung zu. Wenn Sie nicht einverstanden sind, nutzen Sie die Plattform nicht.",
+    "terms.accounts.title": "2. Konten",
+    "terms.accounts.body":
+      "Sie sind verantwortlich für die Sicherheit Ihrer Zugangsdaten und alle Aktivitäten unter Ihrem Konto. Benachrichtigen Sie uns sofort bei unbefugter Nutzung: security@aspidus.app.",
+    "terms.use.title": "3. Zulässige Nutzung",
+    "terms.use.body":
+      "Sie dürfen Aspidus nicht für illegalen Handel, Geldwäsche, sanktionierte Transaktionen oder gesetzlich verbotene Aktivitäten nutzen. Wir behalten uns vor, Konten bei Verstößen zu sperren.",
+    "terms.payment.title": "4. Zahlung",
+    "terms.payment.body":
+      "Pläne werden monatlich im Voraus abgerechnet. Die Aktivierungsgebühr für die 10-tägige Testversion ist nicht erstattungsfähig. Upgrade, Downgrade oder Kündigung jederzeit möglich.",
+    "terms.liability.title": "5. Haftung",
+    "terms.liability.body":
+      "Aspidus wird «wie besehen» bereitgestellt. Im gesetzlich zulässigen Umfang haften wir nicht für indirekte oder Folgeschäden.",
+    "terms.contact.title": "6. Kontakt",
+    "terms.contact.body":
+      "Fragen zu den Bedingungen? Schreiben Sie an legal@aspidus.app oder Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Serbien.",
+
+    "features.pageBadge": "Plattform-Funktionen",
+    "features.pageSubtitle":
+      "Ein komplettes Handels-Betriebssystem — von der ersten Anfrage bis zur letzten Zahlung.",
+    "features.cta.title": "Bereit, es in Aktion zu sehen?",
+    "features.cta.body": "Starten Sie in Sekunden eine voll ausgestattete Demo. Keine Anmeldung.",
+    "features.cta.demo": "Live-Demo öffnen",
+    "features.cta.trial": "Kostenlose Testversion starten",
+  },
+  ru: {
+    "nav.about": "О нас",
+    "nav.contact": "Контакты",
+    "nav.faq": "ЧаВо",
+    "nav.privacy": "Конфиденциальность",
+    "nav.terms": "Условия",
+    "nav.menu": "Меню",
+    "demo.user": "Demo-пользователь",
+    "demo.role": "Администратор",
+    "demo.modeIndicator": "Демо-режим",
+    "demo.searchResults": "Результаты поиска",
+    "demo.noResults": "Ничего не найдено",
+    "demo.searchHint": "Партнёры · Предложения · Счета · Товары",
+    "common.outOfStock": "Нет в наличии",
+    "common.origin": "Происхождение",
+    "common.view": "Открыть",
+    "common.actions": "Действия",
+    "common.all": "Все",
+    "products.add": "Добавить товар",
+    "common.totalOutstanding": "Всего к оплате",
+    "common.totalOffers": "Всего предложений",
+    "common.acceptedValue": "Принятая сумма",
+    "common.pending": "Ожидает",
+    "common.rejected": "Отклонено",
+    "common.overdue": "Просрочено",
+    "common.paidPeriod": "Оплачено (период)",
+    "common.savedCalculations": "Сохранённые расчёты",
+    "common.recentCalculations": "Недавние расчёты вашей команды",
+    "common.last6Months": "Последние 6 месяцев",
+    "common.currentMonth": "Текущий месяц",
+    "common.latest4Offers": "Последние 4 предложения",
+    "common.nextDueInvoices": "Следующие счета по сроку",
+    "common.vsLastMonth": "ср. прошлый месяц",
+    "common.empty.offers": "Нет предложений по фильтрам.",
+    "common.empty.invoices": "Нет счетов по фильтрам.",
+    "common.empty.partners": "Нет партнёров по запросу.",
+    "common.empty.products": "Нет товаров по запросу.",
+    "common.empty.search": "По вашему запросу ничего не найдено.",
+    "common.items": "позиций",
+    "common.item": "позиция",
+    "pricing.compareTitle": "Сравнить все функции",
+    "pricing.compareSubtitle": "Сравнение всех планов side-by-side.",
+    "pricing.custom": "Индивидуально",
+    "trial.legal":
+      "Отправляя форму, вы соглашаетесь с Условиями и Политикой конфиденциальности. Без карты.",
+    "trial.badge": "10-дневный бесплатный период",
+    "trial.backToDemo": "Назад в демо",
+    "calc.buyPrice": "Цена покупки",
+    "calc.sellPrice": "Цена продажи",
+    "calc.margin": "Маржа",
+    "calc.marginPct": "Маржа %",
+    "calc.profit": "Валовая прибыль",
+    "calc.revenue": "Выручка",
+    "calc.cost": "Стоимость",
+    "calc.sellCurrency": "Валюта продажи",
+    "calc.buyCurrency": "Валюта покупки",
+    "calc.results.revenue": "Общая выручка",
+    "calc.results.cost": "Общая стоимость",
+    "calc.results.profit": "Валовая прибыль",
+    "calc.results.margin": "Маржа %",
+    "calc.saveCalc": "Сохранить расчёт",
+    "calc.livePreview": "Живой предпросмотр",
+    "calc.preset": "Шаблон",
+
+    "about.title": "О Aspidus",
+    "about.subtitle": "Мы строим операционную систему для международной торговли.",
+    "about.mission.title": "Наша миссия",
+    "about.mission.body":
+      "Aspidus основан торговцами, уставшими сшивать таблицы, переписки в WhatsApp и устаревшие ERP. Мы строим единое рабочее пространство, выводящее весь торговый стол — фронт-офис, бэк-офис и партнёров — на единую версию правды.",
+    "about.story.title": "Наша история",
+    "about.story.body":
+      "Из небольшой команды в Белграде в 2021 году Aspidus сегодня обслуживает торговые дома в 30+ странах. Наши клиенты ежедневно перемещают удобрения, зерно, металлы, кофе и химикаты через границы — и доверяют Aspidus точность предложений, счетов и расчётов до цента.",
+    "about.values.title": "Наши ценности",
+    "about.value.1.title": "Точность",
+    "about.value.1.body":
+      "Торговля — низкомаржинальный бизнес. Каждый десятичный знак важен. Мы одержимы корректностью.",
+    "about.value.2.title": "Скорость",
+    "about.value.2.body":
+      "Предложения движутся со скоростью рынка. Aspidus загружается меньше чем за секунду, даже в отеле по Wi-Fi.",
+    "about.value.3.title": "Партнёрство",
+    "about.value.3.body":
+      "Мы растём только тогда, когда растут наши клиенты. Каждый пункт roadmap начинается с запроса клиента.",
+    "about.stats.title": "Aspidus в цифрах",
+    "about.stats.customers": "Торговые дома",
+    "about.stats.countries": "Обслужено стран",
+    "about.stats.volume": "Годовой объём торговли",
+    "about.stats.uptime": "Время работы платформы",
+
+    "contact.title": "Связаться с нами",
+    "contact.subtitle":
+      "Расскажите о своём торговом столе — ответим в течение одного рабочего дня.",
+    "contact.company": "Компания",
+    "contact.name": "Ваше имя",
+    "contact.email": "Рабочий email",
+    "contact.subject": "Тема",
+    "contact.message": "Сообщение",
+    "contact.submit": "Отправить сообщение",
+    "contact.success.title": "Сообщение отправлено",
+    "contact.success.body":
+      "Спасибо за обращение. Наша команда ответит в течение одного рабочего дня.",
+    "contact.info.title": "Другие способы связи",
+    "contact.info.emailLabel": "Email",
+    "contact.info.phoneLabel": "Телефон",
+    "contact.info.addressLabel": "Офис",
+    "contact.info.email": "hello@aspidus.app",
+    "contact.info.phone": "+381 11 0000 000",
+    "contact.info.address": "Bulevar oslobođenja 11, 21000 Novi Sad, Сербия",
+    "contact.placeholder.company": "ООО «Acme Trading»",
+    "contact.placeholder.name": "Иван Иванов",
+    "contact.placeholder.email": "vy@kompaniya.ru",
+    "contact.placeholder.subject": "Чем можем помочь?",
+    "contact.placeholder.message":
+      "Расскажите о своём торговом столе и что хотите получить от Aspidus.",
+
+    "faq.title": "Часто задаваемые вопросы",
+    "faq.subtitle":
+      "Всё, что нужно знать об Aspidus. Не нашли ответ? Свяжитесь с нашей командой.",
+    "faq.items.1.q": "Как работает 10-дневный бесплатный период?",
+    "faq.items.1.a":
+      "Зарегистрируйтесь рабочим email, выберите план — мы пришлём инструкции по оплате. После получения активационного взноса начинается 10-дневный период с полным доступом — без ограничений и без карты.",
+    "faq.items.2.q": "Нужна ли карта для старта?",
+    "faq.items.2.a":
+      "Нет. Мы присылаем инструкции по оплате после отправки формы. Оплата банковским переводом или картой — период начинается после получения взноса.",
+    "faq.items.3.q": "Какие валюты поддерживает Aspidus?",
+    "faq.items.3.a":
+      "50+ валют с актуальными курсами и автоматической переоценкой. Можно оценивать, выставлять счета и рассчитываться в разных валютах в одном предложении.",
+    "faq.items.4.q": "Можно ли подключить свой источник курсов?",
+    "faq.items.4.a":
+      "Да. Планы Enterprise и Custom поддерживают собственные FX-источники (ЕЦБ, центральные банки, Bloomberg, ваш банк) вместе со стандартными курсами Aspidus.",
+    "faq.items.5.q": "Безопасны ли мои данные?",
+    "faq.items.5.a":
+      "Весь трафик шифруется в транзите (TLS 1.3) и в покое (AES-256). Мы работаем на ISO 27001-сертифицированной инфраструктуре в ЕС с ежедневными бэкапами и полным аудиторским следом.",
+    "faq.items.6.q": "Могу ли я экспортировать данные при уходе?",
+    "faq.items.6.a":
+      "Всегда. Любой список (партнёры, товары, предложения, счета, расчёты) экспортируется в CSV или Excel одним кликом. Данные принадлежат вам.",
+    "faq.items.7.q": "Предоставляете ли онбординг?",
+    "faq.items.7.a":
+      "Да. Business и выше включают управляемый онбординг. Enterprise и Custom включают выделенного менеджера по успеху клиентов и очное обучение.",
+    "faq.items.8.q": "Есть ли портал для партнёров?",
+    "faq.items.8.a":
+      "Да. Приглашайте покупателей, поставщиков и агентов просматривать предложения, загружать KYC и отвечать на RFQ в защищённом брендированном портале — включено с Business.",
+
+    "privacy.title": "Политика конфиденциальности",
+    "privacy.updated": "Последнее обновление: январь 2025",
+    "privacy.intro":
+      "Эта Политика объясняет, как Aspidus («мы») собирает, использует и защищает ваши персональные данные при использовании платформы и сайта.",
+    "privacy.collect.title": "1. Данные, которые мы собираем",
+    "privacy.collect.body":
+      "Данные аккаунта (имя, email, компания), данные использования (посещённые страницы, функции) и транзакционные данные, создаваемые вами в платформе.",
+    "privacy.use.title": "2. Как мы используем",
+    "privacy.use.body":
+      "Для предоставления и улучшения сервиса, отправки уведомлений о счёте и ответов на обращения в поддержку. Мы никогда не продаём ваши данные.",
+    "privacy.store.title": "3. Хранение и удержание",
+    "privacy.store.body":
+      "Данные хранятся на ISO 27001-сертифицированной инфраструктуре ЕС, шифруются AES-256. Мы храним данные в течение жизни аккаунта и 90 дней после удаления.",
+    "privacy.rights.title": "4. Ваши права",
+    "privacy.rights.body":
+      "Вы можете запросить экспорт, исправление или удаление данных: privacy@aspidus.app. Отвечаем в течение 30 дней.",
+    "privacy.contact.title": "5. Контакты",
+    "privacy.contact.body":
+      "Вопросы по политике? Пишите на privacy@aspidus.app или Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Сербия.",
+
+    "terms.title": "Условия использования",
+    "terms.updated": "Последнее обновление: январь 2025",
+    "terms.intro":
+      "Эти Условия регулируют использование платформы Aspidus. Регистрируясь, вы соглашаетесь с ними.",
+    "terms.accept.title": "1. Принятие условий",
+    "terms.accept.body":
+      "Создавая аккаунт, вы соглашаетесь с Условиями и Политикой конфиденциальности. Если не согласны — не используйте платформу.",
+    "terms.accounts.title": "2. Аккаунты",
+    "terms.accounts.body":
+      "Вы отвечаете за безопасность учётных данных и всю активность под вашим аккаунтом. О несанкционированном использовании сообщайте на security@aspidus.app.",
+    "terms.use.title": "3. Допустимое использование",
+    "terms.use.body":
+      "Нельзя использовать Aspidus для нелегальной торговли, отмывания денег, операций с санкционированными лицами и запрещённой деятельности. Мы вправе приостановить аккаунты-нарушители.",
+    "terms.payment.title": "4. Оплата",
+    "terms.payment.body":
+      "Планы оплачиваются ежемесячно авансом. Активационный взнос за 10-дневный период не возвращается. Апгрейд, даунгрейд или отмена — в любой момент.",
+    "terms.liability.title": "5. Ответственность",
+    "terms.liability.body":
+      "Aspidus предоставляется «как есть». В мере, допустимой законом, мы не отвечаем за косвенные или последующие убытки.",
+    "terms.contact.title": "6. Контакты",
+    "terms.contact.body":
+      "Вопросы по Условиям? Пишите на legal@aspidus.app или Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Сербия.",
+
+    "features.pageBadge": "Возможности платформы",
+    "features.pageSubtitle":
+      "Полноценная торговая операционная система — от первого запроса до последнего платежа.",
+    "features.cta.title": "Готовы увидеть в действии?",
+    "features.cta.body": "Запустите демо за секунды. Без регистрации.",
+    "features.cta.demo": "Открыть демо",
+    "features.cta.trial": "Начать пробный период",
+  },
+};
+
+/** Merged dictionaries: base + extra for each locale. */
+const DICTIONARIES_BASE: Record<Locale, Dict> = { en, sr, tr, de, ru };
+
+export const DICTIONARIES: Record<Locale, Dict> = LOCALES.reduce(
+  (acc, l) => {
+    acc[l] = { ...DICTIONARIES_BASE[l], ...(EXTRA[l] ?? {}) };
+    return acc;
+  },
+  {} as Record<Locale, Dict>,
+);
 
 /** Translate a key for a given locale; falls back to English then to the key itself. */
 export function translate(locale: Locale, key: string): string {
-  return DICTIONARIES[locale]?.[key] ?? en[key] ?? key;
+  return DICTIONARIES[locale]?.[key] ?? en[key] ?? EXTRA.en[key] ?? key;
 }
 
 /** All keys available in the dictionary (useful for completeness checks). */
-export const TRANSLATION_KEYS = Object.keys(en);
+export const TRANSLATION_KEYS = Object.keys(DICTIONARIES.en);
