@@ -28,7 +28,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-medium">{t("contact.email") || "Email"}</h3>
-                <p className="text-sm text-muted-foreground">desk@aspidus.co</p>
+                <p className="text-sm text-muted-foreground">desk@velos.co</p>
               </div>
             </div>
             <div className="flex items-start gap-3">

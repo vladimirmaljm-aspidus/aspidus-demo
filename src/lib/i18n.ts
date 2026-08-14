@@ -21,7 +21,7 @@ type Dict = Record<string, string>;
 
 const en: Dict = {
   // Brand / nav
-  "brand.name": "Aspidus",
+  "brand.name": "VELOS",
   "brand.tagline": "Trade CRM & ERP Platform",
   "nav.features": "Features",
   "nav.pricing": "Pricing",
@@ -45,7 +45,7 @@ const en: Dict = {
 
   // Features
   "features.title": "Everything your trade desk needs",
-  "features.subtitle": "From first inquiry to final payment — Aspidus unifies every step of the trade lifecycle.",
+  "features.subtitle": "From first inquiry to final payment — VELOS unifies every step of the trade lifecycle.",
   "feature.crm.title": "CRM & Partners",
   "feature.crm.desc":
     "Track buyers, suppliers and agents with full contact, KYC and trade history in one 360° view.",
@@ -232,7 +232,7 @@ const en: Dict = {
   "pricing.feature.no": "—",
 
   // Guided tour
-  "tour.step1.title": "Welcome to Aspidus Demo",
+  "tour.step1.title": "Welcome to VELOS Demo",
   "tour.step1.body": "Take a quick 60-second tour to learn the platform. You can skip anytime.",
   "tour.step2.title": "Your Dashboard",
   "tour.step2.body": "KPIs, recent offers and trade volume are at your fingertips.",
@@ -275,7 +275,7 @@ const en: Dict = {
 };
 
 const sr: Dict = {
-  "brand.name": "Aspidus",
+  "brand.name": "VELOS",
   "brand.tagline": "Trade CRM i ERP platforma",
   "nav.features": "Mogućnosti",
   "nav.pricing": "Cene",
@@ -296,7 +296,7 @@ const sr: Dict = {
   "stats.uptime": "Vreme rada platforme",
 
   "features.title": "Sve što vaš trgovački sto treba",
-  "features.subtitle": "Od prvog upita do konačnog plaćanja — Aspidus objedinjuje svaki korak trgovine.",
+  "features.subtitle": "Od prvog upita do konačnog plaćanja — VELOS objedinjuje svaki korak trgovine.",
   "feature.crm.title": "CRM i Partneri",
   "feature.crm.desc":
     "Pratite kupce, dobavljače i agente sa punim pregledom kontakata, KYC-a i istorije trgovine.",
@@ -469,7 +469,7 @@ const sr: Dict = {
   "pricing.feature.yes": "Uključeno",
   "pricing.feature.no": "—",
 
-  "tour.step1.title": "Dobrodošli u Aspidus demo",
+  "tour.step1.title": "Dobrodošli u VELOS demo",
   "tour.step1.body": "Hajde da pogledamo platformu za 60 sekundi. Možete preskočiti bilo kada.",
   "tour.step2.title": "Vaša kontrolna tabla",
   "tour.step2.body": "KPI, nedavne ponude i trgovinski volumen na dohvat ruke.",
@@ -510,7 +510,7 @@ const sr: Dict = {
 };
 
 const tr: Dict = {
-  "brand.name": "Aspidus",
+  "brand.name": "VELOS",
   "brand.tagline": "Ticaret CRM ve ERP Platformu",
   "nav.features": "Özellikler",
   "nav.pricing": "Fiyatlandırma",
@@ -531,7 +531,7 @@ const tr: Dict = {
   "stats.uptime": "Platform çalışma süresi",
 
   "features.title": "Ticaret masanızın ihtiyaç duyduğu her şey",
-  "features.subtitle": "İlk talepten son ödemeye kadar — Aspidus ticaret döngüsünün her adımını birleştirir.",
+  "features.subtitle": "İlk talepten son ödemeye kadar — VELOS ticaret döngüsünün her adımını birleştirir.",
   "feature.crm.title": "CRM ve Partnerler",
   "feature.crm.desc":
     "Alıcılar, tedarikçiler ve acenteler tam temas, KYC ve ticaret geçmişi ile tek 360° görünümde.",
@@ -704,7 +704,7 @@ const tr: Dict = {
   "pricing.feature.yes": "Dahil",
   "pricing.feature.no": "—",
 
-  "tour.step1.title": "Aspidus Demosuna Hoş Geldiniz",
+  "tour.step1.title": "VELOS Demosuna Hoş Geldiniz",
   "tour.step1.body": "Platformu öğrenmek için 60 saniyelik bir tur atın. İstediğiniz zaman atlayabilirsiniz.",
   "tour.step2.title": "Gösterge Paneliniz",
   "tour.step2.body": "KPI'lar, son teklifler ve ticaret hacmi parmaklarınızın ucunda.",
@@ -745,7 +745,7 @@ const tr: Dict = {
 };
 
 const de: Dict = {
-  "brand.name": "Aspidus",
+  "brand.name": "VELOS",
   "brand.tagline": "Handels-CRM- und ERP-Plattform",
   "nav.features": "Funktionen",
   "nav.pricing": "Preise",
@@ -766,7 +766,7 @@ const de: Dict = {
   "stats.uptime": "Plattform-Verfügbarkeit",
 
   "features.title": "Alles, was Ihr Handelstisch braucht",
-  "features.subtitle": "Von der ersten Anfrage bis zur letzten Zahlung — Aspidus vereint jeden Schritt des Handelszyklus.",
+  "features.subtitle": "Von der ersten Anfrage bis zur letzten Zahlung — VELOS vereint jeden Schritt des Handelszyklus.",
   "feature.crm.title": "CRM & Partner",
   "feature.crm.desc":
     "Käufer, Lieferanten und Agenten mit vollem Kontakt-, KYC- und Handelshistorie in einer 360°-Ansicht.",
@@ -939,7 +939,7 @@ const de: Dict = {
   "pricing.feature.yes": "Enthalten",
   "pricing.feature.no": "—",
 
-  "tour.step1.title": "Willkommen zur Aspidus-Demo",
+  "tour.step1.title": "Willkommen zur VELOS-Demo",
   "tour.step1.body": "Machen Sie eine 60-Sekunden-Tour, um die Plattform kennenzulernen. Sie können jederzeit überspringen.",
   "tour.step2.title": "Ihr Dashboard",
   "tour.step2.body": "KPIs, letzte Angebote und Handelsvolumen auf einen Blick.",
@@ -980,7 +980,7 @@ const de: Dict = {
 };
 
 const ru: Dict = {
-  "brand.name": "Aspidus",
+  "brand.name": "VELOS",
   "brand.tagline": "Торговая CRM и ERP-платформа",
   "nav.features": "Возможности",
   "nav.pricing": "Цены",
@@ -1001,7 +1001,7 @@ const ru: Dict = {
   "stats.uptime": "Время работы платформы",
 
   "features.title": "Всё, что нужно вашему торговому столу",
-  "features.subtitle": "От первого запроса до последнего платежа — Aspidus объединяет каждый шаг торгового цикла.",
+  "features.subtitle": "От первого запроса до последнего платежа — VELOS объединяет каждый шаг торгового цикла.",
   "feature.crm.title": "CRM и Партнёры",
   "feature.crm.desc":
     "Покупатели, поставщики и агенты с полным контактом, KYC и историей сделок в одном окне 360°.",
@@ -1174,7 +1174,7 @@ const ru: Dict = {
   "pricing.feature.yes": "Включено",
   "pricing.feature.no": "—",
 
-  "tour.step1.title": "Добро пожаловать в демо Aspidus",
+  "tour.step1.title": "Добро пожаловать в демо VELOS",
   "tour.step1.body": "Пройдите короткий 60-секундный тур по платформе. Можно пропустить в любой момент.",
   "tour.step2.title": "Ваша панель управления",
   "tour.step2.body": "KPI, недавние предложения и объём торговли под рукой.",
@@ -1282,25 +1282,25 @@ const EXTRA: Record<Locale, Dict> = {
     "calc.preset": "Preset",
 
     // About page
-    "about.title": "About Aspidus",
+    "about.title": "About VELOS",
     "about.subtitle": "We build the operating system for international trade.",
     "about.mission.title": "Our mission",
     "about.mission.body":
-      "Aspidus was founded by traders who got tired of stitching spreadsheets, WhatsApp threads and outdated ERPs together. We are building the unified workspace that brings the whole trade desk — front office, back office and partners — onto a single source of truth.",
+      "VELOS was founded by traders who got tired of stitching spreadsheets, WhatsApp threads and outdated ERPs together. We are building the unified workspace that brings the whole trade desk — front office, back office and partners — onto a single source of truth.",
     "about.story.title": "Our story",
     "about.story.body":
-      "From a small team in Belgrade in 2021, Aspidus now serves trading houses across 30+ countries. Our customers move fertilizers, grains, metals, coffee and chemicals across borders every day — and they trust Aspidus to keep their offers, invoices and calculations accurate down to the cent.",
+      "From a small team in Belgrade in 2021, VELOS now serves trading houses across 30+ countries. Our customers move fertilizers, grains, metals, coffee and chemicals across borders every day — and they trust VELOS to keep their offers, invoices and calculations accurate down to the cent.",
     "about.values.title": "What we stand for",
     "about.value.1.title": "Precision",
     "about.value.1.body":
       "Trade is a low-margin business. A single decimal point matters. We obsess over correctness.",
     "about.value.2.title": "Speed",
     "about.value.2.body":
-      "Offers move at the speed of the market. Aspidus loads in under a second, even on hotel Wi-Fi.",
+      "Offers move at the speed of the market. VELOS loads in under a second, even on hotel Wi-Fi.",
     "about.value.3.title": "Partnership",
     "about.value.3.body":
       "We grow only when our customers grow. Every roadmap item starts from a customer request.",
-    "about.stats.title": "Aspidus in numbers",
+    "about.stats.title": "VELOS in numbers",
     "about.stats.customers": "Trading houses",
     "about.stats.countries": "Countries served",
     "about.stats.volume": "Annual trade managed",
@@ -1323,31 +1323,31 @@ const EXTRA: Record<Locale, Dict> = {
     "contact.info.emailLabel": "Email",
     "contact.info.phoneLabel": "Phone",
     "contact.info.addressLabel": "Office",
-    "contact.info.email": "hello@aspidus.app",
+    "contact.info.email": "hello@velos.app",
     "contact.info.phone": "+381 11 0000 000",
     "contact.info.address": "Bulevar oslobođenja 11, 21000 Novi Sad, Serbia",
     "contact.placeholder.company": "Acme Trading Ltd.",
     "contact.placeholder.name": "John Doe",
     "contact.placeholder.email": "you@company.com",
     "contact.placeholder.subject": "How can we help?",
-    "contact.placeholder.message": "Tell us about your trade desk and what you would like to achieve with Aspidus.",
+    "contact.placeholder.message": "Tell us about your trade desk and what you would like to achieve with VELOS.",
 
     // FAQ page
     "faq.title": "Frequently asked questions",
     "faq.subtitle":
-      "Everything you need to know about Aspidus. Cannot find the answer? Reach out to our team.",
+      "Everything you need to know about VELOS. Cannot find the answer? Reach out to our team.",
     "faq.items.1.q": "How does the 10-day free trial work?",
     "faq.items.1.a":
       "Sign up with your work email, choose a plan, and you will receive payment instructions by email. Once the activation fee is processed, your 10-day trial starts with full platform access — no feature limits, no credit card on file.",
     "faq.items.2.q": "Do I need a credit card to start the trial?",
     "faq.items.2.a":
       "No. We send payment instructions by email once you submit the trial form. You can pay by bank transfer or card — your trial only starts after the activation fee is received.",
-    "faq.items.3.q": "Which currencies does Aspidus support?",
+    "faq.items.3.q": "Which currencies does VELOS support?",
     "faq.items.3.a":
       "50+ currencies with live exchange rates and automatic revaluation of open items. You can price, invoice and settle in different currencies in the same offer.",
     "faq.items.4.q": "Can I bring my own exchange rate feed?",
     "faq.items.4.a":
-      "Yes. Enterprise and Custom plans support custom FX feeds (ECB, central banks, Bloomberg, your own bank) alongside the default Aspidus rates.",
+      "Yes. Enterprise and Custom plans support custom FX feeds (ECB, central banks, Bloomberg, your own bank) alongside the default VELOS rates.",
     "faq.items.5.q": "Is my data secure?",
     "faq.items.5.a":
       "All traffic is encrypted in transit (TLS 1.3) and at rest (AES-256). We run on ISO 27001-certified infrastructure in the EU, with daily backups and full audit trails on every record.",
@@ -1365,7 +1365,7 @@ const EXTRA: Record<Locale, Dict> = {
     "privacy.title": "Privacy Policy",
     "privacy.updated": "Last updated: January 2025",
     "privacy.intro":
-      "This Privacy Policy explains how Aspidus («we», «us») collects, uses and protects your personal data when you use our platform and website.",
+      "This Privacy Policy explains how VELOS («we», «us») collects, uses and protects your personal data when you use our platform and website.",
     "privacy.collect.title": "1. Data we collect",
     "privacy.collect.body":
       "Account data (name, email, company), usage data (pages visited, features used), and transactional data you create inside the platform (partners, offers, invoices, calculations).",
@@ -1377,33 +1377,33 @@ const EXTRA: Record<Locale, Dict> = {
       "Data is stored on ISO 27001-certified EU infrastructure, encrypted at rest with AES-256. We retain your data for the lifetime of your account and 90 days after deletion, then it is purged.",
     "privacy.rights.title": "4. Your rights",
     "privacy.rights.body":
-      "You can request export, correction or deletion of your data at any time by emailing privacy@aspidus.app. We respond within 30 days.",
+      "You can request export, correction or deletion of your data at any time by emailing privacy@velos.app. We respond within 30 days.",
     "privacy.contact.title": "5. Contact",
     "privacy.contact.body":
-      "Questions about this policy? Write to privacy@aspidus.app or Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Serbia.",
+      "Questions about this policy? Write to privacy@velos.app or VELOS, Bulevar oslobođenja 11, 21000 Novi Sad, Serbia.",
 
     "terms.title": "Terms of Service",
     "terms.updated": "Last updated: January 2025",
     "terms.intro":
-      "These Terms govern your use of the Aspidus platform. By signing up you agree to them.",
+      "These Terms govern your use of the VELOS platform. By signing up you agree to them.",
     "terms.accept.title": "1. Acceptance of terms",
     "terms.accept.body":
       "By creating an account you agree to these Terms and our Privacy Policy. If you do not agree, do not use the platform.",
     "terms.accounts.title": "2. Accounts",
     "terms.accounts.body":
-      "You are responsible for keeping your credentials secure and for all activity under your account. Notify us immediately at security@aspidus.app of any unauthorized use.",
+      "You are responsible for keeping your credentials secure and for all activity under your account. Notify us immediately at security@velos.app of any unauthorized use.",
     "terms.use.title": "3. Acceptable use",
     "terms.use.body":
-      "You may not use Aspidus to facilitate illegal trade, money laundering, sanctioned-party transactions or any activity prohibited by applicable law. We reserve the right to suspend accounts that violate these rules.",
+      "You may not use VELOS to facilitate illegal trade, money laundering, sanctioned-party transactions or any activity prohibited by applicable law. We reserve the right to suspend accounts that violate these rules.",
     "terms.payment.title": "4. Payment",
     "terms.payment.body":
       "Plans are billed monthly in advance. The 10-day trial activation fee is non-refundable. You can upgrade, downgrade or cancel at any time; changes take effect at the next billing cycle.",
     "terms.liability.title": "5. Liability",
     "terms.liability.body":
-      "Aspidus is provided «as is». To the maximum extent permitted by law, we are not liable for indirect or consequential damages arising from use of the platform.",
+      "VELOS is provided «as is». To the maximum extent permitted by law, we are not liable for indirect or consequential damages arising from use of the platform.",
     "terms.contact.title": "6. Contact",
     "terms.contact.body":
-      "Questions about these Terms? Write to legal@aspidus.app or Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Serbia.",
+      "Questions about these Terms? Write to legal@velos.app or VELOS, Bulevar oslobođenja 11, 21000 Novi Sad, Serbia.",
 
     // Features page
     "features.pageBadge": "Platform features",
@@ -1478,25 +1478,25 @@ const EXTRA: Record<Locale, Dict> = {
     "calc.livePreview": "Pregled uživo",
     "calc.preset": "Preset",
 
-    "about.title": "O Aspidusu",
+    "about.title": "O VELOSu",
     "about.subtitle": "Gradimo operativni sistem za međunarodnu trgovinu.",
     "about.mission.title": "Naša misija",
     "about.mission.body":
-      "Aspidus su osnovali trgovci umorni od kombinovanja tabela, WhatsApp razgovora i zastarelih ERP-ova. Gradimo objedinjeni radni prostor koji ceo trgovački sto — front office, back office i partnere — postavlja na jedan izvor istine.",
+      "VELOS su osnovali trgovci umorni od kombinovanja tabela, WhatsApp razgovora i zastarelih ERP-ova. Gradimo objedinjeni radni prostor koji ceo trgovački sto — front office, back office i partnere — postavlja na jedan izvor istine.",
     "about.story.title": "Naša priča",
     "about.story.body":
-      "Iz malog tima u Beogradu 2021. godine, Aspidus danas služi trgovačkim kućama u 30+ zemalja. Naši kupci svakodnevno prevoze đubriva, žitarice, metale, kafu i hemikalije preko granica — i veruju Aspidusu da njihove ponude, fakture i proračune budu tačni do poslednjeg centa.",
+      "Iz malog tima u Beogradu 2021. godine, VELOS danas služi trgovačkim kućama u 30+ zemalja. Naši kupci svakodnevno prevoze đubriva, žitarice, metale, kafu i hemikalije preko granica — i veruju VELOSu da njihove ponude, fakture i proračune budu tačni do poslednjeg centa.",
     "about.values.title": "Za šta se zalažemo",
     "about.value.1.title": "Preciznost",
     "about.value.1.body":
       "Trgovina je niskomaržni biznis. Jedan decimalni zarez je bitan. Opsednuti smo tačnošću.",
     "about.value.2.title": "Brzina",
     "about.value.2.body":
-      "Ponude se kreću brzinom tržišta. Aspidus se učitava za manje od sekunde, čak na hotelskom Wi-Fi-ju.",
+      "Ponude se kreću brzinom tržišta. VELOS se učitava za manje od sekunde, čak na hotelskom Wi-Fi-ju.",
     "about.value.3.title": "Partnerstvo",
     "about.value.3.body":
       "Rastemo samo kad naši kupci rastu. Svaka stavka roadmapa kreće od zahteva kupca.",
-    "about.stats.title": "Aspidus u brojkama",
+    "about.stats.title": "VELOS u brojkama",
     "about.stats.customers": "Trgovačke kuće",
     "about.stats.countries": "Obuhvaćene zemlje",
     "about.stats.volume": "Godišnja trgovina",
@@ -1518,7 +1518,7 @@ const EXTRA: Record<Locale, Dict> = {
     "contact.info.emailLabel": "Email",
     "contact.info.phoneLabel": "Telefon",
     "contact.info.addressLabel": "Kancelarija",
-    "contact.info.email": "hello@aspidus.app",
+    "contact.info.email": "hello@velos.app",
     "contact.info.phone": "+381 11 0000 000",
     "contact.info.address": "Bulevar oslobođenja 11, 21000 Novi Sad, Srbija",
     "contact.placeholder.company": "Acme Trading d.o.o.",
@@ -1526,23 +1526,23 @@ const EXTRA: Record<Locale, Dict> = {
     "contact.placeholder.email": "vi@kompanija.com",
     "contact.placeholder.subject": "Kako možemo pomoći?",
     "contact.placeholder.message":
-      "Recite nam o svom trgovačkom sto i šta biste želeli da postignete sa Aspidusom.",
+      "Recite nam o svom trgovačkom sto i šta biste želeli da postignete sa VELOSom.",
 
     "faq.title": "Često postavljana pitanja",
     "faq.subtitle":
-      "Sve što treba da znate o Aspidusu. Ne možete da pronađete odgovor? Javite se našem timu.",
+      "Sve što treba da znate o VELOSu. Ne možete da pronađete odgovor? Javite se našem timu.",
     "faq.items.1.q": "Kako funkcioniše 10-dnevna besplatna proba?",
     "faq.items.1.a":
       "Prijavite se poslovnim emailom, izaberite plan i primaćete uputstva za plaćanje emailom. Kada se aktivaciona naknada procesuira, vaša 10-dnevna proba počinje sa punim pristupom — bez ograničenja, bez kreditne kartice.",
     "faq.items.2.q": "Da li mi treba kreditna kartica za početak probe?",
     "faq.items.2.a":
       "Ne. Šaljemo uputstva za plaćanje emailom nakon što popunite formu. Možete platiti bankovnim transferom ili karticom — proba počinje tek po prijemu naknade.",
-    "faq.items.3.q": "Koje valute Aspidus podržava?",
+    "faq.items.3.q": "Koje valute VELOS podržava?",
     "faq.items.3.a":
       "50+ valuta sa živim kursevima i automatskom revalorizacijom. Možete ceniti, fakturisati i poravnavati u različitim valutama unutar iste ponude.",
     "faq.items.4.q": "Mogu li da koristim sopstveni izvor kurseva?",
     "faq.items.4.a":
-      "Da. Enterprise i Custom planovi podržavaju prilagođene FX izvore (ECB, centralne banke, Bloomberg, vaša banka) uz podrazumevane Aspidus kurseve.",
+      "Da. Enterprise i Custom planovi podržavaju prilagođene FX izvore (ECB, centralne banke, Bloomberg, vaša banka) uz podrazumevane VELOS kurseve.",
     "faq.items.5.q": "Da li su moji podaci sigurni?",
     "faq.items.5.a":
       "Sav saobraćaj je šifrovan u tranzitu (TLS 1.3) i u mirovanju (AES-256). Radimo na ISO 27001 sertifikovanoj infrastrukturi u EU, sa dnevnim backupima i potpunim revizijskim tragom.",
@@ -1559,7 +1559,7 @@ const EXTRA: Record<Locale, Dict> = {
     "privacy.title": "Politika privatnosti",
     "privacy.updated": "Poslednje ažuriranje: januar 2025",
     "privacy.intro":
-      "Ova Politika privatnosti objašnjava kako Aspidus („mi”) prikuplja, koristi i štiti vaše lične podatke kada koristite našu platformu i sajt.",
+      "Ova Politika privatnosti objašnjava kako VELOS („mi”) prikuplja, koristi i štiti vaše lične podatke kada koristite našu platformu i sajt.",
     "privacy.collect.title": "1. Podaci koje prikupljamo",
     "privacy.collect.body":
       "Podaci o nalogu (ime, email, kompanija), podaci o korišćenju (posete, funkcije) i transakcioni podaci koje kreirate (partneri, ponude, fakture, proračuni).",
@@ -1571,33 +1571,33 @@ const EXTRA: Record<Locale, Dict> = {
       "Podaci se čuvaju na ISO 27001 sertifikovanoj EU infrastrukturi, šifrovani AES-256. Zadržavamo podatke tokom trajanja naloga i 90 dana nakon brisanja.",
     "privacy.rights.title": "4. Vaša prava",
     "privacy.rights.body":
-      "Možete zatražiti izvoz, ispravku ili brisanje podataka slanjem emaila na privacy@aspidus.app. Odgovaramo u roku od 30 dana.",
+      "Možete zatražiti izvoz, ispravku ili brisanje podataka slanjem emaila na privacy@velos.app. Odgovaramo u roku od 30 dana.",
     "privacy.contact.title": "5. Kontakt",
     "privacy.contact.body":
-      "Pitanja o ovoj politici? Pišite na privacy@aspidus.app ili Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Srbija.",
+      "Pitanja o ovoj politici? Pišite na privacy@velos.app ili VELOS, Bulevar oslobođenja 11, 21000 Novi Sad, Srbija.",
 
     "terms.title": "Uslovi korišćenja",
     "terms.updated": "Poslednje ažuriranje: januar 2025",
     "terms.intro":
-      "Ovi Uslovi uređuju korišćenje Aspidus platforme. Prijavom prihvatate iste.",
+      "Ovi Uslovi uređuju korišćenje VELOS platforme. Prijavom prihvatate iste.",
     "terms.accept.title": "1. Prihvatanje uslova",
     "terms.accept.body":
       "Kreiranjem naloga prihvatate ove Uslove i Politiku privatnosti. Ako ne prihvatate, ne koristite platformu.",
     "terms.accounts.title": "2. Nalozi",
     "terms.accounts.body":
-      "Odgovorni ste za sigurnost akreditiva i svu aktivnost pod vašim nalogom. Odmah nas obavestite na security@aspidus.app o neovlašćenoj upotrebi.",
+      "Odgovorni ste za sigurnost akreditiva i svu aktivnost pod vašim nalogom. Odmah nas obavestite na security@velos.app o neovlašćenoj upotrebi.",
     "terms.use.title": "3. Prihvatljivo korišćenje",
     "terms.use.body":
-      "Ne smete koristiti Aspidus za ilegalnu trgovinu, pranje novca, transakcije sa sankcionisanim licima ni aktivnosti zabranjene zakonom. Zadržavamo pravo suspenzije.",
+      "Ne smete koristiti VELOS za ilegalnu trgovinu, pranje novca, transakcije sa sankcionisanim licima ni aktivnosti zabranjene zakonom. Zadržavamo pravo suspenzije.",
     "terms.payment.title": "4. Plaćanje",
     "terms.payment.body":
       "Planovi se naplaćuju mesečno unapred. Aktivaciona naknada za 10-dnevnu probu nije povratna. Možete nadograditi, sniziti ili otkazati u svakom trenutku.",
     "terms.liability.title": "5. Odgovornost",
     "terms.liability.body":
-      "Aspidus se pruža „kao što jeste”. Po zakonu, ne odgovaramo za indirektne ili posledične štete.",
+      "VELOS se pruža „kao što jeste”. Po zakonu, ne odgovaramo za indirektne ili posledične štete.",
     "terms.contact.title": "6. Kontakt",
     "terms.contact.body":
-      "Pitanja o Uslovima? Pišite na legal@aspidus.app ili Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Srbija.",
+      "Pitanja o Uslovima? Pišite na legal@velos.app ili VELOS, Bulevar oslobođenja 11, 21000 Novi Sad, Srbija.",
 
     "features.pageBadge": "Mogućnosti platforme",
     "features.pageSubtitle":
@@ -1671,25 +1671,25 @@ const EXTRA: Record<Locale, Dict> = {
     "calc.livePreview": "Canlı önizleme",
     "calc.preset": "Hazır ayar",
 
-    "about.title": "Aspidus Hakkında",
+    "about.title": "VELOS Hakkında",
     "about.subtitle": "Uluslararası ticaret için işletim sistemi kuruyoruz.",
     "about.mission.title": "Misyonumuz",
     "about.mission.body":
-      "Aspidus, e-tabloları, WhatsApp konuşmalarını ve eski ERP'leri birleştirmekten bıkan tüccarlar tarafından kuruldu. Tüm ticaret masasını — ön ofis, arka ofis ve partnerler — tek bir doğru kaynak üzerinde birleştiren çalışma alanını inşa ediyoruz.",
+      "VELOS, e-tabloları, WhatsApp konuşmalarını ve eski ERP'leri birleştirmekten bıkan tüccarlar tarafından kuruldu. Tüm ticaret masasını — ön ofis, arka ofis ve partnerler — tek bir doğru kaynak üzerinde birleştiren çalışma alanını inşa ediyoruz.",
     "about.story.title": "Hikâyemiz",
     "about.story.body":
-      "2021'de Belgrad'da küçük bir ekiple başlayan Aspidus, bugün 30+ ülkedeki ticaret evlerine hizmet veriyor. Müşterilerimiz her gün gübre, tahıl, metal, kahve ve kimyasalları sınırlar ötesine taşıyor — ve tekliflerinin, faturalarının ve hesaplamalarının son kuruşuna kadar doğru kalması için Aspidus'a güveniyorlar.",
+      "2021'de Belgrad'da küçük bir ekiple başlayan VELOS, bugün 30+ ülkedeki ticaret evlerine hizmet veriyor. Müşterilerimiz her gün gübre, tahıl, metal, kahve ve kimyasalları sınırlar ötesine taşıyor — ve tekliflerinin, faturalarının ve hesaplamalarının son kuruşuna kadar doğru kalması için VELOS'a güveniyorlar.",
     "about.values.title": "Neyi temsil ediyoruz",
     "about.value.1.title": "Hassasiyet",
     "about.value.1.body":
       "Ticaret düşük marjlı bir iştir. Tek bir ondalık basamak önemlidir. Doğruluğa takıntılıyız.",
     "about.value.2.title": "Hız",
     "about.value.2.body":
-      "Teklifler pazarın hızında hareket eder. Aspidus bir saniyenin altında yüklenir, otel Wi-Fi'ında bile.",
+      "Teklifler pazarın hızında hareket eder. VELOS bir saniyenin altında yüklenir, otel Wi-Fi'ında bile.",
     "about.value.3.title": "Ortaklık",
     "about.value.3.body":
       "Müşterilerimiz büyüdükçe büyüyoruz. Yol haritamızdaki her madde bir müşteri talebiyle başlar.",
-    "about.stats.title": "Aspidus rakamlarla",
+    "about.stats.title": "VELOS rakamlarla",
     "about.stats.customers": "Ticaret evleri",
     "about.stats.countries": "Hizmet verilen ülke",
     "about.stats.volume": "Yıllık yönetilen ticaret",
@@ -1711,7 +1711,7 @@ const EXTRA: Record<Locale, Dict> = {
     "contact.info.emailLabel": "E-posta",
     "contact.info.phoneLabel": "Telefon",
     "contact.info.addressLabel": "Ofis",
-    "contact.info.email": "hello@aspidus.app",
+    "contact.info.email": "hello@velos.app",
     "contact.info.phone": "+381 11 0000 000",
     "contact.info.address": "Bulevar oslobođenja 11, 21000 Novi Sad, Sırbistan",
     "contact.placeholder.company": "Acme Ticaret A.Ş.",
@@ -1719,23 +1719,23 @@ const EXTRA: Record<Locale, Dict> = {
     "contact.placeholder.email": "siz@sirket.com",
     "contact.placeholder.subject": "Nasıl yardımcı olabiliriz?",
     "contact.placeholder.message":
-      "Ticaret masanızdan ve Aspidus ile ne başarmak istediğinizden bahsedin.",
+      "Ticaret masanızdan ve VELOS ile ne başarmak istediğinizden bahsedin.",
 
     "faq.title": "Sık sorulan sorular",
     "faq.subtitle":
-      "Aspidus hakkında bilmeniz gereken her şey. Cevabı bulamıyor musunuz? Ekibimize ulaşın.",
+      "VELOS hakkında bilmeniz gereken her şey. Cevabı bulamıyor musunuz? Ekibimize ulaşın.",
     "faq.items.1.q": "10 günlük ücretsiz deneme nasıl çalışır?",
     "faq.items.1.a":
       "İş e-postanızla kaydolun, plan seçin ve e-posta ile ödeme talimatları alın. Aktivasyon ücreti işlendikten sonra 10 günlük denemeniz tam platform erişimiyle başlar — özellik sınırlaması yok, kredi kartı yok.",
     "faq.items.2.q": "Deneme için kredi kartı gerekir mi?",
     "faq.items.2.a":
       "Hayır. Formu gönderdikten sonra ödeme talimatlarını e-posta ile göndeririz. Banka transferi veya kartla ödeyebilirsiniz — deneme yalnızca aktivasyon ücreti alındıktan sonra başlar.",
-    "faq.items.3.q": "Aspidus hangi para birimlerini destekler?",
+    "faq.items.3.q": "VELOS hangi para birimlerini destekler?",
     "faq.items.3.a":
       "Canlı döviz kurları ve açık kalemlerin otomatik yeniden değerlemesi ile 50+ para birimi. Aynı teklifte farklı para birimlerinde fiyatlandırma, faturalama ve hesaplaşma yapabilirsiniz.",
     "faq.items.4.q": "Kendi döviz kaynağımı getirebilir miyim?",
     "faq.items.4.a":
-      "Evet. Enterprise ve Custom planlar varsayılan Aspidus kurlarının yanı sıra özel FX kaynaklarını (ECB, merkez bankaları, Bloomberg, kendi bankanız) destekler.",
+      "Evet. Enterprise ve Custom planlar varsayılan VELOS kurlarının yanı sıra özel FX kaynaklarını (ECB, merkez bankaları, Bloomberg, kendi bankanız) destekler.",
     "faq.items.5.q": "Verilerim güvende mi?",
     "faq.items.5.a":
       "Tüm trafik transitte (TLS 1.3) ve bekleyen halde (AES-256) şifrelenir. AB'de ISO 27001 sertifikalı altyapıda çalışırız, günlük yedekleme ve her kayıtta tam denetim izi ile.",
@@ -1752,7 +1752,7 @@ const EXTRA: Record<Locale, Dict> = {
     "privacy.title": "Gizlilik Politikası",
     "privacy.updated": "Son güncelleme: Ocak 2025",
     "privacy.intro":
-      "Bu Gizlilik Politikası, platformumuzu ve sitemizi kullanırken Aspidus'un («biz») kişisel verilerinizi nasıl topladığını, kullandığını ve koruduğunu açıklar.",
+      "Bu Gizlilik Politikası, platformumuzu ve sitemizi kullanırken VELOS'un («biz») kişisel verilerinizi nasıl topladığını, kullandığını ve koruduğunu açıklar.",
     "privacy.collect.title": "1. Topladığımız veriler",
     "privacy.collect.body":
       "Hesap verileri (ad, e-posta, şirket), kullanım verileri (ziyaret edilen sayfalar, kullanılan özellikler) ve platformda oluşturduğunuz işlem verileri.",
@@ -1764,33 +1764,33 @@ const EXTRA: Record<Locale, Dict> = {
       "Veriler AB'de ISO 27001 sertifikalı altyapıda, AES-256 ile şifrelenerek saklanır. Verilerinizi hesabınızın ömrü boyunca ve silindikten sonra 90 gün boyunca tutarız.",
     "privacy.rights.title": "4. Haklarınız",
     "privacy.rights.body":
-      "Verilerinizin dışa aktarılmasını, düzeltilmesini veya silinmesini isteyebilirsiniz: privacy@aspidus.app. 30 gün içinde yanıt veririz.",
+      "Verilerinizin dışa aktarılmasını, düzeltilmesini veya silinmesini isteyebilirsiniz: privacy@velos.app. 30 gün içinde yanıt veririz.",
     "privacy.contact.title": "5. İletişim",
     "privacy.contact.body":
-      "Bu politika hakkında sorularınız mı var? privacy@aspidus.app veya Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Sırbistan.",
+      "Bu politika hakkında sorularınız mı var? privacy@velos.app veya VELOS, Bulevar oslobođenja 11, 21000 Novi Sad, Sırbistan.",
 
     "terms.title": "Hizmet Şartları",
     "terms.updated": "Son güncelleme: Ocak 2025",
     "terms.intro":
-      "Bu Şartlar Aspidus platformunun kullanımını düzenler. Kaydolarak kabul edersiniz.",
+      "Bu Şartlar VELOS platformunun kullanımını düzenler. Kaydolarak kabul edersiniz.",
     "terms.accept.title": "1. Şartların kabulü",
     "terms.accept.body":
       "Hesap oluşturarak bu Şartları ve Gizlilik Politikamızı kabul edersiniz. Kabul etmiyorsanız platformu kullanmayın.",
     "terms.accounts.title": "2. Hesaplar",
     "terms.accounts.body":
-      "Kimlik bilgilerinizi güvende tutmaktan ve hesabınız altındaki tüm aktiviteden siz sorumlusunuz. Yetkisiz kullanımda security@aspidus.app adresine hemen bildirin.",
+      "Kimlik bilgilerinizi güvende tutmaktan ve hesabınız altındaki tüm aktiviteden siz sorumlusunuz. Yetkisiz kullanımda security@velos.app adresine hemen bildirin.",
     "terms.use.title": "3. Kabul edilebilir kullanım",
     "terms.use.body":
-      "Aspidus'u yasa dışı ticaret, kara para aklama, yaptırımlı taraflarla işlem veya yasa dışı faaliyet için kullanamazsınız. Kuralları ihlal eden hesapları askıya alma hakkımızı saklı tutarız.",
+      "VELOS'u yasa dışı ticaret, kara para aklama, yaptırımlı taraflarla işlem veya yasa dışı faaliyet için kullanamazsınız. Kuralları ihlal eden hesapları askıya alma hakkımızı saklı tutarız.",
     "terms.payment.title": "4. Ödeme",
     "terms.payment.body":
       "Planlar aylık peşin faturalanır. 10 günlük deneme aktivasyon ücreti iade edilmez. İstediğiniz zaman yükseltebilir, düşürebilir veya iptal edebilirsiniz.",
     "terms.liability.title": "5. Sorumluluk",
     "terms.liability.body":
-      "Aspidus «olduğu gibi» sağlanır. Yasaların izin verdiği en geniş ölçüde dolaylı veya dolaylı zararlardan sorumlu değiliz.",
+      "VELOS «olduğu gibi» sağlanır. Yasaların izin verdiği en geniş ölçüde dolaylı veya dolaylı zararlardan sorumlu değiliz.",
     "terms.contact.title": "6. İletişim",
     "terms.contact.body":
-      "Şartlar hakkında sorularınız mı var? legal@aspidus.app veya Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Sırbistan.",
+      "Şartlar hakkında sorularınız mı var? legal@velos.app veya VELOS, Bulevar oslobođenja 11, 21000 Novi Sad, Sırbistan.",
 
     "features.pageBadge": "Platform özellikleri",
     "features.pageSubtitle":
@@ -1864,25 +1864,25 @@ const EXTRA: Record<Locale, Dict> = {
     "calc.livePreview": "Live-Vorschau",
     "calc.preset": "Vorlage",
 
-    "about.title": "Über Aspidus",
+    "about.title": "Über VELOS",
     "about.subtitle": "Wir bauen das Betriebssystem für den internationalen Handel.",
     "about.mission.title": "Unsere Mission",
     "about.mission.body":
-      "Aspidus wurde von Händlern gegründet, die es satt hatten, Tabellen, WhatsApp-Threads und veraltete ERP-Systeme zusammenzuflicken. Wir bauen den einheitlichen Arbeitsbereich, der den gesamten Handelstisch — Front Office, Back Office und Partner — auf eine einzige Wahrheitsquelle bringt.",
+      "VELOS wurde von Händlern gegründet, die es satt hatten, Tabellen, WhatsApp-Threads und veraltete ERP-Systeme zusammenzuflicken. Wir bauen den einheitlichen Arbeitsbereich, der den gesamten Handelstisch — Front Office, Back Office und Partner — auf eine einzige Wahrheitsquelle bringt.",
     "about.story.title": "Unsere Geschichte",
     "about.story.body":
-      "Aus einem kleinen Team in Belgrad im Jahr 2021 bedient Aspidus heute Handelshäuser in über 30 Ländern. Unsere Kunden bewegen täglich Düngemittel, Getreide, Metalle, Kaffee und Chemikalien über Grenzen — und vertrauen darauf, dass Aspidus ihre Angebote, Rechnungen und Berechnungen bis auf den Cent genau hält.",
+      "Aus einem kleinen Team in Belgrad im Jahr 2021 bedient VELOS heute Handelshäuser in über 30 Ländern. Unsere Kunden bewegen täglich Düngemittel, Getreide, Metalle, Kaffee und Chemikalien über Grenzen — und vertrauen darauf, dass VELOS ihre Angebote, Rechnungen und Berechnungen bis auf den Cent genau hält.",
     "about.values.title": "Wofür wir stehen",
     "about.value.1.title": "Präzision",
     "about.value.1.body":
       "Handel ist ein margenschwaches Geschäft. Eine Dezimalstelle zählt. Wir sind besessen von Korrektheit.",
     "about.value.2.title": "Geschwindigkeit",
     "about.value.2.body":
-      "Angebote bewegen sich im Tempo des Marktes. Aspidus lädt in unter einer Sekunde, selbst im Hotel-WLAN.",
+      "Angebote bewegen sich im Tempo des Marktes. VELOS lädt in unter einer Sekunde, selbst im Hotel-WLAN.",
     "about.value.3.title": "Partnerschaft",
     "about.value.3.body":
       "Wir wachsen nur, wenn unsere Kunden wachsen. Jeder Roadmap-Punkt beginnt mit einer Kundenanfrage.",
-    "about.stats.title": "Aspidus in Zahlen",
+    "about.stats.title": "VELOS in Zahlen",
     "about.stats.customers": "Handelshäuser",
     "about.stats.countries": "Bediente Länder",
     "about.stats.volume": "Jährliches Handelsvolumen",
@@ -1904,7 +1904,7 @@ const EXTRA: Record<Locale, Dict> = {
     "contact.info.emailLabel": "E-Mail",
     "contact.info.phoneLabel": "Telefon",
     "contact.info.addressLabel": "Büro",
-    "contact.info.email": "hello@aspidus.app",
+    "contact.info.email": "hello@velos.app",
     "contact.info.phone": "+381 11 0000 000",
     "contact.info.address": "Bulevar oslobođenja 11, 21000 Novi Sad, Serbien",
     "contact.placeholder.company": "Acme Trading GmbH",
@@ -1912,23 +1912,23 @@ const EXTRA: Record<Locale, Dict> = {
     "contact.placeholder.email": "sie@firma.com",
     "contact.placeholder.subject": "Wie können wir helfen?",
     "contact.placeholder.message":
-      "Erzählen Sie uns von Ihrem Handelstisch und was Sie mit Aspidus erreichen möchten.",
+      "Erzählen Sie uns von Ihrem Handelstisch und was Sie mit VELOS erreichen möchten.",
 
     "faq.title": "Häufig gestellte Fragen",
     "faq.subtitle":
-      "Alles, was Sie über Aspidus wissen müssen. Antwort nicht gefunden? Kontaktieren Sie unser Team.",
+      "Alles, was Sie über VELOS wissen müssen. Antwort nicht gefunden? Kontaktieren Sie unser Team.",
     "faq.items.1.q": "Wie funktioniert die 10-tägige kostenlose Testversion?",
     "faq.items.1.a":
       "Registrieren Sie sich mit Ihrer geschäftlichen E-Mail-Adresse, wählen Sie einen Plan und Sie erhalten per E-Mail Zahlungsanweisungen. Sobald die Aktivierungsgebühr verarbeitet ist, beginnt Ihre 10-tägige Testversion mit vollem Plattformzugang — ohne Feature-Limits, ohne Kreditkarte.",
     "faq.items.2.q": "Brauche ich eine Kreditkarte für den Start?",
     "faq.items.2.a":
       "Nein. Wir senden Zahlungsanweisungen per E-Mail, sobald Sie das Formular absenden. Sie können per Banküberweisung oder Karte zahlen — die Testversion beginnt erst nach Eingang der Aktivierungsgebühr.",
-    "faq.items.3.q": "Welche Währungen unterstützt Aspidus?",
+    "faq.items.3.q": "Welche Währungen unterstützt VELOS?",
     "faq.items.3.a":
       "50+ Währungen mit Live-Wechselkursen und automatischer Neubewertung offener Posten. Sie können in derselben Anfrage in verschiedenen Währungen preisen, abrechnen und begleichen.",
     "faq.items.4.q": "Kann ich meinen eigenen Wechselkurs-Feed einbringen?",
     "faq.items.4.a":
-      "Ja. Enterprise- und Custom-Pläne unterstützen eigene FX-Feeds (EZB, Zentralbanken, Bloomberg, Ihre Bank) neben den Standard-Aspidus-Kursen.",
+      "Ja. Enterprise- und Custom-Pläne unterstützen eigene FX-Feeds (EZB, Zentralbanken, Bloomberg, Ihre Bank) neben den Standard-VELOS-Kursen.",
     "faq.items.5.q": "Sind meine Daten sicher?",
     "faq.items.5.a":
       "Der gesamte Verkehr ist in Transit (TLS 1.3) und ruht (AES-256) verschlüsselt. Wir laufen auf ISO 27001-zertifizierter EU-Infrastruktur mit täglichen Backups und vollständigen Audit-Trails.",
@@ -1945,7 +1945,7 @@ const EXTRA: Record<Locale, Dict> = {
     "privacy.title": "Datenschutzerklärung",
     "privacy.updated": "Zuletzt aktualisiert: Januar 2025",
     "privacy.intro":
-      "Diese Datenschutzerklärung erklärt, wie Aspidus („wir”) Ihre personenbezogenen Daten bei Nutzung unserer Plattform und Website erhebt, verwendet und schützt.",
+      "Diese Datenschutzerklärung erklärt, wie VELOS („wir”) Ihre personenbezogenen Daten bei Nutzung unserer Plattform und Website erhebt, verwendet und schützt.",
     "privacy.collect.title": "1. Daten, die wir erheben",
     "privacy.collect.body":
       "Kontodaten (Name, E-Mail, Firma), Nutzungsdaten (besuchte Seiten, genutzte Funktionen) und Transaktionsdaten, die Sie in der Plattform erstellen.",
@@ -1957,33 +1957,33 @@ const EXTRA: Record<Locale, Dict> = {
       "Daten werden auf ISO 27001-zertifizierter EU-Infrastruktur gespeichert, ruhend mit AES-256 verschlüsselt. Wir bewahren Ihre Daten für die Lebensdauer des Kontos und 90 Tage nach Löschung auf.",
     "privacy.rights.title": "4. Ihre Rechte",
     "privacy.rights.body":
-      "Sie können jederzeit Export, Korrektur oder Löschung verlangen: privacy@aspidus.app. Wir antworten innerhalb von 30 Tagen.",
+      "Sie können jederzeit Export, Korrektur oder Löschung verlangen: privacy@velos.app. Wir antworten innerhalb von 30 Tagen.",
     "privacy.contact.title": "5. Kontakt",
     "privacy.contact.body":
-      "Fragen zu dieser Richtlinie? Schreiben Sie an privacy@aspidus.app oder Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Serbien.",
+      "Fragen zu dieser Richtlinie? Schreiben Sie an privacy@velos.app oder VELOS, Bulevar oslobođenja 11, 21000 Novi Sad, Serbien.",
 
     "terms.title": "Nutzungsbedingungen",
     "terms.updated": "Zuletzt aktualisiert: Januar 2025",
     "terms.intro":
-      "Diese Bedingungen regeln Ihre Nutzung der Aspidus-Plattform. Mit der Anmeldung stimmen Sie ihnen zu.",
+      "Diese Bedingungen regeln Ihre Nutzung der VELOS-Plattform. Mit der Anmeldung stimmen Sie ihnen zu.",
     "terms.accept.title": "1. Annahme der Bedingungen",
     "terms.accept.body":
       "Mit der Kontoerstellung stimmen Sie diesen Bedingungen und unserer Datenschutzerklärung zu. Wenn Sie nicht einverstanden sind, nutzen Sie die Plattform nicht.",
     "terms.accounts.title": "2. Konten",
     "terms.accounts.body":
-      "Sie sind verantwortlich für die Sicherheit Ihrer Zugangsdaten und alle Aktivitäten unter Ihrem Konto. Benachrichtigen Sie uns sofort bei unbefugter Nutzung: security@aspidus.app.",
+      "Sie sind verantwortlich für die Sicherheit Ihrer Zugangsdaten und alle Aktivitäten unter Ihrem Konto. Benachrichtigen Sie uns sofort bei unbefugter Nutzung: security@velos.app.",
     "terms.use.title": "3. Zulässige Nutzung",
     "terms.use.body":
-      "Sie dürfen Aspidus nicht für illegalen Handel, Geldwäsche, sanktionierte Transaktionen oder gesetzlich verbotene Aktivitäten nutzen. Wir behalten uns vor, Konten bei Verstößen zu sperren.",
+      "Sie dürfen VELOS nicht für illegalen Handel, Geldwäsche, sanktionierte Transaktionen oder gesetzlich verbotene Aktivitäten nutzen. Wir behalten uns vor, Konten bei Verstößen zu sperren.",
     "terms.payment.title": "4. Zahlung",
     "terms.payment.body":
       "Pläne werden monatlich im Voraus abgerechnet. Die Aktivierungsgebühr für die 10-tägige Testversion ist nicht erstattungsfähig. Upgrade, Downgrade oder Kündigung jederzeit möglich.",
     "terms.liability.title": "5. Haftung",
     "terms.liability.body":
-      "Aspidus wird «wie besehen» bereitgestellt. Im gesetzlich zulässigen Umfang haften wir nicht für indirekte oder Folgeschäden.",
+      "VELOS wird «wie besehen» bereitgestellt. Im gesetzlich zulässigen Umfang haften wir nicht für indirekte oder Folgeschäden.",
     "terms.contact.title": "6. Kontakt",
     "terms.contact.body":
-      "Fragen zu den Bedingungen? Schreiben Sie an legal@aspidus.app oder Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Serbien.",
+      "Fragen zu den Bedingungen? Schreiben Sie an legal@velos.app oder VELOS, Bulevar oslobođenja 11, 21000 Novi Sad, Serbien.",
 
     "features.pageBadge": "Plattform-Funktionen",
     "features.pageSubtitle":
@@ -2057,25 +2057,25 @@ const EXTRA: Record<Locale, Dict> = {
     "calc.livePreview": "Живой предпросмотр",
     "calc.preset": "Шаблон",
 
-    "about.title": "О Aspidus",
+    "about.title": "О VELOS",
     "about.subtitle": "Мы строим операционную систему для международной торговли.",
     "about.mission.title": "Наша миссия",
     "about.mission.body":
-      "Aspidus основан торговцами, уставшими сшивать таблицы, переписки в WhatsApp и устаревшие ERP. Мы строим единое рабочее пространство, выводящее весь торговый стол — фронт-офис, бэк-офис и партнёров — на единую версию правды.",
+      "VELOS основан торговцами, уставшими сшивать таблицы, переписки в WhatsApp и устаревшие ERP. Мы строим единое рабочее пространство, выводящее весь торговый стол — фронт-офис, бэк-офис и партнёров — на единую версию правды.",
     "about.story.title": "Наша история",
     "about.story.body":
-      "Из небольшой команды в Белграде в 2021 году Aspidus сегодня обслуживает торговые дома в 30+ странах. Наши клиенты ежедневно перемещают удобрения, зерно, металлы, кофе и химикаты через границы — и доверяют Aspidus точность предложений, счетов и расчётов до цента.",
+      "Из небольшой команды в Белграде в 2021 году VELOS сегодня обслуживает торговые дома в 30+ странах. Наши клиенты ежедневно перемещают удобрения, зерно, металлы, кофе и химикаты через границы — и доверяют VELOS точность предложений, счетов и расчётов до цента.",
     "about.values.title": "Наши ценности",
     "about.value.1.title": "Точность",
     "about.value.1.body":
       "Торговля — низкомаржинальный бизнес. Каждый десятичный знак важен. Мы одержимы корректностью.",
     "about.value.2.title": "Скорость",
     "about.value.2.body":
-      "Предложения движутся со скоростью рынка. Aspidus загружается меньше чем за секунду, даже в отеле по Wi-Fi.",
+      "Предложения движутся со скоростью рынка. VELOS загружается меньше чем за секунду, даже в отеле по Wi-Fi.",
     "about.value.3.title": "Партнёрство",
     "about.value.3.body":
       "Мы растём только тогда, когда растут наши клиенты. Каждый пункт roadmap начинается с запроса клиента.",
-    "about.stats.title": "Aspidus в цифрах",
+    "about.stats.title": "VELOS в цифрах",
     "about.stats.customers": "Торговые дома",
     "about.stats.countries": "Обслужено стран",
     "about.stats.volume": "Годовой объём торговли",
@@ -2097,7 +2097,7 @@ const EXTRA: Record<Locale, Dict> = {
     "contact.info.emailLabel": "Email",
     "contact.info.phoneLabel": "Телефон",
     "contact.info.addressLabel": "Офис",
-    "contact.info.email": "hello@aspidus.app",
+    "contact.info.email": "hello@velos.app",
     "contact.info.phone": "+381 11 0000 000",
     "contact.info.address": "Bulevar oslobođenja 11, 21000 Novi Sad, Сербия",
     "contact.placeholder.company": "ООО «Acme Trading»",
@@ -2105,23 +2105,23 @@ const EXTRA: Record<Locale, Dict> = {
     "contact.placeholder.email": "vy@kompaniya.ru",
     "contact.placeholder.subject": "Чем можем помочь?",
     "contact.placeholder.message":
-      "Расскажите о своём торговом столе и что хотите получить от Aspidus.",
+      "Расскажите о своём торговом столе и что хотите получить от VELOS.",
 
     "faq.title": "Часто задаваемые вопросы",
     "faq.subtitle":
-      "Всё, что нужно знать об Aspidus. Не нашли ответ? Свяжитесь с нашей командой.",
+      "Всё, что нужно знать об VELOS. Не нашли ответ? Свяжитесь с нашей командой.",
     "faq.items.1.q": "Как работает 10-дневный бесплатный период?",
     "faq.items.1.a":
       "Зарегистрируйтесь рабочим email, выберите план — мы пришлём инструкции по оплате. После получения активационного взноса начинается 10-дневный период с полным доступом — без ограничений и без карты.",
     "faq.items.2.q": "Нужна ли карта для старта?",
     "faq.items.2.a":
       "Нет. Мы присылаем инструкции по оплате после отправки формы. Оплата банковским переводом или картой — период начинается после получения взноса.",
-    "faq.items.3.q": "Какие валюты поддерживает Aspidus?",
+    "faq.items.3.q": "Какие валюты поддерживает VELOS?",
     "faq.items.3.a":
       "50+ валют с актуальными курсами и автоматической переоценкой. Можно оценивать, выставлять счета и рассчитываться в разных валютах в одном предложении.",
     "faq.items.4.q": "Можно ли подключить свой источник курсов?",
     "faq.items.4.a":
-      "Да. Планы Enterprise и Custom поддерживают собственные FX-источники (ЕЦБ, центральные банки, Bloomberg, ваш банк) вместе со стандартными курсами Aspidus.",
+      "Да. Планы Enterprise и Custom поддерживают собственные FX-источники (ЕЦБ, центральные банки, Bloomberg, ваш банк) вместе со стандартными курсами VELOS.",
     "faq.items.5.q": "Безопасны ли мои данные?",
     "faq.items.5.a":
       "Весь трафик шифруется в транзите (TLS 1.3) и в покое (AES-256). Мы работаем на ISO 27001-сертифицированной инфраструктуре в ЕС с ежедневными бэкапами и полным аудиторским следом.",
@@ -2138,7 +2138,7 @@ const EXTRA: Record<Locale, Dict> = {
     "privacy.title": "Политика конфиденциальности",
     "privacy.updated": "Последнее обновление: январь 2025",
     "privacy.intro":
-      "Эта Политика объясняет, как Aspidus («мы») собирает, использует и защищает ваши персональные данные при использовании платформы и сайта.",
+      "Эта Политика объясняет, как VELOS («мы») собирает, использует и защищает ваши персональные данные при использовании платформы и сайта.",
     "privacy.collect.title": "1. Данные, которые мы собираем",
     "privacy.collect.body":
       "Данные аккаунта (имя, email, компания), данные использования (посещённые страницы, функции) и транзакционные данные, создаваемые вами в платформе.",
@@ -2150,33 +2150,33 @@ const EXTRA: Record<Locale, Dict> = {
       "Данные хранятся на ISO 27001-сертифицированной инфраструктуре ЕС, шифруются AES-256. Мы храним данные в течение жизни аккаунта и 90 дней после удаления.",
     "privacy.rights.title": "4. Ваши права",
     "privacy.rights.body":
-      "Вы можете запросить экспорт, исправление или удаление данных: privacy@aspidus.app. Отвечаем в течение 30 дней.",
+      "Вы можете запросить экспорт, исправление или удаление данных: privacy@velos.app. Отвечаем в течение 30 дней.",
     "privacy.contact.title": "5. Контакты",
     "privacy.contact.body":
-      "Вопросы по политике? Пишите на privacy@aspidus.app или Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Сербия.",
+      "Вопросы по политике? Пишите на privacy@velos.app или VELOS, Bulevar oslobođenja 11, 21000 Novi Sad, Сербия.",
 
     "terms.title": "Условия использования",
     "terms.updated": "Последнее обновление: январь 2025",
     "terms.intro":
-      "Эти Условия регулируют использование платформы Aspidus. Регистрируясь, вы соглашаетесь с ними.",
+      "Эти Условия регулируют использование платформы VELOS. Регистрируясь, вы соглашаетесь с ними.",
     "terms.accept.title": "1. Принятие условий",
     "terms.accept.body":
       "Создавая аккаунт, вы соглашаетесь с Условиями и Политикой конфиденциальности. Если не согласны — не используйте платформу.",
     "terms.accounts.title": "2. Аккаунты",
     "terms.accounts.body":
-      "Вы отвечаете за безопасность учётных данных и всю активность под вашим аккаунтом. О несанкционированном использовании сообщайте на security@aspidus.app.",
+      "Вы отвечаете за безопасность учётных данных и всю активность под вашим аккаунтом. О несанкционированном использовании сообщайте на security@velos.app.",
     "terms.use.title": "3. Допустимое использование",
     "terms.use.body":
-      "Нельзя использовать Aspidus для нелегальной торговли, отмывания денег, операций с санкционированными лицами и запрещённой деятельности. Мы вправе приостановить аккаунты-нарушители.",
+      "Нельзя использовать VELOS для нелегальной торговли, отмывания денег, операций с санкционированными лицами и запрещённой деятельности. Мы вправе приостановить аккаунты-нарушители.",
     "terms.payment.title": "4. Оплата",
     "terms.payment.body":
       "Планы оплачиваются ежемесячно авансом. Активационный взнос за 10-дневный период не возвращается. Апгрейд, даунгрейд или отмена — в любой момент.",
     "terms.liability.title": "5. Ответственность",
     "terms.liability.body":
-      "Aspidus предоставляется «как есть». В мере, допустимой законом, мы не отвечаем за косвенные или последующие убытки.",
+      "VELOS предоставляется «как есть». В мере, допустимой законом, мы не отвечаем за косвенные или последующие убытки.",
     "terms.contact.title": "6. Контакты",
     "terms.contact.body":
-      "Вопросы по Условиям? Пишите на legal@aspidus.app или Aspidus, Bulevar oslobođenja 11, 21000 Novi Sad, Сербия.",
+      "Вопросы по Условиям? Пишите на legal@velos.app или VELOS, Bulevar oslobođenja 11, 21000 Novi Sad, Сербия.",
 
     "features.pageBadge": "Возможности платформы",
     "features.pageSubtitle":

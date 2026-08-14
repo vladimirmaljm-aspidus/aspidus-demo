@@ -12,7 +12,7 @@ export default function PrivacyPage() {
         <div className="mt-8 space-y-6 text-sm leading-relaxed text-muted-foreground">
           <div>
             <h2 className="text-base font-semibold text-foreground">1. Data Collection</h2>
-            <p className="mt-2">Aspidus collects company name, contact email, phone number, and trade-related data (partners, products, offers, invoices) that you voluntarily enter into the platform.</p>
+            <p className="mt-2">VELOS collects company name, contact email, phone number, and trade-related data (partners, products, offers, invoices) that you voluntarily enter into the platform.</p>
           </div>
           <div>
             <h2 className="text-base font-semibold text-foreground">2. Data Storage</h2>
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
           </div>
           <div>
             <h2 className="text-base font-semibold text-foreground">5. Contact</h2>
-            <p className="mt-2">For privacy questions, contact: desk@aspidus.co</p>
+            <p className="mt-2">For privacy questions, contact: desk@velos.co</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
@@ -17,7 +18,6 @@ import {
   BarChart3,
   Settings,
   ChevronLeft,
-  ShieldCheck,
   Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -76,9 +76,14 @@ export function DemoSidebar({ onNavigate }: { onNavigate?: () => void }) {
       {/* Brand */}
       <div className="flex h-16 items-center gap-2 border-b px-4">
         <Link href="/" className="flex items-center gap-2" onClick={onNavigate}>
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-brand text-primary-foreground">
-            <ShieldCheck className="h-5 w-5" />
-          </span>
+          <Image
+            src="/logo.svg"
+            alt={t("brand.name")}
+            width={32}
+            height={32}
+            priority
+            className="h-8 w-8 rounded-lg shadow-sm"
+          />
           <span className="text-lg font-bold tracking-tight">{t("brand.name")}</span>
         </Link>
         <Badge variant="warning" className="ml-auto hidden items-center gap-1 px-2 py-0.5 text-[10px] lg:inline-flex">

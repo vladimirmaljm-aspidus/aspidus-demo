@@ -1,5 +1,5 @@
 /**
- * Mock data for the Aspidus demo site.
+ * Mock data for the VELOS demo site.
  * All values are fictional but realistic for an international trading house.
  * No database connection — these objects are imported directly by components.
  */

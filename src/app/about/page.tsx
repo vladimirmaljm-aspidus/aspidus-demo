@@ -8,9 +8,9 @@ export default function AboutPage() {
   return (
     <SiteChrome>
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold tracking-tight">{t("about.title") || "About Aspidus"}</h1>
+        <h1 className="text-4xl font-bold tracking-tight">{t("about.title") || "About VELOS"}</h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          {t("about.subtitle") || "Built by traders, for traders. Aspidus is the all-in-one platform that powers international commodity trading."}
+          {t("about.subtitle") || "Built by traders, for traders. VELOS is the all-in-one platform that powers international commodity trading."}
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">

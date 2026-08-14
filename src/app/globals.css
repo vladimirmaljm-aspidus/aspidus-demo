@@ -8,75 +8,77 @@
   --card: 0 0% 100%;
   --card-foreground: 222 47% 11%;
 
-  /* Brand — calm blue with a hint of cyan for energy */
-  --primary: 221 83% 53%;
-  --primary-foreground: 210 40% 98%;
-  --primary-soft: 214 95% 93%;
+  /* Brand — deep copper/amber. VELOS: Veles, Slavic god of earth, waters
+     and wealth. Same family as the main platform's primary. */
+  --primary: 26 90% 37%;            /* #B45309 — amber-700 */
+  --primary-foreground: 36 100% 98%; /* #FFFBF5 — warm off-white */
+  --primary-soft: 48 96% 89%;        /* #FEF3C7 — amber-100 */
 
   /* Accents */
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222 47% 11%;
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
-  --accent: 199 89% 96%;
-  --accent-foreground: 222 47% 11%;
+  --secondary: 36 33% 96%;
+  --secondary-foreground: 22 78% 26%;
+  --muted: 36 23% 96%;
+  --muted-foreground: 26 12% 47%;
+  --accent: 32 89% 96%;               /* amber-50 tint */
+  --accent-foreground: 26 90% 37%;
 
   /* Status */
   --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: 36 100% 98%;
   --success: 152 60% 40%;
-  --success-foreground: 210 40% 98%;
-  --warning: 36 94% 50%;
+  --success-foreground: 36 100% 98%;
+  --warning: 38 92% 50%;                /* amber-500 for brand cohesion */
   --warning-foreground: 22 80% 12%;
   --info: 199 89% 48%;
-  --info-foreground: 210 40% 98%;
+  --info-foreground: 36 100% 98%;
 
   /* Lines & focus */
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --ring: 221 83% 53%;
+  --border: 30 25% 91%;
+  --input: 30 25% 91%;
+  --ring: 26 90% 37%;
 
-  /* Gradient stops */
-  --gradient-from: 221 83% 53%;
-  --gradient-via: 199 89% 48%;
-  --gradient-to: 168 84% 42%;
+  /* Gradient stops — copper sweep (light → mid → dark) */
+  --gradient-from: 32 95% 44%;         /* #D97706 — amber-600 */
+  --gradient-via: 38 92% 50%;          /* #F59E0B — amber-500 */
+  --gradient-to: 23 82% 31%;           /* #92400E — amber-800 */
 
   --radius: 0.625rem;
 }
 
 .dark {
-  --background: 222 47% 5%;
-  --foreground: 210 40% 98%;
-  --card: 222 47% 7%;
-  --card-foreground: 210 40% 98%;
+  --background: 20 14% 5%;             /* very warm near-black */
+  --foreground: 36 30% 96%;
+  --card: 20 12% 8%;
+  --card-foreground: 36 30% 96%;
 
-  --primary: 217 91% 60%;
-  --primary-foreground: 222 47% 11%;
-  --primary-soft: 217 91% 16%;
+  /* Bright copper for dark surfaces */
+  --primary: 38 92% 50%;               /* #F59E0B — amber-500 */
+  --primary-foreground: 22 78% 12%;
+  --primary-soft: 26 50% 14%;
 
-  --secondary: 217 33% 12%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217 33% 13%;
-  --muted-foreground: 215 20% 65%;
-  --accent: 217 33% 16%;
-  --accent-foreground: 210 40% 98%;
+  --secondary: 22 18% 14%;
+  --secondary-foreground: 36 30% 96%;
+  --muted: 22 14% 13%;
+  --muted-foreground: 28 14% 65%;
+  --accent: 28 35% 16%;
+  --accent-foreground: 38 92% 60%;
 
   --destructive: 0 63% 45%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: 36 100% 98%;
   --success: 152 60% 42%;
-  --success-foreground: 210 40% 98%;
-  --warning: 36 94% 55%;
+  --success-foreground: 36 100% 98%;
+  --warning: 38 92% 55%;
   --warning-foreground: 22 80% 12%;
   --info: 199 89% 55%;
-  --info-foreground: 210 40% 98%;
+  --info-foreground: 36 100% 98%;
 
-  --border: 217 33% 17%;
-  --input: 217 33% 17%;
-  --ring: 217 91% 60%;
+  --border: 22 18% 17%;
+  --input: 22 18% 17%;
+  --ring: 38 92% 50%;
 
-  --gradient-from: 217 91% 60%;
-  --gradient-via: 199 89% 50%;
-  --gradient-to: 168 84% 45%;
+  --gradient-from: 43 96% 56%;         /* #FBBF24 — amber-400 */
+  --gradient-via: 32 95% 50%;          /* #D97706 brightened */
+  --gradient-to: 26 90% 45%;           /* #B45309 lightened for dark bg */
 }
 
 * {

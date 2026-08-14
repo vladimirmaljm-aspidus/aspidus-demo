@@ -16,7 +16,7 @@ type I18nContextValue = {
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
-const STORAGE_KEY = "aspidus-demo-locale";
+const STORAGE_KEY = "velos-demo-locale";
 
 function detectInitialLocale(): Locale {
   if (typeof window === "undefined") return "en";

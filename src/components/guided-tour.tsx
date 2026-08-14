@@ -33,7 +33,7 @@ const STEPS: TourStep[] = [
   { titleKey: "tour.step8.title", bodyKey: "tour.step8.body", href: "/trial", emoji: "🚀" },
 ];
 
-const STORAGE_KEY = "aspidus-demo-tour-done";
+const STORAGE_KEY = "velos-demo-tour-done";
 
 export function GuidedTour() {
   const t = useT();

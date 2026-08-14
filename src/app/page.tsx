@@ -185,7 +185,7 @@ function HeroMockup() {
           <span className="h-3 w-3 rounded-full bg-amber-400" />
           <span className="h-3 w-3 rounded-full bg-emerald-400" />
         </div>
-        <span className="mx-auto text-xs text-muted-foreground">demo.aspidus.app / dashboard</span>
+        <span className="mx-auto text-xs text-muted-foreground">demo.velos.app / dashboard</span>
       </div>
       <div className="grid grid-cols-12">
         <div className="hidden border-r bg-muted/20 p-3 md:col-span-2 md:block">

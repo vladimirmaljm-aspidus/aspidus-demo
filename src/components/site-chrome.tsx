@@ -1,22 +1,29 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import { Menu, X, ShieldCheck, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSelector } from "@/components/language-selector";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { useT } from "@/components/i18n-provider";
 import { cn } from "@/lib/utils";
 
-/** Shield + wordmark — shared by every marketing page header & footer. */
+/** VELOS logo (Veles symbol on copper/amber gradient tile) + wordmark —
+ *  shared by every marketing page header & footer. */
 export function Logo({ withWordmark = true }: { withWordmark?: boolean }) {
   const t = useT();
   return (
     <Link href="/" className="flex items-center gap-2" aria-label={t("brand.name")}>
-      <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-brand text-primary-foreground shadow-sm">
-        <ShieldCheck className="h-5 w-5" />
-      </span>
+      <Image
+        src="/logo.svg"
+        alt={t("brand.name")}
+        width={32}
+        height={32}
+        priority
+        className="h-8 w-8 rounded-lg shadow-sm"
+      />
       {withWordmark && (
         <span className="text-lg font-bold tracking-tight">{t("brand.name")}</span>
       )}
