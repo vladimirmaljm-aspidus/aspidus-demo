@@ -216,7 +216,7 @@ export function CalculatorDemo() {
                   {[
                     [t("calc.unit"), `$${fmt.format(Math.round(calc.costPerTon))}`],
                     [t("calc.selling"), `$${fmt.format(Math.round(calc.sellPerTon))}/t`],
-                    [t("calc.profit"), `$${(calc.profit / 1000).toFixed(0)}K`],
+                    [t("calc.profit"), `$${fmt.format(Math.round(calc.profit))}`],
                   ].map(([l, v], i) => (
                     <div
                       key={l}
