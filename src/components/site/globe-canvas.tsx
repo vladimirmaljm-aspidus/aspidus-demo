@@ -219,7 +219,6 @@ export function GlobeCanvas({ className }: { className?: string }) {
 
         const depthAlpha = Math.max(0.25, Math.min(1, (pa[2] + pb[2] + 1.2) / 1.8));
         const grad = ctx.createLinearGradient(pa[0], pa[1], pb[0], pb[1]);
-        const [arcR, arcG, arcB] = [palette.hubGlow, palette.arc];
         grad.addColorStop(0, "rgba(0,0,0,0)");
         grad.addColorStop(0.25, palette.arc);
         grad.addColorStop(0.75, palette.arc);
@@ -245,9 +244,6 @@ export function GlobeCanvas({ className }: { className?: string }) {
         ctx.fill();
         ctx.shadowBlur = 0;
         ctx.globalAlpha = 1;
-        void arcR;
-        void arcG;
-        void arcB;
       }
 
       // Hubs on top with glow.
