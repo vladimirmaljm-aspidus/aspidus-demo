@@ -1,75 +1,88 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { I18nProvider } from "@/components/i18n-provider";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-const siteUrl = "https://demo.velos.app";
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const APP_URL = "https://aspidus-demo.vercel.app";
+const APP_TITLE = "VELOS — Trade CRM & ERP Platform for Global Commodity Trading";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: "VELOS — Trade CRM & ERP Platform",
-    template: "%s · VELOS",
-  },
+  metadataBase: new URL(APP_URL),
+  title: APP_TITLE,
   description:
-    "VELOS is the all-in-one trade CRM & ERP platform for international trading houses. Manage partners, multi-currency offers, invoices, trade calculations and ERP in one place.",
-  applicationName: "VELOS",
+    "One platform for your entire trade lifecycle: CRM & partners, offers, proformas, invoices, trade calculator, 3D trade globe, B2B marketplace, partner portal, KYC, ERP, banking and 216 API endpoints. 5 languages. Free trial.",
   keywords: [
     "VELOS",
+    "trade platform",
+    "commodity trading",
     "trade CRM",
     "trade ERP",
-    "multi-currency offers",
+    "offers",
+    "proforma invoices",
     "trade calculator",
-    "landed cost",
-    "international trade software",
-    "commodity trading",
-    "multi-tenant",
-    "document automation",
+    "B2B marketplace",
+    "partner portal",
+    "KYC",
+    "logistics",
+    "trade finance",
   ],
   authors: [{ name: "VELOS" }],
-  creator: "VELOS",
-  publisher: "VELOS",
-  manifest: "/manifest.json",
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: [{ url: "/apple-touch-icon.svg", sizes: "180x180" }],
+    icon: "/logo.svg",
+    apple: "/apple-touch-icon.svg",
   },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: siteUrl,
-    siteName: "VELOS",
-    title: "VELOS — Trade CRM & ERP Platform",
+    title: APP_TITLE,
     description:
-      "International trade CRM with multi-tenancy, compliance, and document automation. Powered by VELOS.",
+      "Manage your global trade operations — from first inquiry to final payment. CRM, documents, trade calculator, 3D globe, marketplace, portal and ERP in one multi-tenant platform.",
+    url: APP_URL,
+    siteName: "VELOS",
+    type: "website",
+    images: [{ url: "/logo.svg", width: 512, height: 512, alt: "VELOS" }],
   },
   twitter: {
     card: "summary",
-    title: "VELOS — Trade CRM & ERP Platform",
+    title: APP_TITLE,
     description:
-      "International trade CRM with multi-tenancy, compliance, and document automation.",
+      "Trade CRM & ERP for international commodity trading. Free trial & live demo.",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#B45309",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#B45309" },
+    { media: "(prefers-color-scheme: dark)", color: "#1A1512" },
+  ],
   width: "device-width",
   initialScale: 1,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <ThemeProvider>
-          <I18nProvider>{children}</I18nProvider>
-        </ThemeProvider>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased bg-background text-foreground font-sans`}
+      >
+        {children}
       </body>
     </html>
   );
