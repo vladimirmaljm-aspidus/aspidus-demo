@@ -2,20 +2,19 @@
 
 import {
   CircleDot,
-  Handshake,
   Sparkles,
   Leaf,
   Newspaper,
   FileSearch,
   MessageSquare,
+  Tags,
 } from "lucide-react";
 import { useSiteT } from "@/components/site/i18n-provider";
 import { Reveal, Section, SectionHeading } from "@/components/site/primitives";
 
 const ITEMS = [
   { key: "rfq", icon: CircleDot },
-  { key: "nego", icon: Handshake },
-  { key: "pricing", icon: Sparkles, highlight: true },
+  { key: "pricing", icon: Tags, highlight: true },
   { key: "ai", icon: Sparkles, highlight: true },
   { key: "esg", icon: Leaf },
   { key: "intel", icon: Newspaper },

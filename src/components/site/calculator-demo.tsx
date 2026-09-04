@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Calculator, RotateCcw, TrendingUp, Zap } from "lucide-react";
+import { Calculator, RotateCcw, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -84,9 +84,6 @@ export function CalculatorDemo() {
                 <Calculator className="h-4 w-4" aria-hidden />
               </span>
               Trade Calculator
-              <span className="flex items-center gap-1 rounded-full bg-emerald-500/12 px-2 py-0.5 text-[10px] font-bold text-emerald-700 dark:text-emerald-400">
-                <Zap className="h-3 w-3" aria-hidden /> {t("calc.live")}
-              </span>
             </div>
             <Button
               variant="ghost"

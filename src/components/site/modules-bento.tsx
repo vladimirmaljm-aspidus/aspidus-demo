@@ -63,15 +63,20 @@ export function ModulesBento() {
               {/* Mini partner list visual */}
               <div className="space-y-2 rounded-xl border border-border/70 bg-secondary/40 p-3">
                 {[
-                  { name: "Nidera Handels GmbH", country: "🇩🇪", status: "ok", value: "$1.2M" },
-                  { name: "Sun Oil d.o.o.", country: "🇷🇸", status: "ok", value: "$840K" },
-                  { name: "Al Watania Trading", country: "🇸🇦", status: "pending", value: "$2.1M" },
+                  { name: "Nordhandel GmbH", country: "DE", status: "ok", value: "$1.2M" },
+                  { name: "Panonija Grain d.o.o.", country: "RS", status: "ok", value: "$840K" },
+                  { name: "Al Bahr Trading", country: "SA", status: "pending", value: "$2.1M" },
                 ].map((p) => (
                   <div
                     key={p.name}
                     className="flex items-center gap-2.5 rounded-lg bg-card px-2.5 py-2 text-xs shadow-sm"
                   >
-                    <span className="text-base leading-none" aria-hidden>{p.country}</span>
+                    <span
+                      className="shrink-0 rounded bg-muted px-1.5 py-0.5 text-[9px] font-semibold tracking-wide text-muted-foreground"
+                      aria-hidden
+                    >
+                      {p.country}
+                    </span>
                     <span className="min-w-0 flex-1 truncate font-medium">{p.name}</span>
                     <span
                       className={cn(

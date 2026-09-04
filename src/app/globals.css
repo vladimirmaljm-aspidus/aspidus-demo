@@ -42,12 +42,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --animate-marquee: marquee 40s linear infinite;
-  --animate-float: float 7s ease-in-out infinite;
-  --animate-float-slow: float 11s ease-in-out infinite;
-  --animate-pulse-soft: pulse-soft 3.5s ease-in-out infinite;
-  --animate-arc-dash: arc-dash 2.2s linear infinite;
-  --animate-shimmer: shimmer 2.8s linear infinite;
 }
 
 :root {
@@ -154,18 +148,7 @@
 }
 
 @layer utilities {
-  /* Gradient brand text + buttons */
-  .text-gradient-brand {
-    background: linear-gradient(
-      100deg,
-      var(--primary) 0%,
-      oklch(0.78 0.15 75) 55%,
-      oklch(0.85 0.12 90) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+  /* Gradient brand buttons / tiles */
   .bg-gradient-brand {
     background: linear-gradient(135deg, oklch(0.56 0.15 50) 0%, oklch(0.66 0.15 55) 50%, oklch(0.74 0.14 70) 100%);
   }
@@ -175,12 +158,6 @@
       color-mix(in oklch, var(--primary) 14%, transparent),
       color-mix(in oklch, var(--primary) 4%, transparent)
     );
-  }
-  .text-gradient-dark {
-    background: linear-gradient(100deg, oklch(0.8 0.12 85) 0%, oklch(0.74 0.13 70) 60%, oklch(0.66 0.14 55) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
   }
 
   /* Dot grid background */
@@ -252,71 +229,9 @@
   .scrollbar-slim::-webkit-scrollbar-track {
     background: transparent;
   }
-
-  /* Marquee for module ticker */
-  .animate-marquee {
-    animation: marquee 40s linear infinite;
-  }
-  .animate-float {
-    animation: float 7s ease-in-out infinite;
-  }
-  .animate-float-slow {
-    animation: float 11s ease-in-out infinite;
-  }
-  .animate-pulse-soft {
-    animation: pulse-soft 3.5s ease-in-out infinite;
-  }
-  .animate-shimmer {
-    animation: shimmer 2.8s linear infinite;
-    background-size: 200% 100%;
-  }
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-14px);
-  }
-}
-@keyframes pulse-soft {
-  0%,
-  100% {
-    opacity: 0.55;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.06);
-  }
-}
-@keyframes shimmer {
-  from {
-    background-position: 200% 0;
-  }
-  to {
-    background-position: -200% 0;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee,
-  .animate-float,
-  .animate-float-slow,
-  .animate-pulse-soft,
-  .animate-shimmer {
-    animation: none;
-  }
   html {
     scroll-behavior: auto;
   }

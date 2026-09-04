@@ -16,6 +16,7 @@ import {
   Users,
   ShieldCheck,
   Lock,
+  Bell,
 } from "lucide-react";
 import { useSiteT } from "@/components/site/i18n-provider";
 import { Reveal, Section, SectionHeading } from "@/components/site/primitives";
@@ -116,7 +117,6 @@ function BrowserFrame({
           <span className="font-mono">velos-platform.vercel.app</span>
         </div>
         <span className="hidden items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary sm:flex">
-          <span className="h-1.5 w-1.5 animate-pulse-soft rounded-full bg-primary" aria-hidden />
           {t("showcase.badge")}
         </span>
       </div>
@@ -192,8 +192,8 @@ function BrowserFrame({
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500/15 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
               EN
             </span>
-            <span className="relative flex h-7 w-7 items-center justify-center rounded-lg border border-border bg-card text-[13px]" aria-hidden>
-              🔔
+            <span className="relative flex h-7 w-7 items-center justify-center rounded-lg border border-border bg-card" aria-hidden>
+              <Bell className="h-3.5 w-3.5 text-muted-foreground" />
               <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-primary" />
             </span>
           </div>

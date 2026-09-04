@@ -156,11 +156,20 @@ export function Navbar() {
         </nav>
       </div>
 
+      {/* Mobile menu scrim (dims page content behind the panel) */}
+      {mobileOpen && (
+        <button
+          className="fixed inset-0 z-40 cursor-default bg-background/70 backdrop-blur-sm xl:hidden"
+          aria-label={t("nav.menu")}
+          onClick={() => setMobileOpen(false)}
+        />
+      )}
+
       {/* Mobile menu panel */}
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:hidden">
         <div
           className={cn(
-            "glass-strong mt-2 overflow-hidden rounded-2xl shadow-xl transition-all duration-300",
+            "glass-strong relative z-50 mt-2 overflow-hidden rounded-2xl shadow-xl transition-all duration-300",
             mobileOpen ? "max-h-[32rem] opacity-100" : "pointer-events-none max-h-0 opacity-0"
           )}
         >
@@ -232,7 +241,6 @@ function LanguageSelector({
             className="gap-2.5 rounded-lg py-2.5"
             aria-current={locale === l}
           >
-            <span aria-hidden>{LOCALE_META[l].flag}</span>
             <span className="flex-1">{LOCALE_META[l].native}</span>
             {locale === l && <Check className="h-4 w-4 text-primary" />}
           </DropdownMenuItem>

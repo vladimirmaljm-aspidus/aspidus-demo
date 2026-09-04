@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Check, Mail, Minus, Sparkles } from "lucide-react";
+import { Check, Mail, Minus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useSiteT } from "@/components/site/i18n-provider";
@@ -57,8 +57,7 @@ export function PricingSection() {
               >
                 {plan.highlight && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-gradient-brand gap-1 px-3 py-1 text-[11px] font-bold text-primary-foreground shadow">
-                      <Sparkles className="h-3 w-3" aria-hidden />
+                    <Badge className="bg-gradient-brand px-3 py-1 text-[11px] font-bold text-primary-foreground shadow">
                       {t("pricing.popular")}
                     </Badge>
                   </div>

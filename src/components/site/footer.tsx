@@ -145,7 +145,7 @@ export function Footer() {
 
           <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border/70 pt-6 text-[11px] text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} VELOS · {t("footer.rights")}
+              © {new Date().getFullYear()} VELOS. {t("footer.rights")}
             </span>
             <Button
               variant="outline"
@@ -216,7 +216,7 @@ function PrivacyBody() {
   return (
     <>
       <p>
-        This marketing website is static — it does not use cookies, analytics trackers or
+        This marketing website is static and does not use cookies, analytics trackers or
         sign-up forms. All data you enter into the live platform (demo or trial) is processed
         under the platform&apos;s tenant agreement.
       </p>
@@ -243,7 +243,7 @@ function TermsBody() {
       <p>
         Fair use applies: automated scraping, load testing without consent, or sharing tenant
         credentials outside your organisation is not permitted. Offer, invoice and proforma
-        documents generated on the platform carry QR verification signatures — tampering with
+        documents generated on the platform carry QR verification signatures. Tampering with
         them is prohibited and detectable.
       </p>
       <p>

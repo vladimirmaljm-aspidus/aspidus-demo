@@ -14,10 +14,13 @@ import {
   Download,
   FileText,
   Handshake,
+  Laptop,
   Lock,
   MapPin,
   MessageSquare,
+  Monitor,
   Plus,
+  RefreshCw,
   Search,
   Send,
   ShieldCheck,
@@ -27,6 +30,7 @@ import {
   Users,
   Ship,
   Globe2,
+  Smartphone,
 } from "lucide-react";
 import { GlobeCanvas } from "@/components/site/globe-canvas";
 import { cn } from "@/lib/utils";
@@ -163,9 +167,9 @@ export function DashboardScreen() {
           <span className="text-xs font-semibold">Recent activity</span>
           <ul className="mt-3 space-y-2.5 text-xs">
             {[
-              { icon: Send, text: "Offer PRO-0207 sent to Sun Oil d.o.o.", time: "2m" },
+              { icon: Send, text: "Offer PRO-0207 sent to Panonija Grain d.o.o.", time: "2m" },
               { icon: Handshake, text: "Deal #D-118 accepted — 5,000 t wheat", time: "18m" },
-              { icon: BadgeCheck, text: "KYC approved: Al Watania Trading", time: "1h" },
+              { icon: BadgeCheck, text: "KYC approved: Al Bahr Trading", time: "1h" },
               { icon: Ship, text: "Shipment ROT→BEG departed port", time: "3h" },
               { icon: FileText, text: "Invoice INV-0141 QR-verified", time: "5h" },
             ].map((a, i) => (
@@ -199,10 +203,10 @@ export function DashboardScreen() {
             </thead>
             <tbody className="divide-y divide-border/60">
               {[
-                ["D-118", "Sun Oil d.o.o. 🇷🇸", "Wheat · 5,000 t", "$1.42M", "accepted"],
-                ["D-117", "Nidera Handels 🇩🇪", "Sunflower oil · 2,000 t", "$2.10M", "in transit"],
-                ["D-116", "Al Watania 🇸🇦", "Sugar · 8,000 t", "$3.24M", "negotiation"],
-                ["D-115", "Marmara Agri 🇹🇷", "Corn · 6,500 t", "$1.08M", "draft"],
+                ["D-118", "Panonija Grain · RS", "Wheat · 5,000 t", "$1.42M", "accepted"],
+                ["D-117", "Nordhandel · DE", "Sunflower oil · 2,000 t", "$2.10M", "in transit"],
+                ["D-116", "Al Bahr · SA", "Sugar · 8,000 t", "$3.24M", "negotiation"],
+                ["D-115", "Marmara Agri · TR", "Corn · 6,500 t", "$1.08M", "draft"],
               ].map((row) => (
                 <tr key={row[0]} className="hover:bg-secondary/30">
                   <td className="px-4 py-2.5 font-mono font-medium">{row[0]}</td>
@@ -276,12 +280,12 @@ export function OffersScreen() {
             </thead>
             <tbody className="divide-y divide-border/60">
               {[
-                ["PRO-2026-0207", "Sun Oil d.o.o. 🇷🇸", "Wheat", "5,000 t", "$1.42M", "sent", "Sep 03"],
-                ["PRO-2026-0206", "Nidera Handels 🇩🇪", "Sunflower oil", "2,000 t", "€1.91M", "accepted", "Sep 02"],
-                ["PRO-2026-0205", "Al Watania Trading 🇸🇦", "Sugar ICUMSA 45", "8,000 t", "$3.24M", "sent", "Sep 01"],
-                ["PRO-2026-0204", "Marmara Agri 🇹🇷", "Corn feed", "6,500 t", "$1.08M", "draft", "Sep 01"],
-                ["PRO-2026-0203", "Delta Grains 🇬🇷", "Barley", "4,200 t", "£0.86M", "accepted", "Aug 30"],
-                ["PRO-2026-0202", "Andes Foods 🇧🇷", "Soybeans", "12,000 t", "R$ 28.4M", "rejected", "Aug 29"],
+                ["PRO-2026-0207", "Panonija Grain · RS", "Wheat", "5,000 t", "$1.42M", "sent", "Sep 03"],
+                ["PRO-2026-0206", "Nordhandel · DE", "Sunflower oil", "2,000 t", "€1.91M", "accepted", "Sep 02"],
+                ["PRO-2026-0205", "Al Bahr Trading · SA", "Sugar ICUMSA 45", "8,000 t", "$3.24M", "sent", "Sep 01"],
+                ["PRO-2026-0204", "Marmara Agri · TR", "Corn feed", "6,500 t", "$1.08M", "draft", "Sep 01"],
+                ["PRO-2026-0203", "Delta Grains · GR", "Barley", "4,200 t", "£0.86M", "accepted", "Aug 30"],
+                ["PRO-2026-0202", "Andes Foods · BR", "Soybeans", "12,000 t", "R$ 28.4M", "rejected", "Aug 29"],
               ].map((row) => (
                 <tr key={row[0]} className="hover:bg-secondary/30">
                   <td className="px-4 py-2.5 font-mono font-medium">{row[0]}</td>
@@ -372,7 +376,7 @@ export function CalcScreen() {
             ))}
           </div>
           <div className="mt-3 flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/8 px-3 py-2 text-[11px] text-primary">
-            <Sparkles className="h-3.5 w-3.5 shrink-0" aria-hidden />
+            <RefreshCw className="h-3.5 w-3.5 shrink-0" aria-hidden />
             Live exchange rates applied (ECB)
           </div>
         </div>
@@ -422,10 +426,10 @@ export function CalcScreen() {
 
 export function GlobeScreen() {
   const routes = [
-    { from: "Rotterdam 🇳🇱", to: "Beograd 🇷🇸", days: "18 d", dist: "7,240 km" },
-    { from: "Houston 🇺🇸", to: "Rotterdam 🇳🇱", days: "14 d", dist: "7,930 km" },
-    { from: "Santos 🇧🇷", to: "Lagos 🇳🇬", days: "17 d", dist: "6,410 km" },
-    { from: "Singapore 🇸🇬", to: "Shanghai 🇨🇳", days: "6 d", dist: "3,760 km" },
+    { from: "Rotterdam, NL", to: "Beograd, RS", days: "18 d", dist: "7,240 km" },
+    { from: "Houston, US", to: "Rotterdam, NL", days: "14 d", dist: "7,930 km" },
+    { from: "Santos, BR", to: "Lagos, NG", days: "17 d", dist: "6,410 km" },
+    { from: "Singapore, SG", to: "Shanghai, CN", days: "6 d", dist: "3,760 km" },
   ];
   return (
     <div className="space-y-4">
@@ -506,10 +510,10 @@ export function DocsScreen() {
         {/* Doc list */}
         <div className="space-y-2">
           {[
-            { id: "INV-2026-0141", type: "Invoice", partner: "Sun Oil d.o.o. 🇷🇸", amount: "$1.42M", status: "QR verified", tone: "ok" as const },
-            { id: "PRO-2026-0207", type: "Proforma", partner: "Nidera Handels 🇩🇪", amount: "€1.91M", status: "sent", tone: "info" as const },
-            { id: "LOI-2026-0089", type: "Letter of Intent", partner: "Al Watania 🇸🇦", amount: "$3.24M", status: "signed", tone: "ok" as const },
-            { id: "INV-2026-0139", type: "Invoice", partner: "Marmara Agri 🇹🇷", amount: "$1.08M", status: "awaiting QR scan", tone: "pending" as const },
+            { id: "INV-2026-0141", type: "Invoice", partner: "Panonija Grain · RS", amount: "$1.42M", status: "QR verified", tone: "ok" as const },
+            { id: "PRO-2026-0207", type: "Proforma", partner: "Nordhandel · DE", amount: "€1.91M", status: "sent", tone: "info" as const },
+            { id: "LOI-2026-0089", type: "Letter of Intent", partner: "Al Bahr · SA", amount: "$3.24M", status: "signed", tone: "ok" as const },
+            { id: "INV-2026-0139", type: "Invoice", partner: "Marmara Agri · TR", amount: "$1.08M", status: "awaiting QR scan", tone: "pending" as const },
           ].map((doc) => (
             <div
               key={doc.id}
@@ -568,7 +572,7 @@ export function DocsScreen() {
                 <div className="flex items-center gap-1.5 font-semibold text-emerald-700 dark:text-emerald-400">
                   <BadgeCheck className="h-4 w-4" aria-hidden /> Document is valid
                 </div>
-                <div className="text-muted-foreground">INV-2026-0141 · Sun Oil d.o.o.</div>
+                <div className="text-muted-foreground">INV-2026-0141 · Panonija Grain</div>
                 <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
                   <MapPin className="h-3.5 w-3.5 text-primary" aria-hidden />
                   Verified in Novi Sad, RS · 45.25°N 19.84°E
@@ -619,7 +623,7 @@ export function MarketScreen() {
           </div>
           <div className="mt-2 text-sm font-semibold">Wheat HRW — 5,000 t</div>
           <div className="mt-1 text-[11px] text-muted-foreground">
-            Loading: Constanta 🇷🇴 · CIF Beograd 🇷🇸 · Payment: DLC 30 days
+            Loading: Constanta, RO · CIF Beograd, RS · Payment: DLC 30 days
           </div>
           <div className="mt-3 flex items-center justify-between gap-2">
             <div className="flex gap-1.5">
@@ -665,7 +669,7 @@ export function MarketScreen() {
           </div>
           <div className="mt-3 space-y-2">
             <div className="max-w-[85%] rounded-lg rounded-tl-none bg-secondary px-3 py-2 text-[11px]">
-              <b>Al Watania:</b> Can you improve to $395/t for 8,000 t?
+              <b>Al Bahr:</b> Can you improve to $395/t for 8,000 t?
             </div>
             <div className="ml-auto max-w-[85%] rounded-lg rounded-tr-none bg-primary/12 px-3 py-2 text-[11px]">
               <b>You:</b> $398/t with DLC 60 days — final.
@@ -694,7 +698,7 @@ export function MarketScreen() {
               <span className="absolute inset-0 flex items-center justify-center text-xs font-bold">80</span>
             </div>
             <div className="min-w-0 text-[11px]">
-              <div className="font-semibold">Nidera Handels GmbH — ESG B</div>
+              <div className="font-semibold">Nordhandel GmbH — ESG B</div>
               <div className="mt-0.5 text-muted-foreground">
                 Reviews 4.6 ★ · 142 deals · member since 2024
               </div>
@@ -725,7 +729,7 @@ export function PortalScreen() {
             <Users className="h-4.5 w-4.5" aria-hidden />
           </span>
           <div>
-            <div className="text-sm font-bold">Partner Portal — Nidera Handels GmbH</div>
+            <div className="text-sm font-bold">Partner Portal — Nordhandel GmbH</div>
             <div className="text-[11px] text-muted-foreground">
               Separate secure login · scoped to shared data only
             </div>
@@ -901,19 +905,22 @@ export function SecurityScreen() {
             <span className="text-xs font-semibold">Active sessions</span>
             <div className="mt-2.5 space-y-2 text-[11px]">
               {[
-                ["💻 MacBook · Chrome", "Belgrade, RS", "current"],
-                ["📱 iPhone 15 · Safari", "Novi Sad, RS", "3h ago"],
-                ["💻 Windows · Edge", "Istanbul, TR", "yesterday"],
+                { icon: Laptop, device: "MacBook · Chrome", loc: "Belgrade, RS", status: "current" },
+                { icon: Smartphone, device: "iPhone 15 · Safari", loc: "Novi Sad, RS", status: "3h ago" },
+                { icon: Monitor, device: "Windows · Edge", loc: "Istanbul, TR", status: "yesterday" },
               ].map((s) => (
                 <div
-                  key={s[0]}
+                  key={s.device}
                   className="flex items-center justify-between gap-2 rounded-lg border border-border/70 bg-secondary/25 px-3 py-2"
                 >
-                  <span className="min-w-0">
-                    <span className="block truncate font-medium">{s[0]}</span>
-                    <span className="text-muted-foreground">{s[1]}</span>
+                  <span className="flex min-w-0 items-center gap-2">
+                    <s.icon className="h-3.5 w-3.5 shrink-0 text-muted-foreground" aria-hidden />
+                    <span className="min-w-0">
+                      <span className="block truncate font-medium">{s.device}</span>
+                      <span className="text-muted-foreground">{s.loc}</span>
+                    </span>
                   </span>
-                  {s[2] === "current" ? (
+                  {s.status === "current" ? (
                     <StatusBadge label="current" tone="ok" />
                   ) : (
                     <span className="shrink-0 rounded-md border border-border px-2 py-0.5 text-[9px] font-semibold text-muted-foreground hover:border-red-400/50 hover:text-red-500">

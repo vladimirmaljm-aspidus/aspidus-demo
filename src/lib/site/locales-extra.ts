@@ -4,7 +4,11 @@
  * VELOS marketing site — additional locale dictionaries (tr, de, ru).
  * Key set mirrors the English base dictionary in `i18n.ts` 1:1.
  * Values under `pricing.<plan>.f.*` that are pure data ("1", "5", "25",
- * "50+", "20", "250", "true", "false", "Email") stay identical to English.
+ * "50+", "20", "250", "true", "false") stay identical to English; words
+ * like "Up to" and the support lines are translated.
+ *
+ * Copy notes: same tone as the base dictionary. Plain sentences, commas
+ * instead of em-dashes, no middot separators, no buzzwords.
  */
 
 import type { Dict } from "./i18n.types";
@@ -28,100 +32,96 @@ export const tr: Dict = {
   "nav.theme.toggle": "Temayı değiştir",
 
   // Hero
-  "hero.badge": "Ticaretin tüm yaşam döngüsü için tek platform",
-  "hero.title.a": "Her ticaret.",
-  "hero.title.b": "Tek komuta merkezi.",
+  "hero.badge": "Emtia ticaret şirketleri için tasarlandı",
+  "hero.title.a": "Küresel ticaret yapın.",
+  "hero.title.b": "Anlaşmaları tek ekrandan kapatın.",
   "hero.subtitle":
-    "VELOS, uluslararası emtia ticareti için çok kiracılı bir CRM & ERP platformudur — ilk talepten son ödemeye kadar. Tek bir güvenli çalışma alanında teklifler, belgeler, lojistik, finans, pazaryeri ve 3D ticaret küresi.",
-  "hero.cta.demo": "Canlı Demoyu Aç",
-  "hero.cta.trial": "10 Günlük Ücretsiz Denemeyi Başlat",
-  "hero.cta.note": "Kredi kartı gerekmez · Tüm özelliklere tam erişim · 5 dil",
-  "hero.card.deals": "Aktif anlaşmalar",
-  "hero.card.offers": "Bu ayın teklifleri",
-  "hero.card.landed": "Teslim maliyeti",
-  "hero.card.verified": "QR doğrulamalı belgeler",
-  "hero.card.route": "Rota Rotterdam → Belgrad",
-  "hero.card.days": "gün denizde",
-  "hero.scroll": "Keşfetmek için kaydırın",
+    "VELOS, uluslararası emtia ticareti için bir CRM ve ERP sistemidir. Ortaklar, teklifler, belgeler, sevkiyatlar ve ödemeler tek sistemde, beş dilde, her cihazda.",
+  "hero.cta.demo": "Canlı demoyu aç",
+  "hero.cta.trial": "10 günlük ücretsiz denemeyi başlat",
+  "hero.cta.note": "10 gün ücretsiz. Tüm özellikler dahil, kredi kartı gerekmez.",
+  "hero.doc.title": "Proforma P-2025-0117",
+  "hero.doc.meta": "az önce alıcıya gönderildi",
+  "hero.ver.title": "Fatura F-2025-0231 doğrulandı",
+  "hero.ver.meta": "QR taraması, Rotterdam",
 
   // Stats
   "stats.endpoints": "REST API uç noktası",
   "stats.modules": "Modül ve görünüm",
   "stats.currencies": "Desteklenen para birimi",
   "stats.languages": "Arayüz dili",
-  "stats.uptime": "Platform çalışma süresi",
 
   // Lifecycle
   "lifecycle.kicker": "Ticaret yaşam döngüsü",
   "lifecycle.title": "İlk talepten son ödemeye",
   "lifecycle.subtitle":
-    "VELOS, bir emtia anlaşmasının her adımını tek çatıda birleştirir — artık elektronik tablolar, kaybolan e-postalar ve kopuk araçlar yok.",
+    "VELOS, bir emtia anlaşmasının her adımını tek yerde tutar. Artık elektronik tablolar, kaybolan e-postalar ve birbiriyle konuşmayan araçlar yok.",
   "lifecycle.step1.title": "Talep",
   "lifecycle.step1.desc": "Alıcı ve tedarikçilerden gelen talepler ve RFQ'lar tek bir pipeline'da toplanır.",
   "lifecycle.step2.title": "Teklif",
-  "lifecycle.step2.desc": "Şablonlardan saniyeler içinde üretilen çok para birimli teklifler ve proformalar.",
+  "lifecycle.step2.desc": "Çok para birimli teklifler ve proformalar, şablonlarınızdan saniyeler içinde üretilir.",
   "lifecycle.step3.title": "Anlaşma",
-  "lifecycle.step3.desc": "Tam geçmiş kaydıyla sözleşmeler, LOI'ler, komisyonlar ve anlaşma takibi.",
+  "lifecycle.step3.desc": "Sözleşmeler, LOI'ler, komisyonlar ve tam geçmişli anlaşma takibi.",
   "lifecycle.step4.title": "Lojistik",
   "lifecycle.step4.desc": "Sevkiyat talepleri, gümrük işlemleri ve 3D küre üzerinde deniz rotası planlama.",
   "lifecycle.step5.title": "Belgeler",
-  "lifecycle.step5.desc": "QR kodlu faturalar, GPS korumalı herkese açık doğrulama ve denetim izi.",
+  "lifecycle.step5.desc": "QR kodlu faturalar, herkese açık bir doğrulama sayfası ve eksiksiz bir denetim izi.",
   "lifecycle.step6.title": "Ödeme",
   "lifecycle.step6.desc": "Bankacılık, ERP kayıtları, döviz kurları ve nihai mutabakat.",
 
   // Modules bento
   "modules.kicker": "Her şey tek bir yerde",
-  "modules.title": "Ticaret şirketleri için tasarlanmış 60+ modül",
+  "modules.title": "60+ modül, tek giriş",
   "modules.subtitle":
-    "Ekibinizin ihtiyaç duyduğu platformun her parçası — düzenli, bağlantılı ve yetki kontrollü.",
+    "Ticaret masanızın dayandığı platform parçalarının tamamı, düzenli, bağlantılı ve yetki kontrollü.",
   "modules.cat.crm.title": "CRM & Ticaret Masası",
   "modules.cat.crm.desc":
-    "Her karşı tarafa 360° görünüm — alıcılar, tedarikçiler, acenteler — tam ticaret geçmişi, KYC durumu ve kişilerle.",
+    "Her karşı tarafın, alıcıların, tedarikçilerin ve acentelerin 360° görünümü, tam ticaret geçmişi, KYC durumu ve iletişim bilgileriyle.",
   "modules.cat.docs.title": "Belgeler & Finans",
   "modules.cat.docs.desc":
-    "Markalı şablonlardan teklifler, proformalar, faturalar ve LOI'ler — QR doğrulama, revizyonlar ve aranabilir kayıt defteriyle.",
+    "Markalı şablonlardan teklifler, proformalar, faturalar ve LOI'ler, QR doğrulama, revizyonlar ve aranabilir kayıt defteriyle.",
   "modules.cat.calc.title": "Ticaret Hesaplayıcı & Küre",
   "modules.cat.calc.desc":
-    "Navlun, sigorta, gümrük vergileri ve banka masrafları dâhil, çok para birimli teslim maliyeti — artı deniz rotalı 3D küre.",
+    "Navlun, sigorta, gümrük vergisi ve banka masraflarıyla para birimleri arası teslim maliyeti, artı deniz rotalı 3D küre.",
   "modules.cat.market.title": "Pazaryeri & Portal",
   "modules.cat.market.desc":
-    "RFQ'lar, müzakereler ve akıllı fiyatlama içeren bir B2B pazaryeri — ve ortakların self-servis çalışabildiği güvenli bir portal.",
-  "modules.cat.ai.title": "Zekâ & Otomasyon",
+    "RFQ'lar, müzakereler ve akıllı fiyatlama içeren bir B2B pazaryeri ve ortaklarınızın kendilerinin giriş yaptığı güvenli bir portal.",
+  "modules.cat.ai.title": "Zeka & Otomasyon",
   "modules.cat.ai.desc":
-    "AI akıllı öneriler, belge ayrıştırma, piyasa haberleri, özel panolar ve tüm verilerde küresel arama.",
+    "Akıllı öneriler, belge ayrıştırma, piyasa haberleri, özel panolar ve tüm verilerinizde küresel arama.",
   "modules.cat.admin.title": "Güvenlik & Yönetim",
   "modules.cat.admin.desc":
-    "Çok kiracılı izolasyon, RBAC yetki kataloğu, 2FA, denetim kaydı, webhook'lar ve platform sağlık izleme.",
+    "Çok kiracılı izolasyon, ayrıntılı yetki kataloğu, 2FA, denetim kaydı, webhook'lar ve platform sağlık izleme.",
   "modules.more": "+ fazlası",
 
   // Showcase
   "showcase.kicker": "Ürün turu",
   "showcase.title": "Platformu iş başında görün",
   "showcase.subtitle":
-    "VELOS çalışma alanından gerçek ekran görüntüleri — ekibinizin ilk günden kullanacağı aynı arayüz.",
+    "Bunlar gerçek ekranların yeniden oluşturulmuş halleri. Ekibinizin ilk günden kullanacağı arayüz, şu an baktığınız arayüzle aynı.",
   "showcase.tab.dashboard": "Panel",
-  "showcase.tab.dashboard.desc": "Özel KPI panoları, pipeline sağlığı ve tüm ekip çapındaki son aktiviteler.",
+  "showcase.tab.dashboard.desc": "Özel KPI panoları, pipeline sağlığı ve tüm ticaret masasını kapsayan son hareketler.",
   "showcase.tab.offers": "Teklifler & CRM",
-  "showcase.tab.offers.desc": "Durumlar, filtreler ve ortak detaylarıyla aranabilir teklif pipeline'ı.",
+  "showcase.tab.offers.desc": "Durumlar, filtreler ve ortak bilgileriyle aranabilir teklif pipeline'ı.",
   "showcase.tab.calc": "Ticaret Hesaplayıcı",
-  "showcase.tab.calc.desc": "Sevkiyat başına canlı maliyet dökümü ve marj kontrolü sunan teslim maliyeti motoru.",
+  "showcase.tab.calc.desc": "Sevkiyat başına canlı maliyet dökümü ve marj kontrollü teslim maliyeti motoru.",
   "showcase.tab.globe": "3D Ticaret Küresi",
-  "showcase.tab.globe.desc": "Limanlar arası canlı deniz rotaları — kara geçişi yok, gerçek mesafeler.",
+  "showcase.tab.globe.desc": "Limanlar arasında canlı deniz rotaları, kara geçişi yok, gerçek mesafeler.",
   "showcase.tab.docs": "Belgeler & QR",
-  "showcase.tab.docs.desc": "QR kodlu her belge ve GPS korumalı herkese açık doğrulama sayfası.",
+  "showcase.tab.docs.desc": "Her belge QR kodlu ve herkese açık bir doğrulama sayfasıyla.",
   "showcase.tab.market": "Pazaryeri",
-  "showcase.tab.market.desc": "Tek akışta B2B gönderileri, RFQ'lar, akıllı fiyatlama ve AI önerileri.",
+  "showcase.tab.market.desc": "Tek akışta B2B gönderileri, RFQ'lar, akıllı fiyatlama ve öneriler.",
   "showcase.tab.portal": "Partner Portalı",
   "showcase.tab.portal.desc": "Karşı taraflarınızın sizinle çalıştığı ayrı ve güvenli bir alan.",
   "showcase.tab.security": "Güvenlik & Denetim",
-  "showcase.tab.security.desc": "Her eylem kayıt altında — denetim kaydı, RBAC matrisi ve canlı oturum kontrolü.",
-  "showcase.badge": "Canlı çalışma alanı",
+  "showcase.tab.security.desc": "Her eylem kayıt altında: denetim kaydı, RBAC matrisi ve canlı oturum kontrolü.",
+  "showcase.badge": "Gerçek ekranlar",
 
   // Calculator demo
   "calc.kicker": "Bizzat deneyin",
-  "calc.title": "Ticaret Hesaplayıcı — tam burada",
+  "calc.title": "Ticaret hesaplayıcısı, hemen burada",
   "calc.subtitle":
-    "Bu, teslim maliyeti motorunun çalışan bir demosudur. Herhangi bir girdiyi değiştirin ve birim ekonomisinin anında güncellendiğini görün.",
+    "Teslim maliyeti motorunun çalışan bir demosu. Herhangi bir girdiyi değiştirin, birim ekonomisi yazarken güncellenir.",
   "calc.product": "Emtia",
   "calc.quantity": "Miktar (t)",
   "calc.unitPrice": "Birim fiyat (USD/t)",
@@ -141,65 +141,64 @@ export const tr: Dict = {
   "calc.reset": "Varsayılanlara sıfırla",
   "calc.hint":
     "Tam platformda bu motor, canlı döviz kurlarına, ortak fiyat listelerine ve teklif şablonlarına bağlıdır.",
-  "calc.live": "Canlı",
 
   // Marketplace
-  "market.kicker": "B2B Pazaryeri",
-  "market.title": "Sadece yazılım değil, bir ağ",
+  "market.kicker": "B2B pazaryeri",
+  "market.title": "İşinizi ortaklarınızın olduğu yerde yapın",
   "market.subtitle":
-    "VELOS, ticaret şirketlerini, tedarikçileri ve alıcıları ortak bir B2B pazaryerinde buluşturur — üstüne zekâ katar.",
+    "Ticaret şirketleri, tedarikçiler ve alıcılar tek bir pazaryerini paylaşır, müzakere, fiyatlama ve zeka özellikleriyle birlikte.",
   "market.rfq.title": "RFQ'lar & gönderiler",
-  "market.rfq.desc": "Arz ve talep gönderileri yayınlayın; yanıtları tek yerde toplayıp karşılaştırın.",
+  "market.rfq.desc": "Arz ve talep gönderileri yayınlayın. Yanıtları tek bir yerde toplayıp karşılaştırın.",
   "market.nego.title": "Yapılandırılmış müzakereler",
-  "market.nego.desc": "Karşı teklifler, takipler ve anlaşmayı sonuçlandırma kararları karşı taraf bazında izlenir.",
+  "market.nego.desc": "Karşı teklifler, takipler ve işi sonuçlandırma kararları, karşı taraf bazında izlenir.",
   "market.pricing.title": "Akıllı fiyatlama",
-  "market.pricing.desc": "Piyasa farkındalıklı fiyat önerileri ve emtia ile rota bazında kıyaslama verileri.",
-  "market.ai.title": "AI akıllı öneri",
-  "market.ai.desc": "Platform, geçmişinize dayanarak ortaklar, fiyatlar ve sonraki adımlar için öneriler sunar.",
+  "market.pricing.desc": "Piyasaya duyarlı fiyat önerileri ve emtia ile rota bazında kıyaslama verileri.",
+  "market.ai.title": "Akıllı öneriler",
+  "market.ai.desc": "Platform, kendi geçmişinize dayanarak ortaklar, fiyatlar ve sonraki adımlar için öneriler sunar.",
   "market.esg.title": "ESG profilleri",
-  "market.esg.desc": "Karşı taraflar için sürdürülebilirlik notları ve değerlendirmeleri — ağa yerleşik.",
-  "market.intel.title": "Piyasa zekâsı",
+  "market.esg.desc": "Karşı taraflar için sürdürülebilirlik notları ve değerlendirmeleri, ağın içine gömülü.",
+  "market.intel.title": "Piyasa zekası",
   "market.intel.desc": "Ticaretini yaptığınız emtialar için haberler, etkinlikler ve fiyat sinyalleri.",
   "market.parse.title": "Belge ayrıştırma",
-  "market.parse.desc": "Bir PDF veya fotoğraf yükleyin — platform yapılandırılmış ticaret verisini çıkarır.",
+  "market.parse.desc": "Bir PDF veya fotoğraf yükleyin, platform yapılandırılmış ticaret verisini çıkarır.",
 
   // Security
   "sec.kicker": "Güvenlik & güven",
-  "sec.title": "Banka sınıfı güvenlik — dahili",
+  "sec.title": "Denetçinize gösterebileceğiniz güvenlik",
   "sec.subtitle":
-    "Ticaretleriniz, belgeleriniz ve ortak verileriniz her katmanda korunur — veritabanından her API isteğine kadar.",
+    "Ticaretleriniz, belgeleriniz ve ortak verileriniz her katmanda korunur, veritabanından her API isteğine kadar.",
   "sec.rls.title": "Satır seviyesinde güvenlik",
   "sec.rls.desc": "Her kiracının verisi veritabanı seviyesinde izole edilir (PostgreSQL RLS).",
   "sec.rbac.title": "İnce ayarlı RBAC",
-  "sec.rbac.desc": "Tam yetki kataloğu — kullanıcı rolüne göre modül seviyesinde haklar atayın.",
+  "sec.rbac.desc": "Tam yetki kataloğu. Kullanıcı rolüne göre modül seviyesinde haklar atayın.",
   "sec.2fa.title": "İki faktörlü doğrulama",
-  "sec.2fa.desc": "Kurtarma kodlarıyla her ekip üyesi için TOTP tabanlı 2FA.",
+  "sec.2fa.desc": "Her ekip üyesi için TOTP tabanlı 2FA, kurtarma kodlarıyla.",
   "sec.audit.title": "Kapsamlı denetim kaydı",
-  "sec.audit.desc": "Kim neyi ne zaman yaptı — her yazma işlemi kaydedilir ve aranabilir.",
+  "sec.audit.desc": "Kim neyi ne zaman yaptı. Her yazma işlemi kaydedilir ve aranabilir.",
   "sec.rate.title": "Hız sınırlama",
   "sec.rate.desc": "Kaba kuvvet ve suistimale karşı IP ve kullanıcı bazlı kısıtlama.",
-  "sec.gps.title": "GPS korumalı doğrulama",
-  "sec.gps.desc": "Herkese açık belge doğrulaması, veriyi göstermeden önce konumu ve geçerliliği kontrol eder.",
+  "sec.gps.title": "Konum kontrollü doğrulama",
+  "sec.gps.desc": "Herkese açık belge doğrulaması, verileri göstermeden önce konumu ve geçerliliği kontrol eder.",
   "sec.session.title": "Oturum kontrolü",
   "sec.session.desc": "Boşta ve mutlak zaman aşımları, anında iptal, cihaz görünürlüğü.",
   "sec.errors.title": "Hata denetimi",
-  "sec.errors.desc": "İstemci ve sunucu hataları, triyaj görünümleriyle merkezi olarak kaydedilir.",
+  "sec.errors.desc": "İstemci ve sunucu hataları, triyaj görünümleriyle merkezi olarak yakalanır.",
 
   // API / developers
   "api.kicker": "Geliştiriciler için",
-  "api.title": "Gerçek bir API — 216 uç nokta",
+  "api.title": "Gerçek bir API: 216 uç nokta",
   "api.subtitle":
-    "Her modül; kiracı kapsamlı API anahtarları, OpenAPI dokümantasyonu ve webhook'larla REST üzerinden erişilebilir.",
+    "Her modül REST üzerinden erişilebilir, kiracı kapsamlı API anahtarları, OpenAPI dokümanları ve webhook'larla.",
   "api.openapi": "/api-docs adresinde etkileşimli OpenAPI dokümanları",
   "api.keys": "Kiracı kapsamlı API anahtarları",
   "api.webhooks": "Olaylar için giden webhook'lar",
   "api.relay": "Entegrasyonlar için AI relay proxy",
-  "api.caption": "Kimlik doğrulamalı istek örneği — GET /api/offers",
+  "api.caption": "Kimlik doğrulamalı istek örneği, GET /api/offers",
 
   // Pricing
   "pricing.kicker": "Fiyatlandırma",
-  "pricing.title": "Ekibinizle birlikte ölçeklenen basit planlar",
-  "pricing.subtitle": "10 gün ücretsiz başlayın. Ticaret hacminiz büyüdükçe yükseltin.",
+  "pricing.title": "Ticaret masanıza uyan planlar",
+  "pricing.subtitle": "Her plan 10 ücretsiz günle başlar. Ticaret hacminiz büyüdükçe yükseltin.",
   "pricing.month": "/ay",
   "pricing.popular": "En popüler",
   "pricing.custom": "Özel",
@@ -216,7 +215,7 @@ export const tr: Dict = {
   "pricing.unlimited": "Sınırsız",
   "pricing.choose": "Ücretsiz denemeyi başlat",
   "pricing.contact": "Bizimle görüşün",
-  "pricing.trialNote": "Her planda 10 günlük ücretsiz deneme · kredi kartı gerekmez",
+  "pricing.trialNote": "Her planda 10 günlük ücretsiz deneme, kredi kartı gerekmez",
   "pricing.compare": "Tüm özellikleri karşılaştırın",
   "pricing.starter.tagline": "Yola yeni çıkan bireysel tüccarlar için.",
   "pricing.starter.f.users": "1",
@@ -228,7 +227,7 @@ export const tr: Dict = {
   "pricing.starter.f.erp": "false",
   "pricing.starter.f.market": "false",
   "pricing.starter.f.api": "false",
-  "pricing.starter.f.support": "Email",
+  "pricing.starter.f.support": "E-posta",
   "pricing.business.tagline": "Küçük bir ekiple büyüyen ticaret masaları için.",
   "pricing.business.f.users": "5",
   "pricing.business.f.partners": "500'e kadar",
@@ -265,36 +264,36 @@ export const tr: Dict = {
 
   // FAQ
   "faq.kicker": "SSS",
-  "faq.title": "Sorular ve yanıtları",
-  "faq.subtitle": "Denemenize başlamadan önce bilmeniz gereken her şey.",
+  "faq.title": "Başlamadan önce",
+  "faq.subtitle": "Tüccarların bize en çok sorduğu sorular.",
   "faq.q1": "VELOS tam olarak nedir?",
   "faq.a1":
-    "VELOS, uluslararası emtia ticareti için çok kiracılı bir CRM & ERP platformudur. Ortak yönetimini, teklifleri, belgeleri, lojistiği, finansı ve B2B pazaryerini tek bir güvenli çalışma alanında birleştirir — genel amaçlı işletmeler için değil, ticaret şirketleri için tasarlanmıştır.",
+    "VELOS, uluslararası emtia ticareti için çok kiracılı bir CRM ve ERP platformudur. Ortak yönetimini, teklifleri, belgeleri, lojistiği, finansı ve B2B pazaryerini tek bir güvenli çalışma alanında toplar, genel amaçlı işletmeler için değil, ticaret şirketleri için tasarlanmıştır.",
   "faq.q2": "Herhangi bir şey kurmam gerekiyor mu?",
   "faq.a2":
-    "Hayır. VELOS bulutta çalışır ve her modern tarayıcıyla uyumludur — masaüstü, tablet ve mobil. Arayüz tamamen duyarlıdır ve 5 dilde sunulur.",
+    "Hayır. VELOS bulutta çalışır, masaüstü, tablet ve mobilde her modern tarayıcıda kullanılabilir. Arayüz tamamen duyarlı ve 5 dilde mevcut.",
   "faq.q3": "Ortaklarım ve acentelerim platforma erişebilir mi?",
   "faq.a3":
-    "Evet — Partner Portalı üzerinden. Karşı tarafların tekliflerini gördüğü, KYC belgelerini yüklediği ve RFQ'lara yanıt verdiği ayrı ve güvenli bir alandır. Her ortağın ne görebileceğini tam olarak siz kontrol edersiniz.",
+    "Evet. Partner Portalı, karşı tarafların tekliflerini gördüğü, KYC belgelerini yüklediği ve RFQ'lara yanıt verdiği ayrı ve güvenli bir alandır. Her ortağın ne görebileceğini tam olarak siz kontrol edersiniz.",
   "faq.q4": "Platform hangi dilleri destekliyor?",
-  "faq.a4": "İngilizce, Sırpça, Türkçe, Almanca ve Rusça — kullanıcı bazında, anında değiştirilebilir.",
+  "faq.a4": "İngilizce, Sırpça, Türkçe, Almanca ve Rusça, kullanıcı bazında değiştirilebilir, anında.",
   "faq.q5": "Verilerim nasıl korunuyor?",
   "faq.a5":
-    "Veriler veritabanı seviyesinde kiracı bazında izole edilir (satır seviyesinde güvenlik); erişim ince ayarlı bir yetki kataloğuyla (RBAC) kontrol edilir ve her hesap iki faktörlü doğrulama ile korunabilir. Her yazma işlemi değiştirilemez bir denetim kaydına işlenir.",
+    "Veriler veritabanı seviyesinde kiracı bazında izole edilir (satır seviyesinde güvenlik), erişim ayrıntılı bir yetki kataloğuyla (RBAC) kontrol edilir ve her hesap iki faktörlü doğrulamayla korunabilir. Her yazma işlemi değiştirilemez bir denetim kaydına işlenir.",
   "faq.q6": "VELOS diğer sistemlerle entegre olabiliyor mu?",
   "faq.a6":
-    "Evet. Etkileşimli OpenAPI dokümanları, kiracı kapsamlı API anahtarları ve giden webhook'larla birlikte 216 REST uç noktası. AI relay proxy sayesinde harici zekâ servislerini de bağlayabilirsiniz.",
+    "Evet. Etkileşimli OpenAPI dokümanları, kiracı kapsamlı API anahtarları ve giden webhook'larla birlikte 216 REST uç noktası. AI relay proxy, harici zeka servislerini bağlamanızı sağlar.",
   "faq.q7": "10 günlük ücretsiz deneme nasıl işliyor?",
   "faq.a7":
-    "Seçtiğiniz planın tüm özelliklerine 10 gün boyunca tam erişim elde edersiniz — kredi kartı gerekmez. Deneme sonunda planınızı yükseltebilir ya da hiçbir yükümlülük olmadan ayrılabilirsiniz.",
+    "Seçtiğiniz planın tüm özelliklerine 10 gün boyunca tam erişim elde edersiniz, kredi kartı gerekmez. Sonunda planı yükseltebilir ya da basitçe vazgeçebilirsiniz.",
   "faq.q8": "Self-hosting veya özelleştirme sunuyor musunuz?",
   "faq.a8":
-    "Özel plan; on-premise veya white-label kurulumları, özel modüller ve ticaret şirketinize uyarlanmış entegrasyonları kapsar. Gereksinimleriniz için bizimle görüşün.",
+    "Özel plan, on-premise veya white-label kurulumları, özel modüller ve ticaret şirketinize uyarlanmış entegrasyonları kapsar. Gereksinimleriniz için bizimle görüşün.",
 
   // CTA
-  "cta.title": "Ticaretlerinizi tek bir yerden yönetmeye hazır mısınız?",
+  "cta.title": "Bir sonraki anlaşmanızda VELOS'u deneyin",
   "cta.subtitle":
-    "Tekliflerini, belgelerini ve lojistiğini VELOS üzerinde yöneten ticaret şirketlerine katılın. 10 gün ücretsiz — dakikalar içinde hazır.",
+    "On gün ücretsiz, tüm özellikler açık. VELOS ticaret masanıza uymazsa çekip gidersiniz, kaldırılacak hiçbir şey yoktur.",
   "cta.demo": "Canlı demoyu aç",
   "cta.trial": "Ücretsiz denemeyi başlat",
 
@@ -315,14 +314,14 @@ export const tr: Dict = {
   "footer.privacy": "Gizlilik politikası",
   "footer.terms": "Kullanım koşulları",
   "footer.rights": "Tüm hakları saklıdır.",
-  "footer.languages": "Platform 5 dilde mevcut",
-  "footer.made": "Adını Veles'ten alır — toprak, sular ve zenginliğin Slav tanrısı.",
+  "footer.languages": "5 dilde mevcut",
+  "footer.made": "Adını, toprağın, suların ve zenginliğin Slav tanrısı Veles'ten alır.",
 
   // Misc
   "misc.lang": "Dil",
   "misc.backToTop": "Yukarı dön",
   "misc.yes": "Dahil",
-  "misc.no": "—",
+  "misc.no": "Dahil değil",
 };
 
 /* ───────────────────────────── German ───────────────────────────────── */
@@ -344,77 +343,73 @@ export const de: Dict = {
   "nav.theme.toggle": "Design umschalten",
 
   // Hero
-  "hero.badge": "Eine Plattform für den gesamten Handelslebenszyklus",
-  "hero.title.a": "Jedes Geschäft.",
-  "hero.title.b": "Ein Kommandozentrum.",
+  "hero.badge": "Für Rohstoffhandelshäuser gebaut",
+  "hero.title.a": "Global handeln.",
+  "hero.title.b": "Geschäfte von einem Bildschirm aus abschließen.",
   "hero.subtitle":
-    "VELOS ist die mandantenfähige CRM- & ERP-Plattform für den internationalen Rohstoffhandel — von der ersten Anfrage bis zur finalen Zahlung. Angebote, Dokumente, Logistik, Finanzen, Marktplatz und ein 3D-Handelsglobus in einem einzigen, sicheren Arbeitsbereich.",
+    "VELOS ist ein CRM und ERP für den internationalen Rohstoffhandel. Partner, Angebote, Dokumente, Sendungen und Zahlungen in einem System, in fünf Sprachen, auf jedem Gerät.",
   "hero.cta.demo": "Live-Demo öffnen",
   "hero.cta.trial": "10 Tage kostenlos testen",
-  "hero.cta.note": "Keine Kreditkarte · Voller Funktionsumfang · 5 Sprachen",
-  "hero.card.deals": "Aktive Geschäfte",
-  "hero.card.offers": "Angebote diesen Monat",
-  "hero.card.landed": "Landekosten",
-  "hero.card.verified": "QR-verifizierte Dokumente",
-  "hero.card.route": "Route Rotterdam → Belgrad",
-  "hero.card.days": "Tage auf See",
-  "hero.scroll": "Scrollen zum Entdecken",
+  "hero.cta.note": "10 Tage kostenlos. Alle Funktionen, keine Kreditkarte.",
+  "hero.doc.title": "Proforma P-2025-0117",
+  "hero.doc.meta": "soeben an den Käufer gesendet",
+  "hero.ver.title": "Rechnung F-2025-0231 verifiziert",
+  "hero.ver.meta": "QR-Scan, Rotterdam",
 
   // Stats
   "stats.endpoints": "REST-API-Endpunkte",
   "stats.modules": "Module & Ansichten",
   "stats.currencies": "Unterstützte Währungen",
   "stats.languages": "UI-Sprachen",
-  "stats.uptime": "Plattform-Verfügbarkeit",
 
   // Lifecycle
   "lifecycle.kicker": "Der Handelslebenszyklus",
   "lifecycle.title": "Von der ersten Anfrage bis zur finalen Zahlung",
   "lifecycle.subtitle":
-    "VELOS vereint jeden Schritt eines Rohstoffgeschäfts — Schluss mit Tabellen, verlorenen E-Mails und isolierten Tools.",
+    "VELOS bündelt jeden Schritt eines Rohstoffgeschäfts an einem Ort. Schluss mit Tabellen, verlorenen E-Mails und Tools, die nicht miteinander sprechen.",
   "lifecycle.step1.title": "Anfrage",
-  "lifecycle.step1.desc": "Bedarfe & RFQs von Käufern und Lieferanten — erfasst in einer gemeinsamen Pipeline.",
+  "lifecycle.step1.desc": "Bedarfe und RFQs von Käufern und Lieferanten, gesammelt in einer Pipeline.",
   "lifecycle.step2.title": "Angebot",
-  "lifecycle.step2.desc": "Angebote und Proforma-Rechnungen in mehreren Währungen — in Sekunden aus Vorlagen generiert.",
+  "lifecycle.step2.desc": "Angebote und Proforma-Rechnungen in mehreren Währungen, in Sekunden aus Ihren Vorlagen generiert.",
   "lifecycle.step3.title": "Geschäft",
   "lifecycle.step3.desc": "Verträge, LOIs, Provisionen und Deal-Tracking mit vollständiger Historie.",
   "lifecycle.step4.title": "Logistik",
   "lifecycle.step4.desc": "Versandanfragen, Zoll und Seerouting auf dem 3D-Globus.",
   "lifecycle.step5.title": "Dokumente",
-  "lifecycle.step5.desc": "Rechnungen mit QR-Codes, öffentliche GPS-gebundene Verifikation, Audit-Trail.",
+  "lifecycle.step5.desc": "Rechnungen mit QR-Codes, eine öffentliche Verifikationsseite und ein vollständiger Audit-Trail.",
   "lifecycle.step6.title": "Zahlung",
   "lifecycle.step6.desc": "Banking, ERP-Buchungen, Wechselkurse und finaler Abgleich.",
 
   // Modules bento
   "modules.kicker": "Alles an einem Ort",
-  "modules.title": "60+ Module, entwickelt für Handelshäuser",
+  "modules.title": "60+ Module, ein Login",
   "modules.subtitle":
-    "Jeder Teil der Plattform, den Ihr Desk braucht — organisiert, vernetzt und über granulare Rechte kontrolliert.",
+    "Jeder Teil der Plattform, auf dem Ihr Desk läuft, organisiert, vernetzt und über granulare Rechte gesteuert.",
   "modules.cat.crm.title": "CRM & Trade Desk",
   "modules.cat.crm.desc":
-    "Der 360°-Blick auf jeden Geschäftspartner — Käufer, Lieferanten, Agenten — mit vollständiger Handelshistorie, KYC-Status und Kontakten.",
+    "Der 360°-Blick auf jeden Geschäftspartner, auf Käufer, Lieferanten und Agenten, mit vollständiger Handelshistorie, KYC-Status und Kontakten.",
   "modules.cat.docs.title": "Dokumente & Finanzen",
   "modules.cat.docs.desc":
-    "Angebote, Proforma-Rechnungen, Rechnungen und LOIs aus Marken-Vorlagen — mit QR-Verifikation, Revisionen und durchsuchbarem Register.",
+    "Angebote, Proforma-Rechnungen, Rechnungen und LOIs aus Marken-Vorlagen, mit QR-Verifikation, Revisionen und durchsuchbarem Register.",
   "modules.cat.calc.title": "Handelskalkulator & Globus",
   "modules.cat.calc.desc":
-    "Landekosten über Währungen hinweg — inklusive Fracht, Versicherung, Zöllen und Bankgebühren — plus 3D-Globus mit Seerouting.",
+    "Landekosten über Währungen hinweg mit Fracht, Versicherung, Zöllen und Bankgebühren, plus ein 3D-Globus mit Seerouting.",
   "modules.cat.market.title": "Marktplatz & Portal",
   "modules.cat.market.desc":
-    "Ein B2B-Marktplatz mit RFQs, Verhandlungen und Smart Pricing — und ein sicheres Portal, in dem Partner sich selbst bedienen.",
+    "Ein B2B-Marktplatz mit RFQs, Verhandlungen und Smart Pricing, und ein sicheres Portal, in das sich Ihre Partner selbst einloggen.",
   "modules.cat.ai.title": "Intelligenz & Automatisierung",
   "modules.cat.ai.desc":
-    "KI-Smart-Vorschläge, Dokumenten-Parsing, Marktnachrichten, individuelle Dashboards und globale Suche über alle Daten.",
+    "Smarte Vorschläge, Dokumenten-Parsing, Marktnachrichten, individuelle Dashboards und globale Suche über alle Ihre Daten.",
   "modules.cat.admin.title": "Sicherheit & Administration",
   "modules.cat.admin.desc":
-    "Mandanten-Trennung, RBAC-Rechtekatalog, 2FA, Audit-Log, Webhooks und Monitoring der Plattformgesundheit.",
+    "Mandanten-Trennung, ein granularer Rechtekatalog, 2FA, Audit-Log, Webhooks und Monitoring der Plattformgesundheit.",
   "modules.more": "+ weitere",
 
   // Showcase
   "showcase.kicker": "Produkttour",
   "showcase.title": "Sehen Sie die Plattform in Aktion",
   "showcase.subtitle":
-    "Echte Screens aus dem VELOS-Arbeitsbereich — dieselbe Oberfläche, die Ihr Team ab Tag eins erhält.",
+    "Dies sind Nachbauten der echten Screens. Die Oberfläche, die Ihr Team am ersten Tag erhält, ist genau die, die Sie gerade sehen.",
   "showcase.tab.dashboard": "Dashboard",
   "showcase.tab.dashboard.desc": "Individuelle KPI-Dashboards, Pipeline-Gesundheit und aktuelle Aktivitäten des gesamten Desks.",
   "showcase.tab.offers": "Angebote & CRM",
@@ -422,22 +417,22 @@ export const de: Dict = {
   "showcase.tab.calc": "Handelskalkulator",
   "showcase.tab.calc.desc": "Landekosten-Engine mit Live-Kostenaufschlüsselung pro Sendung und Margenkontrolle.",
   "showcase.tab.globe": "3D-Handelsglobus",
-  "showcase.tab.globe.desc": "Live-Seerouten zwischen Häfen — keine Landwege, echte Distanzen.",
+  "showcase.tab.globe.desc": "Live-Seerouten zwischen Häfen, keine Landwege, echte Distanzen.",
   "showcase.tab.docs": "Dokumente & QR",
-  "showcase.tab.docs.desc": "Jedes Dokument mit QR-Code und öffentlicher GPS-gebundener Verifikationsseite.",
+  "showcase.tab.docs.desc": "Jedes Dokument mit QR-Code und öffentlicher Verifikationsseite.",
   "showcase.tab.market": "Marktplatz",
-  "showcase.tab.market.desc": "B2B-Beiträge, RFQs, Smart Pricing und KI-Vorschläge in einem Feed.",
+  "showcase.tab.market.desc": "B2B-Beiträge, RFQs, Smart Pricing und Vorschläge in einem Feed.",
   "showcase.tab.portal": "Partner-Portal",
   "showcase.tab.portal.desc": "Ein separater, sicherer Bereich, in dem Ihre Geschäftspartner mit Ihnen arbeiten.",
   "showcase.tab.security": "Sicherheit & Audit",
-  "showcase.tab.security.desc": "Jede Aktion wird aufgezeichnet — Audit-Log, RBAC-Matrix und Live-Sitzungskontrolle.",
-  "showcase.badge": "Live-Arbeitsbereich",
+  "showcase.tab.security.desc": "Jede Aktion wird aufgezeichnet: Audit-Log, RBAC-Matrix und Live-Sitzungskontrolle.",
+  "showcase.badge": "Echte Screens",
 
   // Calculator demo
   "calc.kicker": "Probieren Sie es selbst",
-  "calc.title": "Der Handelskalkulator — direkt hier",
+  "calc.title": "Der Handelskalkulator, direkt hier",
   "calc.subtitle":
-    "Dies ist eine funktionierende Demo der Landekosten-Engine. Ändern Sie einen beliebigen Wert und sehen Sie, wie sich die Stückkosten sofort aktualisieren.",
+    "Eine funktionierende Demo der Landekosten-Engine. Ändern Sie einen beliebigen Wert, und die Stückkosten aktualisieren sich, während Sie tippen.",
   "calc.product": "Rohstoff",
   "calc.quantity": "Menge (t)",
   "calc.unitPrice": "Einzelpreis (USD/t)",
@@ -457,66 +452,65 @@ export const de: Dict = {
   "calc.reset": "Auf Standardwerte zurücksetzen",
   "calc.hint":
     "In der vollständigen Plattform ist diese Engine mit Live-Wechselkursen, Partner-Preislisten und Angebotsvorlagen verbunden.",
-  "calc.live": "Live",
 
   // Marketplace
   "market.kicker": "B2B-Marktplatz",
-  "market.title": "Ein Netzwerk, nicht nur Software",
+  "market.title": "Machen Sie Geschäfte, wo Ihre Partner sind",
   "market.subtitle":
-    "VELOS verbindet Handelshäuser, Lieferanten und Käufer in einem gemeinsamen B2B-Marktplatz — mit Intelligenz obendrauf.",
+    "Handelshäuser, Lieferanten und Käufer teilen sich einen Marktplatz, mit Verhandlungen, Preisbildung und Intelligenz direkt integriert.",
   "market.rfq.title": "RFQs & Beiträge",
-  "market.rfq.desc": "Veröffentlichen Sie Angebot- und Nachfrage-Beiträge; sammeln und vergleichen Sie die Antworten an einem Ort.",
+  "market.rfq.desc": "Veröffentlichen Sie Angebots- und Nachfrage-Beiträge. Sammeln und vergleichen Sie die Antworten an einem Ort.",
   "market.nego.title": "Strukturierte Verhandlungen",
-  "market.nego.desc": "Gegenangebote, Follow-ups und Zuschlagsentscheidungen — pro Geschäftspartner nachverfolgt.",
+  "market.nego.desc": "Gegenangebote, Follow-ups und Zuschlagsentscheidungen, pro Geschäftspartner nachverfolgt.",
   "market.pricing.title": "Smart Pricing",
   "market.pricing.desc": "Marktbewusste Preisvorschläge und Benchmark-Daten je Rohstoff und Route.",
-  "market.ai.title": "KI-Smart-Suggest",
-  "market.ai.desc": "Die Plattform schlägt Partner, Preise und nächste Schritte auf Basis Ihrer Historie vor.",
+  "market.ai.title": "Smarte Vorschläge",
+  "market.ai.desc": "Die Plattform schlägt Partner, Preise und nächste Schritte auf Basis Ihrer eigenen Historie vor.",
   "market.esg.title": "ESG-Profile",
-  "market.esg.desc": "Nachhaltigkeits-Bewertungen und Reviews für Geschäftspartner — fest ins Netzwerk integriert.",
+  "market.esg.desc": "Nachhaltigkeits-Bewertungen und Reviews für Geschäftspartner, fest ins Netzwerk integriert.",
   "market.intel.title": "Markt-Intelligenz",
   "market.intel.desc": "Nachrichten, Events und Preissignale für die Rohstoffe, die Sie handeln.",
   "market.parse.title": "Dokumenten-Parsing",
-  "market.parse.desc": "Laden Sie ein PDF oder Foto hoch — die Plattform extrahiert strukturierte Handelsdaten.",
+  "market.parse.desc": "Laden Sie ein PDF oder ein Foto hoch, und die Plattform extrahiert strukturierte Handelsdaten.",
 
   // Security
   "sec.kicker": "Sicherheit & Vertrauen",
-  "sec.title": "Sicherheit auf Bankenniveau — integriert",
+  "sec.title": "Sicherheit, die Sie Ihrem Auditor zeigen können",
   "sec.subtitle":
-    "Ihre Geschäfte, Dokumente und Partnerdaten sind auf jeder Ebene geschützt — von der Datenbank bis zu jeder einzelnen API-Anfrage.",
+    "Ihre Geschäfte, Dokumente und Partnerdaten sind auf jeder Ebene geschützt, von der Datenbank bis zu jeder API-Anfrage.",
   "sec.rls.title": "Sicherheit auf Zeilenebene",
   "sec.rls.desc": "Die Daten jedes Mandanten sind auf Datenbankebene isoliert (PostgreSQL RLS).",
   "sec.rbac.title": "Granulares RBAC",
-  "sec.rbac.desc": "Ein vollständiger Rechtekatalog — vergeben Sie Modulrechte pro Benutzerrolle.",
+  "sec.rbac.desc": "Ein vollständiger Rechtekatalog. Vergeben Sie Modulrechte pro Benutzerrolle.",
   "sec.2fa.title": "Zwei-Faktor-Authentifizierung",
-  "sec.2fa.desc": "TOTP-basierte 2FA für jedes Teammitglied — inklusive Wiederherstellungscodes.",
+  "sec.2fa.desc": "TOTP-basierte 2FA für jedes Teammitglied, inklusive Wiederherstellungscodes.",
   "sec.audit.title": "Vollständiges Audit-Log",
-  "sec.audit.desc": "Wer hat was wann getan — jede Schreiboperation wird erfasst und ist durchsuchbar.",
+  "sec.audit.desc": "Wer hat was wann getan. Jede Schreiboperation wird erfasst und ist durchsuchbar.",
   "sec.rate.title": "Rate Limiting",
   "sec.rate.desc": "Drosselung pro IP und pro Benutzer gegen Brute Force und Missbrauch.",
-  "sec.gps.title": "GPS-gebundene Verifikation",
+  "sec.gps.title": "Standortgeprüfte Verifikation",
   "sec.gps.desc": "Die öffentliche Dokumenten-Verifikation prüft Standort und Gültigkeit, bevor Daten preisgegeben werden.",
   "sec.session.title": "Sitzungskontrolle",
   "sec.session.desc": "Idle- und absolute Timeouts, sofortige Sperrung, Gerätesichtbarkeit.",
   "sec.errors.title": "Fehler-Audit",
-  "sec.errors.desc": "Client- und Serverfehler werden zentral erfasst — mit Triage-Ansichten.",
+  "sec.errors.desc": "Client- und Serverfehler werden zentral erfasst, mit Triage-Ansichten.",
 
   // API / developers
   "api.kicker": "Für Entwickler",
-  "api.title": "Eine echte API — 216 Endpunkte",
+  "api.title": "Eine echte API: 216 Endpunkte",
   "api.subtitle":
-    "Jedes Modul ist über REST verfügbar — mit mandantenbezogenen API-Keys, OpenAPI-Dokumentation und Webhooks.",
+    "Jedes Modul ist über REST verfügbar, mit mandantenbezogenen API-Keys, OpenAPI-Dokumentation und Webhooks.",
   "api.openapi": "Interaktive OpenAPI-Dokumentation unter /api-docs",
   "api.keys": "Mandantenbezogene API-Keys",
   "api.webhooks": "Ausgehende Webhooks für Ereignisse",
   "api.relay": "KI-Relay-Proxy für Integrationen",
-  "api.caption": "Beispiel für eine authentifizierte Anfrage — GET /api/offers",
+  "api.caption": "Beispiel für eine authentifizierte Anfrage, GET /api/offers",
 
   // Pricing
   "pricing.kicker": "Preise",
-  "pricing.title": "Einfache Pläne, die mit Ihrem Desk skalieren",
-  "pricing.subtitle": "Starten Sie 10 Tage kostenlos. Upgraden Sie, wenn Ihr Handelsvolumen wächst.",
-  "pricing.month": "/Mo",
+  "pricing.title": "Pläne, die zu Ihrem Desk passen",
+  "pricing.subtitle": "Jeder Plan startet mit 10 kostenlosen Tagen. Upgraden Sie, wenn Ihr Handelsvolumen wächst.",
+  "pricing.month": "/Monat",
   "pricing.popular": "Am beliebtesten",
   "pricing.custom": "Individuell",
   "pricing.f.users": "Benutzer",
@@ -532,7 +526,7 @@ export const de: Dict = {
   "pricing.unlimited": "Unbegrenzt",
   "pricing.choose": "Kostenlos testen",
   "pricing.contact": "Sprechen Sie mit uns",
-  "pricing.trialNote": "10 Tage kostenlos testen — in jedem Plan · keine Kreditkarte erforderlich",
+  "pricing.trialNote": "10 Tage kostenlos in jedem Plan, keine Kreditkarte erforderlich",
   "pricing.compare": "Alle Funktionen vergleichen",
   "pricing.starter.tagline": "Für Solo-Händler, die gerade starten.",
   "pricing.starter.f.users": "1",
@@ -544,7 +538,7 @@ export const de: Dict = {
   "pricing.starter.f.erp": "false",
   "pricing.starter.f.market": "false",
   "pricing.starter.f.api": "false",
-  "pricing.starter.f.support": "Email",
+  "pricing.starter.f.support": "E-Mail",
   "pricing.business.tagline": "Für wachsende Trade Desks mit kleinem Team.",
   "pricing.business.f.users": "5",
   "pricing.business.f.partners": "Bis zu 500",
@@ -581,19 +575,19 @@ export const de: Dict = {
 
   // FAQ
   "faq.kicker": "FAQ",
-  "faq.title": "Fragen, beantwortet",
-  "faq.subtitle": "Alles, was Sie vor dem Start Ihrer Testphase wissen sollten.",
+  "faq.title": "Bevor Sie starten",
+  "faq.subtitle": "Die Fragen, die uns Händler am häufigsten stellen.",
   "faq.q1": "Was genau ist VELOS?",
   "faq.a1":
-    "VELOS ist eine mandantenfähige CRM- & ERP-Plattform für den internationalen Rohstoffhandel. Sie vereint Partnermanagement, Angebote, Dokumente, Logistik, Finanzen und einen B2B-Marktplatz in einem sicheren Arbeitsbereich — gebaut für Handelshäuser, nicht für generische Unternehmen.",
+    "VELOS ist eine Multi-Tenant-CRM- und ERP-Plattform für den internationalen Rohstoffhandel. Sie bringt Partnermanagement, Angebote, Dokumente, Logistik, Finanzen und einen B2B-Marktplatz in einen sicheren Arbeitsbereich, gebaut für Handelshäuser statt für generische Unternehmen.",
   "faq.q2": "Muss ich etwas installieren?",
   "faq.a2":
-    "Nein. VELOS läuft in der Cloud und funktioniert in jedem modernen Browser — am Desktop, Tablet und Smartphone. Die Oberfläche ist vollständig responsiv und in 5 Sprachen verfügbar.",
+    "Nein. VELOS läuft in der Cloud und funktioniert in jedem modernen Browser, am Desktop, Tablet und Smartphone. Die Oberfläche ist vollständig responsiv und in 5 Sprachen verfügbar.",
   "faq.q3": "Können meine Partner und Agenten auf die Plattform zugreifen?",
   "faq.a3":
-    "Ja — über das Partner-Portal: einen separaten, sicheren Bereich, in dem Geschäftspartner ihre Angebote sehen, KYC-Dokumente hochladen und auf RFQs antworten. Sie bestimmen genau, was jeder Partner sehen darf.",
+    "Ja. Das Partner-Portal ist ein separater, sicherer Bereich, in dem Geschäftspartner ihre Angebote sehen, KYC-Dokumente hochladen und auf RFQs antworten. Sie bestimmen genau, was jeder Partner sehen darf.",
   "faq.q4": "Welche Sprachen unterstützt die Plattform?",
-  "faq.a4": "Englisch, Serbisch, Türkisch, Deutsch und Russisch — pro Benutzer umstellbar, sofort wirksam.",
+  "faq.a4": "Englisch, Serbisch, Türkisch, Deutsch und Russisch, pro Benutzer umstellbar, sofort.",
   "faq.q5": "Wie sind meine Daten geschützt?",
   "faq.a5":
     "Daten werden pro Mandant auf Datenbankebene isoliert (Sicherheit auf Zeilenebene), der Zugriff läuft über einen granularen Rechtekatalog (RBAC), und jedes Konto lässt sich per Zwei-Faktor-Authentifizierung schützen. Jede Schreiboperation landet in einem unveränderlichen Audit-Log.",
@@ -602,15 +596,15 @@ export const de: Dict = {
     "Ja. 216 REST-Endpunkte mit interaktiver OpenAPI-Dokumentation, mandantenbezogenen API-Keys und ausgehenden Webhooks. Der KI-Relay-Proxy verbindet externe Intelligenz-Dienste.",
   "faq.q7": "Wie funktioniert die 10-tägige kostenlose Testphase?",
   "faq.a7":
-    "Sie erhalten 10 Tage lang vollen Zugriff auf alle Funktionen Ihres gewählten Plans — ohne Kreditkarte. Am Ende der Testphase können Sie upgraden — oder es einfach dabei belassen.",
+    "Sie erhalten 10 Tage lang vollen Zugriff auf alle Funktionen Ihres gewählten Plans, ohne Kreditkarte. Am Ende können Sie upgraden oder einfach weitergehen.",
   "faq.q8": "Bieten Sie Self-Hosting oder Anpassungen an?",
   "faq.a8":
     "Der individuelle Plan umfasst On-Premise- oder White-Label-Bereitstellungen, eigene Module und auf Ihr Handelshaus zugeschnittene Integrationen. Sprechen Sie mit uns über Ihre Anforderungen.",
 
   // CTA
-  "cta.title": "Bereit, Ihre Geschäfte von einem Ort aus zu steuern?",
+  "cta.title": "Testen Sie VELOS bei Ihrem nächsten Geschäft",
   "cta.subtitle":
-    "Schließen Sie sich Handelshäusern an, die Angebote, Dokumente und Logistik auf VELOS managen. 10 Tage kostenlos — in Minuten eingerichtet.",
+    "Zehn Tage kostenlos, alle Funktionen freigeschaltet. Wenn VELOS nicht zu Ihrem Desk passt, gehen Sie einfach, ohne etwas deinstallieren zu müssen.",
   "cta.demo": "Live-Demo öffnen",
   "cta.trial": "Kostenlos testen",
 
@@ -631,14 +625,14 @@ export const de: Dict = {
   "footer.privacy": "Datenschutz",
   "footer.terms": "AGB",
   "footer.rights": "Alle Rechte vorbehalten.",
-  "footer.languages": "Plattform in 5 Sprachen verfügbar",
-  "footer.made": "Benannt nach Veles — dem slawischen Gott der Erde, der Gewässer und des Reichtums.",
+  "footer.languages": "In 5 Sprachen verfügbar",
+  "footer.made": "Benannt nach Veles, dem slawischen Gott der Erde, der Gewässer und des Reichtums.",
 
   // Misc
   "misc.lang": "Sprache",
   "misc.backToTop": "Nach oben",
   "misc.yes": "Enthalten",
-  "misc.no": "—",
+  "misc.no": "Nicht enthalten",
 };
 
 /* ───────────────────────────── Russian ──────────────────────────────── */
@@ -660,100 +654,96 @@ export const ru: Dict = {
   "nav.theme.toggle": "Переключить тему",
 
   // Hero
-  "hero.badge": "Одна платформа для всего цикла сделки",
-  "hero.title.a": "Каждая сделка.",
-  "hero.title.b": "Единый центр управления.",
+  "hero.badge": "Создано для сырьевых торговых домов",
+  "hero.title.a": "Торгуйте по всему миру.",
+  "hero.title.b": "Закрывайте сделки с одного экрана.",
   "hero.subtitle":
-    "VELOS — мультитенантная CRM- и ERP-платформа для международной торговли сырьевыми товарами — от первого запроса до финального платежа. Предложения, документы, логистика, финансы, маркетплейс и 3D-глобус торговли в едином защищённом рабочем пространстве.",
+    "VELOS: CRM и ERP для международной торговли сырьём. Партнёры, предложения, документы, отгрузки и платежи в одной системе, на пяти языках, на любом устройстве.",
   "hero.cta.demo": "Открыть онлайн-демо",
   "hero.cta.trial": "Начать бесплатный 10-дневный период",
-  "hero.cta.note": "Без кредитной карты · Полный доступ ко всем функциям · 5 языков",
-  "hero.card.deals": "Активные сделки",
-  "hero.card.offers": "Предложения за месяц",
-  "hero.card.landed": "Стоимость с доставкой",
-  "hero.card.verified": "Документы с QR-верификацией",
-  "hero.card.route": "Маршрут Роттердам → Белград",
-  "hero.card.days": "дней в море",
-  "hero.scroll": "Прокрутите, чтобы узнать больше",
+  "hero.cta.note": "10 дней бесплатно. Все функции, кредитная карта не нужна.",
+  "hero.doc.title": "Проформа P-2025-0117",
+  "hero.doc.meta": "только что отправлена покупателю",
+  "hero.ver.title": "Счёт F-2025-0231 верифицирован",
+  "hero.ver.meta": "QR-сканирование, Роттердам",
 
   // Stats
   "stats.endpoints": "эндпоинтов REST API",
   "stats.modules": "модулей и экранов",
-  "stats.currencies": "Поддерживаемых валют",
-  "stats.languages": "Языков интерфейса",
-  "stats.uptime": "Доступность платформы",
+  "stats.currencies": "поддерживаемых валют",
+  "stats.languages": "языков интерфейса",
 
   // Lifecycle
   "lifecycle.kicker": "Жизненный цикл сделки",
   "lifecycle.title": "От первого запроса до финального платежа",
   "lifecycle.subtitle":
-    "VELOS объединяет каждый шаг сырьевой сделки — больше никаких таблиц, потерянных писем и разрозненных инструментов.",
+    "VELOS хранит каждый шаг сырьевой сделки в одном месте. Больше никаких таблиц, потерянных писем и инструментов, которые не общаются друг с другом.",
   "lifecycle.step1.title": "Запрос",
-  "lifecycle.step1.desc": "Запросы и RFQ от покупателей и поставщиков — всё в едином пайплайне.",
+  "lifecycle.step1.desc": "Запросы и RFQ от покупателей и поставщиков, собранные в одном пайплайне.",
   "lifecycle.step2.title": "Предложение",
-  "lifecycle.step2.desc": "Мультивалютные предложения и проформы, генерируемые из шаблонов за секунды.",
+  "lifecycle.step2.desc": "Мультивалютные предложения и проформы, генерируемые из ваших шаблонов за секунды.",
   "lifecycle.step3.title": "Сделка",
   "lifecycle.step3.desc": "Контракты, LOI, комиссии и отслеживание сделок с полной историей.",
   "lifecycle.step4.title": "Логистика",
   "lifecycle.step4.desc": "Заявки на отгрузку, таможня и морские маршруты на 3D-глобусе.",
   "lifecycle.step5.title": "Документы",
-  "lifecycle.step5.desc": "Счета с QR-кодами, публичная верификация с GPS-привязкой, журнал аудита.",
+  "lifecycle.step5.desc": "Счета с QR-кодами, публичная страница верификации и полный журнал аудита.",
   "lifecycle.step6.title": "Оплата",
   "lifecycle.step6.desc": "Банковские операции, проводки в ERP, курсы валют и финальная сверка.",
 
   // Modules bento
   "modules.kicker": "Всё в одном месте",
-  "modules.title": "60+ модулей, созданных для торговых домов",
+  "modules.title": "60+ модулей, один логин",
   "modules.subtitle":
-    "Все части платформы, которые необходимы вашей команде, — структурированные, связанные и управляемые через права доступа.",
+    "Каждая часть платформы, на которой работает ваш деск, организована, связана и защищена правами доступа.",
   "modules.cat.crm.title": "CRM и торговый деск",
   "modules.cat.crm.desc":
-    "Обзор 360° по каждому контрагенту — покупателям, поставщикам, агентам — с полной историей сделок, статусом KYC и контактами.",
+    "Обзор 360° каждого контрагента, покупателей, поставщиков и агентов, с полной историей сделок, статусом KYC и контактами.",
   "modules.cat.docs.title": "Документы и финансы",
   "modules.cat.docs.desc":
-    "Предложения, проформы, счета и LOI из брендированных шаблонов — с QR-верификацией, версиями и поиском по реестру.",
+    "Предложения, проформы, счета и LOI из брендированных шаблонов, с QR-верификацией, версиями и регистром с поиском.",
   "modules.cat.calc.title": "Калькулятор и глобус",
   "modules.cat.calc.desc":
-    "Стоимость с доставкой в разных валютах — с учётом фрахта, страховки, пошлин и банковских комиссий — плюс 3D-глобус с морскими маршрутами.",
+    "Стоимость с доставкой в разных валютах с учётом фрахта, страховки, пошлин и банковских комиссий, плюс 3D-глобус с морскими маршрутами.",
   "modules.cat.market.title": "Маркетплейс и портал",
   "modules.cat.market.desc":
-    "B2B-маркетплейс с RFQ, переговорами и умным ценообразованием — и защищённый портал, где партнёры работают самостоятельно.",
+    "B2B-маркетплейс с RFQ, переговорами и умным ценообразованием, и защищённый портал, в который партнёры входят сами.",
   "modules.cat.ai.title": "Аналитика и автоматизация",
   "modules.cat.ai.desc":
-    "ИИ-подсказки, разбор документов, рыночные новости, настраиваемые дашборды и глобальный поиск по всем данным.",
+    "Умные подсказки, разбор документов, рыночные новости, настраиваемые дашборды и глобальный поиск по всем данным.",
   "modules.cat.admin.title": "Безопасность и администрирование",
   "modules.cat.admin.desc":
-    "Мультитенантная изоляция, каталог прав RBAC, 2FA, журнал аудита, вебхуки и мониторинг состояния платформы.",
+    "Мультитенантная изоляция, гранулярный каталог прав, 2FA, журнал аудита, вебхуки и мониторинг состояния платформы.",
   "modules.more": "+ ещё",
 
   // Showcase
   "showcase.kicker": "Обзор продукта",
   "showcase.title": "Платформа в действии",
   "showcase.subtitle":
-    "Реальные экраны рабочего пространства VELOS — тот же интерфейс, который ваша команда получает с первого дня.",
+    "Это воссоздания реальных экранов. Интерфейс, который ваша команда получает в первый же день, тот же, на который вы смотрите сейчас.",
   "showcase.tab.dashboard": "Дашборд",
   "showcase.tab.dashboard.desc": "Настраиваемые KPI-дашборды, состояние пайплайна и недавние действия всей команды.",
   "showcase.tab.offers": "Предложения и CRM",
   "showcase.tab.offers.desc": "Пайплайн предложений с поиском, статусами, фильтрами и данными партнёров.",
   "showcase.tab.calc": "Торговый калькулятор",
-  "showcase.tab.calc.desc": "Движок расчёта стоимости с доставкой: живая разбивка затрат по отгрузке и контроль маржи.",
+  "showcase.tab.calc.desc": "Движок расчёта полной стоимости: живая разбивка затрат по каждой отгрузке и контроль маржи.",
   "showcase.tab.globe": "3D-глобус торговли",
-  "showcase.tab.globe.desc": "Живые морские маршруты между портами — без сухопутных переходов, реальные расстояния.",
+  "showcase.tab.globe.desc": "Живые морские маршруты между портами, без сухопутных переходов, реальные расстояния.",
   "showcase.tab.docs": "Документы и QR",
-  "showcase.tab.docs.desc": "Каждый документ — с QR-кодом и публичной страницей верификации с GPS-привязкой.",
+  "showcase.tab.docs.desc": "Каждый документ с QR-кодом и публичной страницей верификации.",
   "showcase.tab.market": "Маркетплейс",
-  "showcase.tab.market.desc": "B2B-публикации, RFQ, умное ценообразование и ИИ-подсказки в единой ленте.",
+  "showcase.tab.market.desc": "B2B-публикации, RFQ, умное ценообразование и подсказки в одной ленте.",
   "showcase.tab.portal": "Портал партнёров",
   "showcase.tab.portal.desc": "Отдельное защищённое пространство, где ваши контрагенты работают с вами.",
   "showcase.tab.security": "Безопасность и аудит",
-  "showcase.tab.security.desc": "Каждое действие записывается — журнал аудита, матрица RBAC и управление сессиями в реальном времени.",
-  "showcase.badge": "Реальное рабочее пространство",
+  "showcase.tab.security.desc": "Каждое действие записано: журнал аудита, матрица RBAC и управление сессиями в реальном времени.",
+  "showcase.badge": "Реальные экраны",
 
   // Calculator demo
   "calc.kicker": "Попробуйте сами",
-  "calc.title": "Торговый калькулятор — прямо здесь",
+  "calc.title": "Торговый калькулятор, прямо здесь",
   "calc.subtitle":
-    "Это рабочее демо движка расчёта полной стоимости. Измените любой параметр — и экономика единицы товара пересчитается мгновенно.",
+    "Рабочее демо движка расчёта полной стоимости. Измените любой параметр, и юнит-экономика обновится прямо при вводе.",
   "calc.product": "Сырьевой товар",
   "calc.quantity": "Количество (т)",
   "calc.unitPrice": "Цена за единицу (USD/т)",
@@ -773,65 +763,64 @@ export const ru: Dict = {
   "calc.reset": "Сбросить к значениям по умолчанию",
   "calc.hint":
     "В полной версии платформы этот движок связан с живыми курсами валют, прайс-листами партнёров и шаблонами предложений.",
-  "calc.live": "В реальном времени",
 
   // Marketplace
   "market.kicker": "B2B-маркетплейс",
-  "market.title": "Не просто софт, а целая сеть",
+  "market.title": "Ведите дела там, где ваши партнёры",
   "market.subtitle":
-    "VELOS объединяет торговые дома, поставщиков и покупателей в общем B2B-маркетплейсе — со слоем аналитики поверх.",
+    "Торговые дома, поставщики и покупатели делят один маркетплейс, со встроенными переговорами, ценообразованием и аналитикой.",
   "market.rfq.title": "RFQ и публикации",
-  "market.rfq.desc": "Публикуйте предложения и спрос; собирайте и сравнивайте отклики в одном месте.",
+  "market.rfq.desc": "Публикуйте предложения о поставке и спрос. Собирайте и сравнивайте отклики в одном месте.",
   "market.nego.title": "Структурированные переговоры",
-  "market.nego.desc": "Встречные предложения, последующие шаги и решения по сделкам — всё отслеживается по каждому контрагенту.",
+  "market.nego.desc": "Встречные предложения, последующие шаги и решения о заключении сделки, отслеживаемые по каждому контрагенту.",
   "market.pricing.title": "Умное ценообразование",
-  "market.pricing.desc": "Ценовые рекомендации с учётом рынка и бенчмарки по товарам и маршрутам.",
-  "market.ai.title": "ИИ-подсказки",
-  "market.ai.desc": "Платформа предлагает партнёров, цены и следующие шаги на основе вашей истории.",
+  "market.pricing.desc": "Ценовые рекомендации с учётом рынка и бенчмарки по каждому товару и маршруту.",
+  "market.ai.title": "Умные подсказки",
+  "market.ai.desc": "Платформа предлагает партнёров, цены и следующие шаги на основе вашей собственной истории.",
   "market.esg.title": "ESG-профили",
-  "market.esg.desc": "Рейтинги устойчивости и отзывы о контрагентах — встроены в саму сеть.",
+  "market.esg.desc": "Рейтинги устойчивости и отзывы о контрагентах, встроенные в сеть.",
   "market.intel.title": "Рыночная аналитика",
   "market.intel.desc": "Новости, события и ценовые сигналы по товарам, которыми вы торгуете.",
   "market.parse.title": "Разбор документов",
-  "market.parse.desc": "Загрузите PDF или фото — платформа извлечёт структурированные торговые данные.",
+  "market.parse.desc": "Загрузите PDF или фото, и платформа извлечёт структурированные торговые данные.",
 
   // Security
   "sec.kicker": "Безопасность и доверие",
-  "sec.title": "Встроенная безопасность банковского уровня",
+  "sec.title": "Безопасность, которую вы можете показать аудитору",
   "sec.subtitle":
-    "Ваши сделки, документы и данные партнёров защищены на каждом уровне — от базы данных до каждого API-запроса.",
+    "Сделки, документы и данные партнёров защищены на каждом уровне, от базы данных до каждого API-запроса.",
   "sec.rls.title": "Безопасность на уровне строк",
   "sec.rls.desc": "Данные каждого тенанта изолированы на уровне базы данных (PostgreSQL RLS).",
   "sec.rbac.title": "Гранулярный RBAC",
-  "sec.rbac.desc": "Полный каталог прав — назначайте права на уровне модулей для каждой роли.",
+  "sec.rbac.desc": "Полный каталог прав. Назначайте права на уровне модулей для каждой роли.",
   "sec.2fa.title": "Двухфакторная аутентификация",
-  "sec.2fa.desc": "2FA на основе TOTP для каждого сотрудника — с кодами восстановления.",
+  "sec.2fa.desc": "2FA на основе TOTP для каждого сотрудника, с кодами восстановления.",
   "sec.audit.title": "Полный журнал аудита",
-  "sec.audit.desc": "Кто, что и когда — каждая операция записи фиксируется и доступна для поиска.",
+  "sec.audit.desc": "Кто, что и когда. Каждая операция записи фиксируется и доступна для поиска.",
   "sec.rate.title": "Ограничение частоты запросов",
   "sec.rate.desc": "Ограничения по IP и по пользователю против брутфорса и злоупотреблений.",
-  "sec.gps.title": "Верификация с GPS-привязкой",
-  "sec.gps.desc": "Публичная проверка документов сверяет местоположение и действительность до раскрытия данных.",
+  "sec.gps.title": "Верификация с проверкой местоположения",
+  "sec.gps.desc": "Публичная верификация документов проверяет местоположение и действительность до раскрытия данных.",
   "sec.session.title": "Управление сессиями",
-  "sec.session.desc": "Таймауты по неактивности и абсолютные, мгновенный отзыв сессий, видимость устройств.",
+  "sec.session.desc": "Таймауты по неактивности и абсолютные, мгновенный отзыв, видимость устройств.",
   "sec.errors.title": "Аудит ошибок",
-  "sec.errors.desc": "Ошибки клиента и сервера собираются централизованно, с экранами триажа.",
+  "sec.errors.desc": "Ошибки клиента и сервера централизованно собираются с экранами триажа.",
 
   // API / developers
   "api.kicker": "Для разработчиков",
-  "api.title": "Настоящий API — 216 эндпоинтов",
+  "api.title": "Настоящий API: 216 эндпоинтов",
   "api.subtitle":
-    "Каждый модуль доступен по REST: API-ключи с привязкой к тенанту, документация OpenAPI и вебхуки.",
+    "Каждый модуль доступен по REST, с API-ключами, привязанными к тенанту, документацией OpenAPI и вебхуками.",
   "api.openapi": "Интерактивная документация OpenAPI по адресу /api-docs",
   "api.keys": "API-ключи с привязкой к тенанту",
   "api.webhooks": "Исходящие вебхуки для событий",
   "api.relay": "AI relay proxy для интеграций",
-  "api.caption": "Пример аутентифицированного запроса — GET /api/offers",
+  "api.caption": "Пример аутентифицированного запроса, GET /api/offers",
 
   // Pricing
   "pricing.kicker": "Тарифы",
-  "pricing.title": "Простые тарифы, которые масштабируются вместе с вашей командой",
-  "pricing.subtitle": "Начните с 10 бесплатных дней. Переходите на старший тариф, когда растёт объём торговли.",
+  "pricing.title": "Тарифы, которые подходят вашему деску",
+  "pricing.subtitle": "Каждый тариф начинается с 10 бесплатных дней. Переходите на старший тариф, когда объём торговли вырастет.",
   "pricing.month": "/мес",
   "pricing.popular": "Самый популярный",
   "pricing.custom": "Индивидуальный",
@@ -848,7 +837,7 @@ export const ru: Dict = {
   "pricing.unlimited": "Без ограничений",
   "pricing.choose": "Начать бесплатно",
   "pricing.contact": "Связаться с нами",
-  "pricing.trialNote": "10 дней бесплатно на любом тарифе · кредитная карта не нужна",
+  "pricing.trialNote": "10 дней бесплатно на любом тарифе, кредитная карта не нужна",
   "pricing.compare": "Сравнить все функции",
   "pricing.starter.tagline": "Для одиночных трейдеров, которые только начинают.",
   "pricing.starter.f.users": "1",
@@ -897,36 +886,36 @@ export const ru: Dict = {
 
   // FAQ
   "faq.kicker": "FAQ",
-  "faq.title": "Вопросы и ответы",
-  "faq.subtitle": "Всё, что нужно знать перед началом пробного периода.",
+  "faq.title": "Перед тем как начать",
+  "faq.subtitle": "Вопросы, которые трейдеры задают нам чаще всего.",
   "faq.q1": "Что такое VELOS?",
   "faq.a1":
-    "VELOS — мультитенантная CRM- и ERP-платформа для международной торговли сырьевыми товарами. Она объединяет управление партнёрами, предложения, документы, логистику, финансы и B2B-маркетплейс в едином защищённом пространстве — создана для торговых домов, а не для обычных компаний.",
+    "VELOS, мультитенантная CRM- и ERP-платформа для международной торговли сырьём. Она объединяет управление партнёрами, предложения, документы, логистику, финансы и B2B-маркетплейс в едином защищённом рабочем пространстве, созданном для торговых домов, а не для обычных компаний.",
   "faq.q2": "Нужно ли что-то устанавливать?",
   "faq.a2":
-    "Нет. VELOS работает в облаке и открывается в любом современном браузере — на компьютере, планшете и телефоне. Интерфейс полностью адаптивный и доступен на 5 языках.",
+    "Нет. VELOS работает в облаке и запускается в любом современном браузере, на компьютере, планшете и телефоне. Интерфейс полностью адаптивный и доступен на 5 языках.",
   "faq.q3": "Могут ли мои партнёры и агенты работать в платформе?",
   "faq.a3":
-    "Да — через Портал партнёров: отдельное защищённое пространство, где контрагенты видят свои предложения, загружают документы KYC и отвечают на RFQ. Вы сами решаете, что видит каждый партнёр.",
+    "Да. Портал партнёров представляет собой отдельное защищённое пространство, где контрагенты видят свои предложения, загружают документы KYC и отвечают на RFQ. Вы сами контролируете, что видит каждый партнёр.",
   "faq.q4": "Какие языки поддерживает платформа?",
-  "faq.a4": "Английский, сербский, турецкий, немецкий и русский — переключается для каждого пользователя, мгновенно.",
+  "faq.a4": "Английский, сербский, турецкий, немецкий и русский, переключается для каждого пользователя, мгновенно.",
   "faq.q5": "Как защищены мои данные?",
   "faq.a5":
-    "Данные изолируются по тенантам на уровне базы данных (безопасность на уровне строк), доступ контролируется гранулярным каталогом прав (RBAC), а каждый аккаунт можно защитить двухфакторной аутентификацией. Каждая операция записи попадает в неизменяемый журнал аудита.",
+    "Данные изолированы по тенантам на уровне базы данных (безопасность на уровне строк), доступ контролируется гранулярным каталогом прав (RBAC), а каждый аккаунт можно защитить двухфакторной аутентификацией. Каждая операция записи попадает в неизменяемый журнал аудита.",
   "faq.q6": "Интегрируется ли VELOS с другими системами?",
   "faq.a6":
-    "Да. 216 REST-эндпоинтов, интерактивная документация OpenAPI, API-ключи с привязкой к тенанту и исходящие вебхуки. AI relay proxy позволяет подключать внешние аналитические сервисы.",
+    "Да. 216 REST-эндпоинтов с интерактивной документацией OpenAPI, API-ключами с привязкой к тенанту и исходящими вебхуками. AI relay proxy позволяет подключать внешние аналитические сервисы.",
   "faq.q7": "Как работает бесплатный 10-дневный период?",
   "faq.a7":
-    "Вы получаете полный доступ ко всем функциям выбранного тарифа на 10 дней — кредитная карта не нужна. По окончании можно перейти на платный тариф или просто уйти без обязательств.",
+    "Вы получаете полный доступ ко всем функциям выбранного тарифа на 10 дней, кредитная карта не нужна. В конце можно перейти на платный тариф или просто уйти.",
   "faq.q8": "Предлагаете ли вы self-hosting или кастомизацию?",
   "faq.a8":
     "Индивидуальный тариф охватывает развёртывание on-premise или white-label, кастомные модули и интеграции под ваш торговый дом. Расскажите нам о своих требованиях.",
 
   // CTA
-  "cta.title": "Готовы вести все сделки из одного места?",
+  "cta.title": "Попробуйте VELOS на следующей сделке",
   "cta.subtitle":
-    "Присоединяйтесь к торговым домам, которые управляют предложениями, документами и логистикой в VELOS. 10 дней бесплатно — настройка за считанные минуты.",
+    "Десять дней бесплатно, все функции открыты. Если VELOS не подойдёт вашему деску, вы просто уходите, и ничего не нужно удалять.",
   "cta.demo": "Открыть онлайн-демо",
   "cta.trial": "Начать бесплатно",
 
@@ -947,12 +936,12 @@ export const ru: Dict = {
   "footer.privacy": "Политика конфиденциальности",
   "footer.terms": "Условия использования",
   "footer.rights": "Все права защищены.",
-  "footer.languages": "Платформа доступна на 5 языках",
-  "footer.made": "Названа в честь Велеса — славянского бога земли, вод и богатства.",
+  "footer.languages": "Доступно на 5 языках",
+  "footer.made": "Названа в честь Велеса, славянского бога земли, вод и богатства.",
 
   // Misc
   "misc.lang": "Язык",
   "misc.backToTop": "Наверх",
   "misc.yes": "Включено",
-  "misc.no": "—",
+  "misc.no": "Не включено",
 };

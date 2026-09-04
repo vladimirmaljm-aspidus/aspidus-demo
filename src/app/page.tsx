@@ -5,7 +5,6 @@ import { SiteI18nProvider } from "@/components/site/i18n-provider";
 import { Navbar } from "@/components/site/navbar";
 import { Hero } from "@/components/site/hero";
 import { StatsBar } from "@/components/site/stats-bar";
-import { ModuleMarquee } from "@/components/site/module-marquee";
 import { Lifecycle } from "@/components/site/lifecycle";
 import { ModulesBento } from "@/components/site/modules-bento";
 import { Showcase } from "@/components/site/showcase";
@@ -32,7 +31,6 @@ export default function Home() {
           <main className="flex-1">
             <Hero />
             <StatsBar />
-            <ModuleMarquee />
             <Lifecycle />
             <ModulesBento />
             <Showcase />
