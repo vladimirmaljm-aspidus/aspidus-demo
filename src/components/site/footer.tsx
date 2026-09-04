@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/drawer";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useSiteT } from "@/components/site/i18n-provider";
-import { VelosLogo, VelosWordmark } from "@/components/site/velos-logo";
+import { VelosLogoAnimated, VelosWordmark } from "@/components/site/velos-logo";
 
 const DEMO_URL = "https://velos-platform.vercel.app";
 const REGISTER_URL = "https://velos-platform.vercel.app/register";
@@ -69,7 +69,7 @@ export function Footer() {
             {/* Brand */}
             <div className="col-span-2 lg:col-span-2">
               <div className="flex items-center gap-2.5">
-                <VelosLogo size={28} />
+                <VelosLogoAnimated size={28} />
                 <div className="flex flex-col">
                   <VelosWordmark />
                   <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">

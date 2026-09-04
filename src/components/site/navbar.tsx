@@ -22,7 +22,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useSiteT, LOCALES, LOCALE_META, type Locale } from "@/components/site/i18n-provider";
-import { VelosLogo, VelosWordmark } from "@/components/site/velos-logo";
+import { VelosLogoAnimated, VelosWordmark } from "@/components/site/velos-logo";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS: { href: string; key: string }[] = [
@@ -91,7 +91,7 @@ export function Navbar() {
             className="flex items-center gap-2.5 rounded-lg px-1 py-0.5"
             aria-label="VELOS — home"
           >
-            <VelosLogo size={30} />
+            <VelosLogoAnimated size={30} />
             <span className="hidden flex-col leading-none sm:flex">
               <VelosWordmark />
               <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">

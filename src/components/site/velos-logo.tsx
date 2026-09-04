@@ -1,6 +1,8 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
+import { LottieBox } from "@/components/site/lottie-box";
 
 /** VELOS logo — Veles symbol on copper tile. Matches /logo.svg exactly. */
 export function VelosLogo({
@@ -52,5 +54,34 @@ export function VelosWordmark({ className }: { className?: string }) {
     >
       VELOS
     </span>
+  );
+}
+
+/**
+ * VELOS logo as a Lottie animation: the copper tile pops in, the Veles mark
+ * draws itself stroke by stroke, then a soft sheen sweeps across the tile
+ * every few seconds. Pointer-hover replays the draw-in.
+ */
+export function VelosLogoAnimated({
+  className,
+  size = 30,
+  replayOnHover = true,
+  style,
+}: {
+  className?: string;
+  size?: number;
+  replayOnHover?: boolean;
+  style?: CSSProperties;
+}) {
+  return (
+    <LottieBox
+      src="/lottie/velos-mark.json"
+      idleFrom={60}
+      replayOnHover={replayOnHover}
+      pauseOffscreen
+      label="VELOS"
+      className={cn("block shrink-0", className)}
+      style={{ width: size, height: size, ...style }}
+    />
   );
 }

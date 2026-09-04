@@ -16,6 +16,7 @@ import { PricingSection } from "@/components/site/pricing-section";
 import { FaqSection } from "@/components/site/faq-section";
 import { CtaSection } from "@/components/site/cta-section";
 import { Footer } from "@/components/site/footer";
+import { LottieBox } from "@/components/site/lottie-box";
 
 export default function Home() {
   return (
@@ -27,6 +28,15 @@ export default function Home() {
     >
       <SiteI18nProvider>
         <div className="flex min-h-screen flex-col bg-background text-foreground">
+          {/* Warm specks drifting up behind the whole page */}
+          <LottieBox
+            src="/lottie/ambient-drift.json"
+            loop
+            reduced="hide"
+            pauseOffscreen={false}
+            aspect="slice"
+            className="fixed inset-0 z-0 opacity-70"
+          />
           <Navbar />
           <main className="flex-1">
             <Hero />
